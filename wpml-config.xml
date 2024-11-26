@@ -1,0 +1,29 @@
+<wpml-config>
+    <admin-texts>
+        <key name="fasheno">
+            <key name="rt_phone" />
+            <key name="rt_email" />
+            <key name="rt_website" />
+            <key name="rt_contact_address" />
+            <key name="rt_get_login_label" />
+            <key name="rt_get_started_label" />
+            <key name="rt_contact_info_label" />
+            <key name="rt_follow_us_label" />
+            <key name="rt_about_label" />
+            <key name="rt_about_text" />
+            <key name="rt_footer_labels" />
+            <key name="rt_ready_label" />
+            <key name="rt_contact_button_text" />
+            <key name="rt_blog_labels" />
+            <key name="rt_author_prefix" />
+            <key name="rt_tags" />
+            <key name="rt_social" />
+            <key name="rt_blog_read_more" />
+            <key name="rt_error_heading" />
+            <key name="rt_error_text" />
+            <key name="rt_error_button_text" />
+            <key name="rt_footer_copyright" />
+            <key name="rt_post_related_title" />
+        </key>
+    </admin-texts>
+</wpml-config>

@@ -1,0 +1,19 @@
+/*===============================
+RT Post Grid
+================================*/
+.blog-default {
+	.rt-swiper-slider {
+		.article-inner-wrapper {
+			box-shadow: unset;
+			border: 1px solid $border_color;
+		}
+	}
+}
+
+
+
+@media (min-width: 1025px) {
+	.blog-list-2.rt-el-post-wrapper .post-thumbnail-wrap {
+		max-width: 286px;
+	}
+}

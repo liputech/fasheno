@@ -1,0 +1,57 @@
+//Footer Style 2
+.fasheno-footer-2 {
+	.footer-widgets-wrapper {
+		background-color: $black_bg_color;
+	}
+	.fasheno-navigation ul > li:hover > ul {
+		z-index: 9999;
+	}
+	.site-footer {
+		.widget-title, .widgettitle {
+			color: $white_color;
+		}
+		.tagcloud {
+			a {
+				color: $primary_color;
+			}
+		}
+	}
+
+	.footer-sidebar {
+		color: $meta_color;
+		a {
+			color: $meta_color;
+			&:hover {
+				color: $white_color;
+			}
+		}
+		.phone-no {
+			a {
+				color: $white_color;
+			}
+		}
+	}
+
+	.footer-copyright-wrapper {
+		border-top: 1px solid $meta_color;
+		background-color: $black_bg_color;
+		color: $meta_color;
+		a {
+			color: $meta_color;
+			&:hover {
+				color: $tertiary_color;
+			}
+		}
+	}
+	.copyright-text-wrap {
+		@media (max-width: 767px) {
+			flex-direction: column;
+			gap: 8px;
+			text-align: center;
+		}
+	}
+}
+
+.fasheno-footer-2 .site-footer .widget_nav_menu ul li a:before {
+	background-color: $white_color;
+}

@@ -1,0 +1,145 @@
+button {
+	@include transition_default();
+	cursor: pointer;
+}
+
+.btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	user-select: none;
+	border-radius: 50px;
+	padding: 14px 32px;
+	font-size: 15px;
+	overflow: hidden;
+	line-height: 1.2;
+	z-index: 1;
+	transition: all 520ms ease;
+	&:active {
+		box-shadow: none;
+	}
+	&:focus {
+		outline: none;
+	}
+
+	&.btn-xl {
+		$xl_size: $base_fs + 8;
+		padding: ($base_fs+8) ($base_fs + 16);
+		@include font_size($xl_size, $xl_size);
+	}
+
+	&.btn-lg {
+		$lg_size: $base_fs + 2;
+		padding: ($base_fs + 2) ($base_fs + 8);
+		@include font_size($lg_size, $lg_size);
+	}
+
+	&.btn-sm {
+		$lg_size: $base_fs - 3;
+		padding: ($base_fs - 4) ($base_fs + 4);
+		@include font_size($lg_size, $lg_size);
+	}
+
+	&.btn-xs {
+		$lg_size: $base_fs - 6;
+		padding: ($base_fs - 5) ($base_fs + 2);
+		@include font_size($lg_size, $lg_size);
+	}
+
+}
+
+//Button style
+.btn-primary {
+	@include button_style($white_color, $primary_color, $secondary_color);
+}
+
+.btn-secondary {
+	@include button_style($white_color, $secondary_color, rgba($secondary_rgb, 0.8));
+}
+
+.btn-light {
+	@include button_style($white_color, $meta_color, $primary_color);
+}
+
+.btn-gray {
+	@include button_style($white_color, $meta_color, $primary_color);
+}
+.rt-button .btn {
+	column-gap: 5px;
+	i {
+		position: absolute;
+		left: -30px;
+		font-size: 8px;
+		display: inline-block;
+		transition: all 520ms ease;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateX(0px);
+	}
+	&:hover {
+		padding-left: 40px;
+		i {
+			transform: translateX(10px);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	span {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+	}
+}
+// button 1
+.button-1 {
+	color: $button_color;
+	background-color: $black_bg_color;
+	&:hover {
+		color: $button_color;
+		background-color: $primary_color;
+	}
+
+}
+// button 2
+.rt-button .button-2 {
+	color: $button_color;
+	background-color: $primary_color;
+	&:hover {
+		color: $button_color_1;
+		background-color: $black_bg_color_1;
+	}
+}
+// button 3
+.rt-button .button-3 {
+	color: $button_text_color;
+	background-color: $button_bg_color;
+	box-shadow: 0 0 5px rgb( $heading_rgb, 0.06 );
+	i {
+		color: $button_text_color;
+	}
+	&:hover {
+		background-color: $primary_color;
+		color: $button_color;
+		i {
+			color: $button_color;
+		}
+	}
+}
+// button 4
+.rt-button .button-4 {
+	color: $button_text_color;
+	padding: 0;
+	&:hover {
+		padding-left: 20px;
+		color: $primary_color;
+		i {
+			left: 0;
+			transform: translateX(0px);
+		}
+	}
+}

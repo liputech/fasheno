@@ -1,0 +1,11 @@
+//Style 2
+.fasheno-single-2 .single-post-container {
+	.content-top-area {
+		.post-thumbnail {
+			border-radius: 8px;
+			@media(min-width: 768px) {
+				height: 640px;
+			}
+		}
+	}
+}

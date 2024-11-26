@@ -1,0 +1,129 @@
+/* Topbar Navigation
+***************************/
+.fasheno-top-bar {
+	font-size: 15px;
+	background-color: $gray_color;
+	color: $heading_color;
+	min-height: 50px;
+	padding: 12px 0;
+	display: flex;
+	align-items: center;
+
+	@media(max-width: 650px) {
+		.top-bar-right {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	.top-bar-row {
+		justify-content: space-between;
+		@media(max-width: 991px) {
+			justify-content: center;
+		}
+	}
+	&.top-bar-style-2 {
+		.top-bar-row {
+			justify-content: center;
+		}
+	}
+	.top-bar-menu {
+		display: inline-flex;
+		align-items: center;
+		column-gap: 32px;
+		li {
+			position: relative;
+			@media(min-width: 992px) {
+				&:before {
+					content: "";
+					height: 50px;
+					width: 1px;
+					background-color: $border_color;
+					position: absolute;
+					top: -12px;
+					right: -18px;
+				}
+			}
+		}
+	}
+	.top-bar-left {
+		li {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			column-gap: 8px;
+			flex-wrap: wrap;
+			&:not(:last-child):before {
+				content: "";
+				height: 5px;
+				width: 5px;
+				background-color: #8DA4A2;
+				position: absolute;
+				top: 12px;
+				right: -18px;
+				border-radius: 50%;
+			}
+		}
+		span {
+			color: $red_color;
+		}
+		a {
+			color: $heading_color;
+			&:hover {
+				color: $primary_color;
+			}
+		}
+		@media(max-width: 767px) {
+			justify-content: center;
+		}
+	}
+
+	.social-icon {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		padding: 0 32px;
+		a {
+			&:hover svg {
+				fill: $primary_color;
+			}
+		}
+
+		[class*=rticon] svg {
+			width: 15px;
+			height: 13px;
+			fill: $heading_color;
+		}
+	}
+	.switcher-list {
+		.switcher-using-shortcode {
+			border: none;
+			padding: 0;
+			a.currency-selected {
+				padding: 0;
+			}
+			@media(min-width: 992px) {
+				&:before {
+					content: "";
+					height: 50px;
+					width: 1px;
+					background-color: $border_color;
+					position: absolute;
+					top: -12px;
+					left: -18px;
+				}
+			}
+		}
+		.dashicons {
+			color: $button_text_color;
+			transition: all 120ms ease;
+		}
+		a.currency-selected, .switcher-list a:hover {
+			color: $button_text_color;
+		}
+	}
+}
+
+.has-trheader .site-header .fasheno-top-bar * {
+	color: $meta_color;
+}

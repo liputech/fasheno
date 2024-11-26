@@ -1,0 +1,209 @@
+.fasheno-breadcrumb-wrapper {
+	display: flex;
+	align-items: center;
+	padding: 65px 0;
+	background-color: $gray_color;
+	@media(max-width: 767px) {
+		padding: 50px 0;
+	}
+	&.has-bg {
+		position: relative;
+		background-color: $heading_color;
+		z-index: 0;
+		.banner-image {
+			opacity: 0.5;
+		}
+		.entry-title {
+			color: $white_color;
+		}
+	}
+
+	.banner-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		z-index: -1;
+	}
+
+	.breadcrumb {
+		display: block;
+		padding: 0;
+		list-style: none;
+		background-color: transparent;
+		border-radius: 0;
+		color: $meta_color;
+		font-size: $base_fs - 1;
+		font-weight: 500;
+		margin: 0;
+		position: relative;
+
+		li {
+			display: inline;
+			position: relative;
+			align-items: center;
+			gap: 10px;
+		}
+		.raquo {
+			padding: 0 5px;
+			line-height: 1;
+			font-size: 8px;
+			color: $body_color;
+		}
+
+		a {
+			color: $meta_color;
+		}
+
+		path {
+			stroke: $meta_color;
+		}
+
+		li.active .title {
+			@extend .primaryColor;
+		}
+
+	}
+	.container {
+		z-index: 1;
+	}
+	.entry-breadcrumb {
+		span {
+			font-size: $base_fs - 1;
+			font-weight: 500;
+			a {
+				color: $meta_color;
+				&:hover {
+					color: $primary_color;
+				}
+			}
+
+		}
+		.current-item {
+			color: $primary_color;
+		}
+		.dvdr {
+			color: $body_color;
+			font-size: 8px;
+			line-height: 1;
+			padding: 0 8px;
+		}
+	}
+	.entry-title {
+		color: $heading_color;
+		font-size: clamp(32px, 4vw, 44px);
+		line-height: 1.2;
+		margin-bottom: 0;
+	}
+	.align-items-center {
+		.entry-breadcrumb {
+			text-align: center;
+		}
+	}
+	.align-items-end {
+		.entry-breadcrumb {
+			text-align: right;
+		}
+	}
+
+}
+
+.has-trheader {
+	.fasheno-breadcrumb-wrapper {
+		padding-top: 205px;
+		&.has-bg {
+			padding-bottom: 120px;
+		}
+		&.has-color {
+			padding-bottom: 120px;
+		}
+	}
+}
+
+.has-sticky-header {
+	&.fasheno-header-1 {
+		.fasheno-breadcrumb-wrapper {
+			padding-top: 145px;
+			@media(max-width: 1199px) {
+				padding-top: 115px;
+			}
+		}
+	}
+	&.fasheno-header-2 {
+		.fasheno-breadcrumb-wrapper {
+			padding-top: 250px;
+			@media(max-width: 1199px) {
+				padding-top: 115px;
+			}
+		}
+	}
+	&.fasheno-header-3 {
+		.fasheno-breadcrumb-wrapper {
+			padding-top: 195px;
+			@media(max-width: 1199px) {
+				padding-top: 115px;
+			}
+		}
+	}
+}
+.has-sticky-header.has-top-bar {
+	&.fasheno-header-1 {
+		.fasheno-breadcrumb-wrapper {
+			padding-top: 195px;
+			@media(max-width: 1199px) {
+				padding-top: 115px;
+			}
+		}
+	}
+	&.fasheno-header-2 {
+		.fasheno-breadcrumb-wrapper {
+			padding-top: 300px;
+			@media(max-width: 1199px) {
+				padding-top: 115px;
+			}
+		}
+	}
+	&.fasheno-header-3 {
+		.fasheno-breadcrumb-wrapper {
+			padding-top: 245px;
+			@media(max-width: 1199px) {
+				padding-top: 115px;
+			}
+		}
+	}
+}
+
+.fasheno-breadcrumb-wrapper,
+.has-trheader .fasheno-breadcrumb-wrapper {
+	.breadcrumb {
+		color: $meta_color;
+
+		a {
+			color: $meta_color;
+
+			&:hover {
+				color: $primary_color;
+			}
+		}
+
+		li.active .title {
+			color: $primary_color;
+		}
+	}
+}
+.banner-light {
+	.entry-title {
+		color: $white_color;
+	}
+	.entry-breadcrumb {
+		span a {
+			color: $white_color;
+		}
+		.dvdr {
+			color: $white_color;
+		}
+	}
+}
