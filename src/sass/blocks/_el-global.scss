@@ -175,12 +175,20 @@ body .home4-hero-social {
 [data-theme="dark-mode"] .elementor-widget-rt-site-logo .site-branding .light-logo {
 	display: block !important;
 }
-
+.ele-border-radius-5 {
+	border-radius: 5px;
+}
 .ele-gray-bg {
 	background-color: $gray_color;
 }
 .ele-brown-bg {
 	background-color: $brown_bg_color;
+}
+.ele-light-pink-bg {
+	background-color: $light_pink_bg_color;
+}
+.ele-light-purple-bg {
+	background-color: $light_purple_bg_color;
 }
 .ele-border-top {
 	border-top: 1px solid $border_color;
@@ -199,6 +207,13 @@ body .home4-hero-social {
 [data-theme="dark-mode"] .ele-brown-bg {
 	background: linear-gradient(111deg, #FF0080 19.42%, #FF001A 73.08%);
 }
+[data-theme="dark-mode"] .ele-light-pink-bg {
+	background: linear-gradient(111deg, #00FF99 19.42%, #66FF00 73.08%);
+}
+[data-theme="dark-mode"] .ele-light-purple-bg {
+	background: linear-gradient(111deg, #499DFC 19.42%, #1466F5 73.08%);
+}
+
 [data-theme="dark-mode"] .ele-brown-bg .rt-special-offer,
 [data-theme="dark-mode"] .ele-brown-bg .rt-info-layout-1 .info-box .info-icon {
 	border-color: #fff;

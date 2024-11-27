@@ -45,7 +45,7 @@ class TgmConfig {
 				'slug'         => 'shopbuilder-pro',
 				'source'       => 'shopbuilder-pro.zip',
 				'required'     => true,
-				'version'      => '1.7.0'
+				'version'      => '1.7.1'
 			],
 
 			// Repository
@@ -55,8 +55,8 @@ class TgmConfig {
 				'required' => false,
 			],
 			[
-				'name'     => esc_html__('Breadcrumb NavXT','fasheno'),
-				'slug'     => 'breadcrumb-navxt',
+				'name'     => esc_html__('ShopBuilder - Elementor WooCommerce Builder Addons','fasheno'),
+				'slug'     => 'shopbuilder',
 				'required' => false,
 			],
 			[
@@ -70,13 +70,13 @@ class TgmConfig {
 				'required' => false,
 			],
 			[
-				'name'     => esc_html__('One Click Demo Import','fasheno'),
-				'slug'     => 'one-click-demo-import',
+				'name'     => esc_html__('Breadcrumb NavXT','fasheno'),
+				'slug'     => 'breadcrumb-navxt',
 				'required' => false,
 			],
 			[
-				'name'     => esc_html__('ShopBuilder - Elementor WooCommerce Builder Addons','fasheno'),
-				'slug'     => 'shopbuilder',
+				'name'     => esc_html__('One Click Demo Import','fasheno'),
+				'slug'     => 'one-click-demo-import',
 				'required' => false,
 			],
 		];

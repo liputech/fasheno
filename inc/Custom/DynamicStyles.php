@@ -56,7 +56,6 @@ class DynamicStyles {
 		--rt-black-bg-color-1: 	#010101;
 		--rt-button-color-1: 	#ffffff;
 		--rt-heading-color-1: 	#010101;
-		--rt-brown-bg-color: 	#fff8ef;
 
 		--rt-body-rgb: 			<?php echo esc_html( Fns::hex2rgb( fasheno_option( 'rt_body_color', '#666666' ) ) ); ?>;
 		--rt-heading-rgb: 		<?php echo esc_html( Fns::hex2rgb( fasheno_option( 'rt_heading_color', '#010101' ) ) ); ?>;
@@ -86,7 +85,6 @@ class DynamicStyles {
 		--rt-black-bg-color-1: 	#ffffff;
 		--rt-button-color-1: 	#010101;
 		--rt-heading-color-1: 	#b4b4b4;
-		--rt-brown-bg-color: 	#fff8ef;
 
 		--rt-body-rgb: 			<?php echo esc_html( Fns::hex2rgb( fasheno_option( 'rt_body_color', '#666666' ) ) ); ?>;
 		--rt-heading-rgb: 		<?php echo esc_html( Fns::hex2rgb( fasheno_option( 'rt_heading_color', '#b4b4b4' ) ) ); ?>;

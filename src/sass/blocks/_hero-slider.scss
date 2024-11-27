@@ -3,41 +3,59 @@
 	overflow: hidden;
 }
 .rt-hero-slider {
-	.slider-content {
-		position:  relative;
-		max-width: 700px;
-		z-index: 9;
-		@media(max-width: 767px) {
-			max-width: 100%;
+	border-radius: 5px;
+	.single-slide {
+		&:nth-child(even) {
+			.content-wrap {
+				flex-direction: row-reverse;
+			}
 		}
 	}
 	.single-slider {
-		background-size: cover;
-		background-position: top center;
-		min-height: 900px;
+		border-radius: 5px;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	.content-wrap {
 		display: flex;
 		align-items: center;
+		gap: 30px;
+		@media(max-width: 767px) {
+			flex-direction: column;
+		}
+	}
+	.slider-image {
+		padding-top: 30px;
+		img {
+			display: block;
+			max-width: 370px;
+		}
+	}
+	.slider-content {
+		position:  relative;
+		z-index: 9;
 	}
 	.sub-title {
 		position: relative;
 		display: inline-block;
-		color: $tertiary_color;
-		font-size: 14px;
-		font-weight: 700;
+		color: $heading_color;
+		border: 1px solid $border_color;
+		border-radius: 3px;
+		font-size: 15px;
+		font-weight: 400;
 		margin-bottom: 7px;
-		text-transform: uppercase;
-		letter-spacing: 0.6px;
-		line-height: 1.4;
+		padding: 5px 12px;
+		line-height: 1.2;
 		z-index: 1;
 	}
 	.slider-title {
-		 font-size: 60px;
-		 color: $white_color;
+		 font-size: 44px;
+		 color: $heading_color;
 		 margin-bottom: 20px;
-		 line-height: 1.1;
+		 line-height: 1.2;
 	}
 	.slider-text {
-		color: $white_color;
+		color: $heading_color;
 		font-size: 16px;
 		line-height: 1.6;
 		margin-bottom: 30px;
@@ -45,26 +63,26 @@
 	.animation {
 		.single-slide {
 			.sub-title {
-				transform: translateY(70px);
-				transition: all ease 1.2s;
+				transform: translateY(30px);
+				transition: all ease 320ms;
 				opacity: 0;
 				visibility: hidden;
 			}
 			.slider-title {
-				transform: translateY(70px);
-				transition: all ease 1.2s;
+				transform: translateY(30px);
+				transition: all ease 320ms;
 				opacity: 0;
 				visibility: hidden;
 			}
 			.slider-text {
-				transform: translateY(70px);
-				transition: all ease 1.2s;
+				transform: translateY(30px);
+				transition: all ease 320ms;
 				opacity: 0;
 				visibility: hidden;
 			}
 			.slider-btn-area {
-				transform: translateY(70px);
-				transition: all ease 1.2s;
+				transform: translateY(30px);
+				transition: all ease 320ms;
 				opacity: 0;
 				visibility: hidden;
 			}
