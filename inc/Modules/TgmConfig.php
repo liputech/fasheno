@@ -47,6 +47,20 @@ class TgmConfig {
 				'required'     => true,
 				'version'      => '1.7.1'
 			],
+			[
+				'name'         => 'WooCommerce Variation Swatches Pro',
+				'slug'         => 'woo-product-variation-swatches-pro',
+				'source'       => 'woo-product-variation-swatches-pro.zip',
+				'required'     => false,
+				'version'      => '2.2.7'
+			],
+			[
+				'name'         => 'WooCommerce Variation images gallery Pro',
+				'slug'         => 'woo-product-variation-gallery-pro',
+				'source'       => 'woo-product-variation-gallery-pro.zip',
+				'required'     => false,
+				'version'      => '2.3.9'
+			],
 
 			// Repository
 			[
@@ -57,6 +71,16 @@ class TgmConfig {
 			[
 				'name'     => esc_html__('ShopBuilder - Elementor WooCommerce Builder Addons','fasheno'),
 				'slug'     => 'shopbuilder',
+				'required' => false,
+			],
+			[
+				'name'     => 'Variation Images Gallery for WooCommerce',
+				'slug'     => 'woo-product-variation-gallery',
+				'required' => false,
+			],
+			[
+				'name'     => 'Variation Swatches for WooCommerce',
+				'slug'     => 'woo-product-variation-swatches',
 				'required' => false,
 			],
 			[

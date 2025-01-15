@@ -16,11 +16,11 @@
 		align-items: center;
 		gap: 15px;
 		background-color: $gray_color;
-		color: $primary_color;
+		color: $heading_color;
 		border-radius: 6px;
 		padding: 22px 26px;
 		font-size: 18px;
-		font-weight: 600;
+		font-weight: 500;
 		line-height: 22px;
 		z-index: 1;
 		i {
@@ -41,7 +41,7 @@
 				right: 24px;
 				font-size: 12px;
 				font-weight: 500;
-				content: "\e858";
+				content: "\e908";
 				font-family: "rt-fontello";
 			}
 		}

@@ -1,0 +1,83 @@
+// Case Study
+.rt-image-tab {
+	.tab-item {
+		display: flex;
+		justify-content: space-between;
+		gap: 80px;
+		position: relative;
+		@media(max-width: 991px) {
+			flex-direction: column;
+			gap: 40px;
+		}
+	}
+	.tab-item-title {
+		flex: 0 0 50%;
+	}
+	.rt-title {
+		position: relative;
+		margin-bottom: 0;
+		font-size: 24px;
+		font-weight: 500;
+	}
+	.rt-number {
+		position: relative;
+		top: 6px;
+		font-size: 24px;
+		@include transition_default();
+	}
+	.content-wrap {
+		position: relative;
+		display: flex;
+		align-items: start;
+		gap: 15px;
+		margin-bottom: 32px;
+		padding-bottom: 32px;
+		cursor: pointer;
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+		&:after {
+			position: absolute;
+			content: "";
+			left: 0;
+			bottom: 0;
+			height: 1px;
+			width: 100%;
+			background-color: $border_color;
+			z-index: 0;
+		}
+		&:before {
+			position: absolute;
+			content: "";
+			left: 0;
+			bottom: 0;
+			height: 1px;
+			width: 0;
+			background-color: $primary_color;
+			transition: width 0.59s;
+			z-index: 1;
+		}
+		&:hover {
+			.rt-number {
+				color: $heading_color;
+			}
+		}
+		&.is-active {
+			&:before {
+				width: 100%;
+			}
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.service-img {
+		line-height: 0;
+		background-color: $white_color;
+		border-radius: 8px;
+		img {
+			border-radius: 8px;
+			object-fit: cover;
+		}
+	}
+}

@@ -12,7 +12,7 @@
 			height: 50px;
 			width: 50px;
 			font-size: 22px;
-			font-weight: 600;
+			font-weight: 500;
 			color: $button_text_color;
 			border: 1px solid $border_color;
 			border-radius: 50%;
@@ -23,11 +23,6 @@
 		}
 		i {
 			font-size: 12px;
-		}
-		&:first-child {
-			i {
-				transform: rotate(-180deg);
-			}
 		}
 		&.active {
 			a {

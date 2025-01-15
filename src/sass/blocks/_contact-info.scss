@@ -1,10 +1,10 @@
 // Contact Info Box
 .rt-contact-info {
 	.info-title {
-		font-size: 24px;
-		font-weight: 700;
+		font-size: 18px;
+		font-weight: 500;
 		color: $heading_color;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		line-height: 1.2;
 	}
 	.contact-list {
@@ -13,23 +13,21 @@
 		padding: 0;
 		li {
 			position: relative;
-			font-size: 18px;
-			font-weight: 500;
 			color: $body_color;
-			margin-bottom: 10px;
 			&:last-child {
 				margin-bottom: 0 !important;
 			}
 			span {
 				color: $heading_color;
-				font-weight: 600;
+				font-weight: 500;
 				margin-right: 5px;
 			}
 			i {
 				margin-right: 5px;
 			}
 			a {
-				color: $body_color;
+				color: $heading_color;
+				font-weight: 600;
 				&:hover {
 					color: $primary_color;
 				}

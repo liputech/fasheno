@@ -26,18 +26,19 @@ class Enqueue {
 		wp_register_style( 'rt-magnific-popup', fasheno_get_css( 'magnific-popup', true ), [], Constants::get_version() );
 		wp_register_style( 'rt-animate', fasheno_get_css( 'animate', true ), [], Constants::get_version() );
 		wp_register_style( 'rt-animated-headline', fasheno_get_css( 'animated-headline', true ), [], Constants::get_version() );
+		wp_register_style( 'rt-swiper', fasheno_get_css( 'swiper.min', true ), [], Constants::get_version() );
 
 		wp_register_script( 'rt-animated-headline', fasheno_get_js( 'animated-headline' ), [ 'jquery' ], Constants::get_version(), true );
-		wp_register_script( 'rt-counterup', fasheno_get_js( 'counterup' ), [ 'jquery' ], Constants::get_version(), true );
-		wp_register_script( 'rt-waypoints', fasheno_get_js( 'waypoints' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-parallax-scroll', fasheno_get_js( 'parallax-scroll' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-ele-parallax', fasheno_get_js( 'ele-parallax' ), [ 'jquery' ], Constants::get_version(), true );
+		wp_register_script( 'rt-countdown', fasheno_get_js( 'countdown' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-appear', fasheno_get_js( 'appear' ), [ 'jquery' ], Constants::get_version(), true );
-		wp_register_script( 'rt-magnific-popup', fasheno_get_js( 'magnific-popup' ), [ 'jquery' ], Constants::get_version(), true );// magnific js
-		wp_register_script( 'rt-nice-select', fasheno_get_js( 'nice-select' ), [ 'jquery' ], Constants::get_version(), true );// Isotope js
-		wp_register_script( 'rt-isotope', fasheno_get_js( 'isotope.min' ), [ 'jquery' ], Constants::get_version(), true );// Swiper js
-		wp_register_script( 'rt-swiper', fasheno_get_js( 'swiper.min' ), [ 'jquery' ], Constants::get_version(), true );// headRoom js
-		wp_register_script( 'rt-headroom', fasheno_get_js( 'headroom' ), [ 'jquery' ], Constants::get_version(), true );// headRoom js
+		wp_register_script( 'rt-magnific-popup', fasheno_get_js( 'magnific-popup' ), [ 'jquery' ], Constants::get_version(), true );
+		wp_register_script( 'rt-nice-select', fasheno_get_js( 'nice-select' ), [ 'jquery' ], Constants::get_version(), true );
+		wp_register_script( 'rt-isotope', fasheno_get_js( 'isotope.min' ), [ 'jquery' ], Constants::get_version(), true );
+		wp_register_script( 'rt-swiper', fasheno_get_js( 'swiper.min' ), [ 'jquery' ], Constants::get_version(), true );
+		wp_register_script( 'rt-swiper-animation', fasheno_get_js( 'swiper-animation' ), [ 'jquery' ], Constants::get_version(), true );
+		wp_register_script( 'rt-headroom', fasheno_get_js( 'headroom' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-wow', fasheno_get_js( 'wow.min' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-color-mode', fasheno_get_js( 'color-mode' ), [ 'jquery' ], Constants::get_version(), true );
 
@@ -52,6 +53,10 @@ class Enqueue {
 		wp_enqueue_style( 'fasheno-gfonts' );
 		wp_enqueue_style( 'rt-animate' );
 		wp_enqueue_style( 'rt-magnific-popup' );
+
+		//if ( ! function_exists( 'rtsb' ) ) {
+			wp_enqueue_style( 'rt-swiper' );
+		//}
 		wp_enqueue_style( 'fasheno-main', fasheno_get_css( 'style', true ), [], Constants::get_version() );
 
 		// JS
@@ -60,6 +65,8 @@ class Enqueue {
 		if ( fasheno_option( 'rt_color_mode' ) ) {
 			wp_enqueue_script('rt-color-mode');
 		}
+
+		wp_enqueue_script( 'rt-swiper-animation' );
 
 		wp_enqueue_script( 'rt-appear', fasheno_get_js( 'appear' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_enqueue_script( 'rt-magnific-popup', fasheno_get_js( 'magnific-popup' ), [ 'jquery' ], Constants::get_version(), true );// magnific js
@@ -78,6 +85,11 @@ class Enqueue {
 		// localize script
 		$fasheno_localize_data = array(
 			'rtl' => is_rtl()?'rtl':'ltr',
+
+			'day'	      => esc_html__('Day' , 'fasheno'),
+			'hour'	      => esc_html__('Hour' , 'fasheno'),
+			'minute'      => esc_html__('Min' , 'fasheno'),
+			'second'      => esc_html__('Sec' , 'fasheno'),
 
 			// Ajax
 			'ajaxURL' => admin_url('admin-ajax.php'),

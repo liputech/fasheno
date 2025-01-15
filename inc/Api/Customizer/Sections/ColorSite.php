@@ -39,16 +39,6 @@ class ColorSite extends Customizer {
 
 		return apply_filters( 'rt_site_color_controls', [
 
-			'code_mode_type' => [
-				'type'    => 'select',
-				'label'   => __( 'Select Color Mode', 'fasheno' ),
-				'default' => 'dark-mode',
-				'choices' => [
-					'light-mode' => esc_html__( 'Light Mode', 'fasheno' ),
-					'dark-mode' => esc_html__( 'Dark Mode', 'fasheno' ),
-				]
-			],
-
 			'rt_site_color1'   => [
 				'type'  => 'heading',
 				'label' => __( 'Site Ascent Color', 'fasheno' ),

@@ -82,7 +82,7 @@ figure {
 }
 
 pre {
-	background: #f1f1f1;
+	background: $gray_color;
 	line-height: 1.2;
 	margin-bottom: 1.6em;
 	max-width: 100%;
@@ -92,12 +92,12 @@ pre {
 	word-wrap: break-word;
 }
 mark, ins {
-	background: #006D5B;
+	background: $primary_color;
 	text-decoration: none;
 	color: #ffffff;
-	padding: 1px 3px;
-	border-radius: 2px;
-	font-weight: 600;
+	padding: 1px 5px;
+	border-radius: 3px;
+	font-weight: 500;
 }
 kbd {
 	color: #041b16;
@@ -106,7 +106,7 @@ kbd {
 	background: #f1f1f1;
 }
 .wp-block-code {
-	border: 1px solid #e7e7e7;
+	border: 1px solid $border_color;
 	border-radius: 6px;
 	font-family: Menlo, Consolas, monaco, monospace;
 	padding: .8em 1em;
@@ -135,7 +135,7 @@ table th,
 table td,
 .wp-block-table td,
 .wp-block-table th{
-	border: 1px solid #e7e7e7;
+	border: 1px solid $border_color;
 	padding: 8px;
 	text-align: center;
 }
@@ -143,24 +143,4 @@ table td,
 td,
 th {
 	padding: 0;
-}
-
-//Scrollbar CSS
-::-webkit-scrollbar {
-	width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-	background: $gray_color;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-	background: $meta_color;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-	background: $primary_color;
 }

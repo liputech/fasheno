@@ -18,17 +18,17 @@ $shopview_grid_class = 'grid' == $shopview ? 'selected':'';
 	</div>
 	<div class="view-mode" id="rt-shop-view-mode">
 		<ul>
-			<li class="sort-list rtsb-archive-catalog-ordering">
-				<?php woocommerce_catalog_ordering();?>
-				<span class="line"></span>
+			<li class="list-view-nav <?php echo esc_attr($shopview_list_class); ?>">
+				<a href="<?php echo Fns::shop_list_page_url(); ?>"><i class="icon-rt-list-2"></i></a>
 			</li>
 			<li class="grid-view-nav <?php echo esc_attr($shopview_grid_class); ?>">
 				<a href="<?php echo Fns::shop_grid_page_url(); ?>" >
-					<i class="icon-rt-grid"></i></a>
+					<i class="icon-rt-grid-two"></i></a>
 				<span class="line"></span>
 			</li>
-			<li class="list-view-nav <?php echo esc_attr($shopview_list_class); ?>">
-				<a href="<?php echo Fns::shop_list_page_url(); ?>"><i class="icon-rt-list"></i></a>
+			<li class="sort-list rtsb-archive-catalog-ordering">
+				<?php woocommerce_catalog_ordering();?>
+				<span class="line"></span>
 			</li>
 		</ul>
 	</div>

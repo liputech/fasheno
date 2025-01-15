@@ -26,3 +26,8 @@
 	display: none;
 }
 
+@media (min-width: 1025px) {
+	.menu-icon-action .mobile-hamburg {
+		display: none;
+	}
+}

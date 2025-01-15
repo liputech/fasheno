@@ -31,11 +31,16 @@
 	}
 	.rt-title {
 		display: block;
-		color: $black_color;
+		color: $heading_color;
 		font-weight: 250;
 		font-size: 36px;
 		margin-bottom: 20px;
 		line-height: 1.2;
+		@media(max-width: 991px) {
+			br {
+				display: none;
+			}
+		}
 	}
 	.rt-sub-title {
 		display: inline-block;
@@ -55,7 +60,7 @@
 				top: 0;
 				height: 100%;
 				width: 100%;
-				background-color: rgba(255,255,255, 0.6);
+				background-color: rgba(255,255,255, 0.8);
 			}
 		}
 	}
@@ -64,9 +69,6 @@
 	&.image-display {
 		justify-content: flex-end;
 	}
-	@media(max-width: 991px) {
-		flex-direction: column;
-	}
 	.rt-image {
 		position: absolute;
 		left: 0;
@@ -74,9 +76,6 @@
 	}
 }
 .rt-image-box-layout-2 {
-	@media(max-width: 991px) {
-		flex-direction: column-reverse;
-	}
 	.rt-image {
 		position: absolute;
 		right: 0;

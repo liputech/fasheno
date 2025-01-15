@@ -11,23 +11,23 @@ class PostShare {
 		$defaults       = [
 			'facebook'  => [
 				'url'  => "http://www.facebook.com/sharer.php?u=$url",
-				'icon' => 'icon-rt-facebook',
+				'icon' => 'icon-rt-facebook-1',
 			],
 			'twitter'   => [
 				'url'  => "https://twitter.com/intent/tweet?source=$url&text=$title:$url",
-				'icon' => 'icon-rt-x-twitter'
+				'icon' => 'icon-rt-twitter-1'
 			],
 			'linkedin'  => [
 				'url'  => "http://www.linkedin.com/shareArticle?mini=true&url=$url&title=$title",
-				'icon' => 'icon-rt-linkedin'
+				'icon' => 'icon-rt-linkedin-1'
 			],
 			'pinterest' => [
 				'url'  => "http://pinterest.com/pin/create/button/?url=$url&description=$title",
-				'icon' => 'icon-rt-pinterest'
+				'icon' => 'icon-rt-pinterest-1'
 			],
 			'whatsapp' => [
 				'url'   => 'https://api.whatsapp.com/send?text='. $title . ' – ' . $url ,
-				'icon' => 'icon-rt-whatsapp'
+				'icon' => 'icon-rt-whatsapp-1'
 			],
 			'youtube' => [
 				'url'  => "https://www.youtube.com?text='. $title .'&amp;url='. $url",

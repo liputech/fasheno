@@ -16,7 +16,7 @@ Section Title
 		display: inline-flex;
 		align-items: center;
 		margin-bottom: 7px;
-		color: $primary_color;
+		color: $heading_color;
 		i {
 			margin-right: 5px;
 		}
@@ -113,6 +113,7 @@ Section Title
 		}
 	}
 	.description {
+		color: $heading_color_1;
 		p {
 			opacity: 1 !important;
 			margin-bottom: 15px;

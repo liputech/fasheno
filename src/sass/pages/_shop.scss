@@ -7,9 +7,10 @@
 		margin-bottom: 15px;
 		line-height: 1.4;
 		del {
-			font-size: 17px;
+			color: $meta_color;
+			font-size: 18px;
 			font-weight: 400;
-			opacity: 0.5;
+			opacity: 1 !important;
 		}
 		ins {
 			color: $primary_color;
@@ -19,7 +20,7 @@
 	select,
 	.wc-blocks-components-select .wc-blocks-components-select__container {
 		border: 1px solid $border_color;
-		border-radius: 6px;
+		border-radius: 4px;
 		padding: 5px 24px 5px 12px;
 		transition: all 0.21s ease-in-out;
 	}
@@ -28,15 +29,17 @@
 	}
 	.woocommerce-ordering select,
 	.rtsb-archive-catalog-ordering .woocommerce-ordering select {
+		color: $heading_color;
 		border: 1px solid $border_color;
-		border-radius: 6px;
+		border-radius: 3px;
 		padding: 5px 24px 5px 12px;
-		font-size: 16px;
-		font-weight: 500;
+		font-size: 15px;
+		font-weight: 400;
 		width: initial;
-		height: 40px;
+		height: 45px;
 		outline: none;
 		vertical-align: middle;
+		transition: unset;
 	}
 }
 .woo-shop-top {
@@ -44,26 +47,26 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 15px;
-	border: 1px solid $border_color;
-	border-radius: 8px;
 	margin-bottom: 24px;
-	padding: 12px 24px;
+	.woocommerce-result-count {
+		font-size: 16px;
+	}
 	.view-mode {
 		ul {
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			flex-wrap: wrap;
-			gap: 12px;
+			gap: 10px;
 			@include list_default;
 			a {
 				font-size: 18px;
-				width: 40px;
-				height: 40px;
+				width: 50px;
+				height: 45px;
 				padding: 0;
 				display: grid;
 				place-content: center;
-				border-radius: 5px;
+				border-radius: 3px;
 				border: 1px solid $border_color;
 				color: $meta_color;
 			}
@@ -84,7 +87,7 @@
 		margin: 0 0 3px;
 		&:before {
 			content: "SSSSS";
-			color: $body_color;
+			color: $meta_color;
 		}
 		span:before {
 			color: $tertiary_color;
@@ -98,9 +101,9 @@
 		font-size: 14px;
 	}
 	span.onsale {
-		background-color: $primary_color;
+		background-color: $red_color;
 		color: $white_color;
-		border-radius: 6px 0;
+		border-radius: 0;
 		margin: 0;
 		padding: 6px 12px;
 		min-width: auto;
@@ -108,8 +111,10 @@
 		line-height: 1;
 		font-weight: 500;
 		left: 0;
-		top: 0;
+		top: 10px;
 		z-index: 2;
+		display: inline-block;
+		clip-path: polygon(50% 0, 100% 0, 100% 0, 90% 50%, 100% 100%, 100% 100%, 62% 100%, 0 100%, 0 0, 0 0);
 	}
 	ul.products {
 		margin: 0;
@@ -130,7 +135,7 @@
 				transition: all .45s;
 			}
 			.onsale {
-				top: 0;
+				top: 10px;
 				right: auto;
 				left: 0;
 				margin: 0;
@@ -140,11 +145,6 @@
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
-				border: 1px solid $border_color;
-				border-radius: 8px;
-				padding: 15px;
-				height: 100%;
-				transition: all 0.21s ease-in-out;
 				.rt-product-thumb {
 					position: relative;
 					overflow: hidden;
@@ -154,7 +154,7 @@
 				}
 				.rt-shop-meta {
 					display: flex;
-					gap: 5px;
+					gap: 8px;
 					flex-wrap: wrap;
 					justify-content: center;
 					bottom: 0;
@@ -169,22 +169,21 @@
 						display: inline-flex;
 						align-items: center;
 						justify-content: center;
-						min-width: 36px;
-						height: 36px;
-						background-color: $white_color;
+						min-width: 50px;
+						height: 50px;
+						background-color: $white_bg_color;
 						color: $heading_color;
-						border-radius: 6px;
-						font-size: 14px;
+						border-radius: 3px;
+						font-size: 18px;
+						margin-top: 0;
 						padding: 5px 8px;
 						&:hover {
 							background-color: $primary_color;
 							color: $white_color;
 						}
 					}
-					.action-cart {
-						i {
-							padding-right: 5px;
-						}
+					.button-text, .text {
+						display: none;
 					}
 				}
 				.shop-cat {
@@ -192,7 +191,7 @@
 					line-height: 1;
 					a {
 						color: $body_color;
-						font-size: 14px;
+						font-size: 15px;
 						font-weight: 400;
 						&:hover {
 							color: $primary_color;
@@ -200,20 +199,37 @@
 					}
 				}
 				.rt-shop-title {
-					font-size: 17px;
+					font-size: 20px;
+					font-weight: 400;
 					margin-bottom: 10px;
 					padding: 0;
 					line-height: 1.2;
+					a {
+						color: $heading_color;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
 				}
 				.rt-price {
 					color: $primary_color;
 					font-size: 20px;
-					font-weight: 700;
+					font-weight: 500;
 					margin-top: 10px;
 					margin-bottom: 0;
 					display: flex;
 					align-items: center;
 					column-gap: 5px;
+					del {
+						color: $meta_color;
+						opacity: 1;
+					}
+				}
+				.variations {
+					display: inline-flex;
+					flex-direction: column;
+					gap: 10px;
+					margin-top: 10px;
 				}
 				&:hover {
 					.rt-product-thumb {
@@ -223,7 +239,7 @@
 					}
 					.rt-shop-meta {
 						opacity: 1;
-						transform: translateY(-10px);
+						transform: translateY(-30px);
 						transition: all .3s cubic-bezier(.08,.27,.04,1.11);
 						visibility: visible;
 					}
@@ -242,6 +258,9 @@
 				}
 				.rt-product-thumb {
 					margin-bottom: 0;
+					@media(min-width: 769px) {
+						width: 30%;
+					}
 				}
 				.rt-shop-title {
 					font-size: 22px;
@@ -258,7 +277,6 @@
 			.product-rating {
 				display: inline-flex;
 				align-items: center;
-				column-gap: 8px;
 				margin-top: 0;
 			}
 		}
@@ -484,6 +502,7 @@
 	opacity: 1;
 	padding: 15px 20px 16px 20px;
 }
+
 // Checkout page
 .wc-block-components-form .wc-block-components-text-input input,
 .wc-block-components-text-input input,
@@ -517,10 +536,13 @@ body .wc-block-checkout__sidebar .wc-block-components-totals-item {
 	font-weight: 700;
 }
 // Quick View
+.rtsb-ui-modal .rtsb-modal-wrapper .rtsb-modal-content {
+	background-color: $body_bg_color;
+}
 .rtsb-ui-modal .rtsb-modal-wrapper.quick-view-modal .rtsb-modal-content .rtsb-modal-body .summary .product_title {
 	color: $heading_color;
-	font-size: 36px;
-	font-weight: 700;
+	font-size: 26px;
+	font-weight: 600;
 	margin-bottom: 10px;
 	line-height: 1.2;
 }
@@ -539,7 +561,7 @@ body .wc-block-checkout__sidebar .wc-block-components-totals-item {
 	min-height: 48px;
 }
 .rtsb-ui-modal .rtsb-modal-wrapper.quick-view-modal .rtsb-modal-content .rtsb-modal-body .summary .single_add_to_cart_button:hover {
-	background-color: $secondary_color;
+	//background-color: $secondary_color;
 }
 
 // Wishlist
@@ -580,3 +602,8 @@ body .wc-block-checkout__sidebar .wc-block-components-totals-item {
 		}
 	}
 }
+
+@import "parts/_shop-builder";
+@import "parts/_single-product";
+@import "parts/_shop-sidebar";
+@import "parts/_cart-checkout";

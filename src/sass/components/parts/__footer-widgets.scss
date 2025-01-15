@@ -75,35 +75,6 @@
 			height: 14px;
 		}
 	}
-	.fluentform {
-		.ff-t-container {
-			position: relative;
-			@media(min-width: 768px) {
-				gap: 0;
-				align-items: start;
-			}
-		}
-		.ff-el-group {
-			margin-bottom: 0;
-		}
-		.ff-btn-submit {
-			margin-bottom: 0 !important;
-			i {
-				display: block;
-				transition: all 0.4s ease-in-out;
-			}
-			&:hover {
-				i {
-					animation: headShake 1.5s;
-				}
-			}
-		}
-		.ff-t-cell {
-			&:first-of-type {
-				flex-basis: 100% !important;
-			}
-		}
-	}
 
 	.tagcloud {
 		display: flex;

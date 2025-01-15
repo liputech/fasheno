@@ -20,9 +20,9 @@
             Fasheno.menuDrawerOpen(offCanvas);
             Fasheno.offcanvasMenuToggle(offCanvas);
             Fasheno.headerSearchOpen();
+            Fasheno.headerTopbar();
             Fasheno.rtCategorySearchDropdown();
             Fasheno.backToTop();
-            Fasheno.counterUp();
             Fasheno.pricingTab();
             Fasheno.preLoader();
             Fasheno.menuOffset();
@@ -31,16 +31,16 @@
             Fasheno.wow();
             Fasheno.rtElementorParallax();
             Fasheno.rtAnimatedHeadline();
+            Fasheno.rtCountDown();
             Fasheno.magnificPopup();
             Fasheno.imageFunction();
             Fasheno.hasAnimation();
             Fasheno.rtMasonary();
             Fasheno.rtIsotope();
-            Fasheno.swiperSlider($);
-            Fasheno.horizontalSwiperSlider();
-            Fasheno.heroSlider();
-			Fasheno.ProgressBar();
 			Fasheno.rtOpenTabs();
+			Fasheno.heroSlider();
+			Fasheno.swiperSlider($);
+			Fasheno.horizontalSwiperSlider();
         },
 
 		rtElementorParallax: function () {
@@ -66,6 +66,14 @@
 			});
 		},
 
+		rtCountDown: function () {
+			$('.countdown').each(function () {
+				var date = $(this).data('date');
+				$(this).countdown(date, function (event) {
+					var $this = $(this).html(event.strftime("<div class='countdown-section'><div class='countdown-number'>%D</div> <div class='countdown-unit'>" + fashenoObj.day + "%!D</div> </div><div class='countdown-section'><div class='countdown-number'>%H</div> <div class='countdown-unit'>" + fashenoObj.hour + "%!H</div> </div><div class='countdown-section'><div class='countdown-number'>%M</div> <div class='countdown-unit'>" + fashenoObj.minute + "%!M</div> </div><div class='countdown-section'><div class='countdown-number'>%S</div> <div class='countdown-unit'>" + fashenoObj.second + "%!S</div> </div>"));
+				});
+			});
+		},
 
 		rtCategorySearchDropdown: function () {
 			$('.category-search-dropdown-js .dropdown-menu li').on('click', function (e) {
@@ -382,6 +390,13 @@
 			});
         },
 
+		headerTopbar: function () {
+			$(".fasheno-top-bar .close").on("click", function (event) {
+				event.preventDefault();
+				$(".fasheno-top-bar").addClass("close").slideUp(500);
+			});
+		},
+
         backToTop: function () {
             /* Scroll to top */
             $('.scrollToTop').on('click', function () {
@@ -398,17 +413,6 @@
                 $('.scrollToTop').removeClass('show');
             }
         },
-
-		/* Counter */
-		counterUp: function () {
-			const counterContainer = $('.counter');
-			if (counterContainer.length) {
-				counterContainer.counterUp({
-					delay: counterContainer.data('rtsteps'),
-					time: counterContainer.data('rtspeed')
-				});
-			}
-		},
 
   		/* Pricing Switch */
 		pricingTab: function () {
@@ -430,46 +434,11 @@
 			});
 		},
 
-		// with progress bar
-		ProgressBar: function () {
-			if ( $(".progress-appear").length === 0 ) {
-				return false;
-			}
-			let counter = true;
-			$(".progress-appear").appear();
-			$(".progress-appear").on("appear", function () {
-				if (counter) {
-					// with skill bar
-					$(".skill-per").each(function () {
-						let $this = $(this);
-						let per = $this.attr("data-per");
-						$this.css("width", per + "%");
-						$({ animatedValue: 0 }).animate(
-							{
-								Hover: per,
-								animatedValue: per
-							},
-							{
-								duration: 500,
-								step: function () {
-									$this.attr("data-per", Math.floor(this.animatedValue) + "%");
-								},
-								complete: function () {
-									$this.attr("data-per", Math.floor(this.animatedValue) + "%");
-								},
-							},
-						);
-					});
-					counter = false;
-				}
-			});
-		},
-
 		/* Tab action */
 		rtOpenTabs: function () {
 			var TabBlock = {
 				s: {
-					animLen: 300
+					animLen: 500
 				},
 
 				init: function() {
@@ -679,6 +648,7 @@
 
 		/* Swiper slider */
 		heroSlider: function () {
+			let swiperAnimation = new SwiperAnimation();
 			$('.rt-swiper-hero-slider').each(function () {
 				var $this = $(this);
 				var settings = $this.data('xld');
@@ -696,6 +666,37 @@
 					spaceBetween: settings['spaceBetween'],
 					centeredSlides: settings['centeredSlides'],
 					slidesPerGroup: settings['slidesPerGroup'],
+					parallax: true,
+					on: {
+						init: function () {
+							let swiper = this;
+							for (let i = 0; i < swiper.slides.length; i++) {
+								$(swiper.slides[i])
+									.find('.img-container')
+									.attr({
+										'data-swiper-parallax': 0.75 * swiper.width,
+										'data-swiper-paralalx-opacity': 0.5
+									});
+							}
+							let index = swiper.activeIndex;
+							$(swiper.slides).removeClass('active');
+							$(swiper.slides[index]).addClass('active');
+
+							swiperAnimation.init(this).animate();
+						},
+						transitionEnd: function () {
+							let swiper = this;
+							let index = swiper.activeIndex;
+							$(swiper.slides).removeClass('active');
+							$(swiper.slides[index]).addClass('active');
+						},
+						resize: function () {
+							this.update();
+						},
+						slideChange: function () {
+							swiperAnimation.init(this).animate();
+						}
+					},
 					pagination: {
 						el: $pagination,
 						clickable: true,
@@ -727,9 +728,6 @@
 				swiper.init();
 			});
 		},
-
-
-
     };
 
     $(document).ready(function (e) {
@@ -755,19 +753,18 @@
                 Fasheno.AjaxSearch();
                 Fasheno.rtElementorParallax();
 				Fasheno.rtAnimatedHeadline();
+				Fasheno.rtCountDown();
 				Fasheno.rtCategorySearchDropdown();
                 Fasheno.magnificPopup();
 				Fasheno.hasAnimation();
-				Fasheno.counterUp();
 				Fasheno.pricingTab();
 				Fasheno.imageFunction();
 				Fasheno.rtMasonary();
 				Fasheno.rtIsotope();
+				Fasheno.rtOpenTabs();
+				Fasheno.heroSlider();
 				Fasheno.swiperSlider($);
 				Fasheno.horizontalSwiperSlider();
-				Fasheno.heroSlider();
-				Fasheno.ProgressBar();
-				Fasheno.rtOpenTabs();
             });
 
         }

@@ -7,6 +7,7 @@
  * @package fasheno
  */
 
+use RadiusTheme\SB\Helpers\Fns;
 use RT\Fasheno\Options\Opt;
 
 if(! Opt::$has_top_bar ) {
@@ -55,7 +56,7 @@ $_fullwidth = Opt::$header_width == 'full' ? '-fluid' : '';
 						<?php if( fasheno_option( 'rt_follow_us_label' ) ) { ?><label><?php echo fasheno_option( 'rt_follow_us_label' ) ?></label><?php } ?>
 						<?php fasheno_get_social_html( '#555' ); ?>
 					</div>
-				<?php } if( fasheno_option( 'rt_top_bar_currency' ) ) { ?>
+				<?php } if( fasheno_option( 'rt_top_bar_currency' ) && Fns::is_module_active( 'currency_switcher' ) ) { ?>
 					<?php echo do_shortcode('[currency_switcher]')  ?>
 				<?php } ?>
 			</div>

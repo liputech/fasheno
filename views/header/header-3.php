@@ -29,7 +29,7 @@ $_fullwidth = Opt::$header_width == 'full' ? '-fluid' : '';
 			<?php if ( fasheno_option( 'rt_header_phone' ) ) { ?>
 			<div class="phone-wrap">
 				<div class="info-icon phone-icon">
-					<i class="icon-rt-phone-2"></i>
+					<i class="icon-rt-phone-call"></i>
 				</div>
 				<div class="info-text phone-no">
 					<span class="phone-label"><?php fasheno_html( fasheno_option('rt_get_phone_label') , 'allow_title' );?></span><a href="tel:<?php echo esc_attr( fasheno_option('rt_phone') );?>"><?php fasheno_html( fasheno_option('rt_phone') , 'allow_title' );?></a>

@@ -31,34 +31,18 @@
 		.entry-title {
 			display: inline-flex;
 			align-items: center;
-			font-size: 80px;
-			line-height: 1.4;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 1.2;
 			position: relative;
 			margin-bottom: 0;
 			text-transform: uppercase;
-			-webkit-text-stroke-width: 1px;
-			-webkit-text-stroke-color: $body_color;
-			color: transparent;
-			&:before {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 0;
-				color: $primary_color;
-				white-space: nowrap;
-				content: attr(data-per);
-				transition: all 0.5s cubic-bezier(0.17, 0.67, 0.32, 0.87);
-				height: 100%;
-				overflow: hidden;
-				z-index: -1;
-			}
-			&:hover {
-				&:before {
-					width: 100%;
-				}
-			}
+			color: $heading_color;
 			a {
-				color: transparent;
+				color: $heading_color;
+				&:hover {
+					color: $primary_color;
+				}
 			}
 		}
 		.title-gradient {
@@ -69,7 +53,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 120px;
+			width: 60px;
 			text-align: center;
 		}
 	}

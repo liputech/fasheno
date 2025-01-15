@@ -73,6 +73,17 @@ class General extends Customizer {
 				'label' => __( 'Color Mode', 'fasheno' ),
 			],
 
+			'code_mode_type' => [
+				'type'    => 'select',
+				'label'   => __( 'Select Color Mode', 'fasheno' ),
+				'default' => 'light-mode',
+				'choices' => [
+					'light-mode' => esc_html__( 'Light Mode', 'fasheno' ),
+					'dark-mode' => esc_html__( 'Dark Mode', 'fasheno' ),
+				],
+				'condition' => [ 'rt_color_mode' ]
+			],
+
 			'rt_remove_admin_bar' => [
 				'type'        => 'switch',
 				'label'       => __( 'Remove Admin Bar', 'fasheno' ),

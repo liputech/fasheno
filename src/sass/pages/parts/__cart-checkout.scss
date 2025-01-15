@@ -1,0 +1,211 @@
+// Cart page
+.rtsb-cart-table {
+	table.shop_table {
+		margin-bottom: 0;
+		tr {
+			th {
+				color: $heading_color;
+				font-size: 16px;
+				font-weight: 600;
+			}
+			td:is(.product-name, .product-data) a {
+				font-size: 15px;
+				font-weight: 500;
+			}
+		}
+		thead {
+			background-color: $gray_color;
+		}
+		tbody {
+			tr{
+				&:nth-child(odd) {
+					background-color: $white_bg_color;
+				}
+				&:nth-child(even) {
+					background-color: $gray_color;
+				}
+			}
+		}
+		.rtsb-quantity-box-group {
+			border: 1px solid $border_color;
+			border-radius: 5px;
+		}
+		.actions-button-wrapper {
+			.button {
+				border: 1px solid $border_color;
+				color: $button_text_color;
+				background-color: transparent;
+				@media (max-width: 768px) {
+					width: auto !important;
+				}
+				&:hover {
+					border: 1px solid transparent;
+					background-color: $primary_color;
+					color: $button_color;
+
+				}
+			}
+		}
+	}
+}
+
+// checkout page
+.rtsb-woocommerce-checkout {
+	#order_review {
+		table.shop_table {
+			border: 1px solid $border_color;
+			border-radius: 5px;
+		}
+		th {
+			color: $heading_color;
+			font-size: 16px;
+			font-weight: 600;
+		}
+		tfoot {
+			td {
+				color: $heading_color;
+				font-size: 16px;
+				font-weight: 600;
+			}
+		}
+	}
+}
+.rtsb-myacount-page :is(input, textarea, select, .select2-selection--single ),
+.woocommerce-billing-fields :is(input, textarea, select, .select2-selection--single ) {
+	border: 1px solid $border_color;
+	background-color: $white_bg_color;
+	color: $body_color;
+	border-radius: 3px;
+	padding: 0 12px;
+	transition: unset;
+}
+.rtsb-form-order-note :is( input, textarea ) {
+	border: 1px solid $border_color;
+	background-color: $white_bg_color;
+	border-radius: 3px;
+	padding: 12px;
+	transition: unset;
+}
+.woocommerce-account ol.commentlist.notes li.note p.meta {
+	color: $heading_color;
+	font-weight: 500;
+}
+.rtsb-notice {
+	.wc-block-components-notice-banner {
+		color: $heading_color;
+		&.is-info {
+			border: 1px solid $primary_color;
+			background-color: $gray_color;
+		}
+	}
+}
+
+// my account
+.woocommerce-MyAccount-navigation {
+	background-color: $gray_color;
+	border-radius: 10px;
+	padding: 20px;
+}
+.rtsb-myacount-page {
+	label {
+		color: $heading_color;
+		font-size: 16px;
+	}
+	legend {
+		color: $heading_color;
+		font-size: 28px;
+		font-weight: 500;
+	}
+	table.shop_table {
+		th {
+			color: $heading_color;
+			font-size: 16px;
+			font-weight: 500;
+		}
+	}
+	table.rtsb-account-table {
+		border: none;
+		th, td {
+			border: none;
+		}
+	}
+}
+.rtsb-order-thankyou {
+	.woocommerce-notice {
+		background-color: $gray_color;
+		border-radius: 5px;
+		padding: 15px;
+	}
+}
+.rtsb-builder-content .rtsb-order-thankyou table td,
+.rtsb-builder-content .rtsb-order-thankyou table th {
+	background-color: transparent;
+	border: 1px solid $border_color;
+}
+.woocommerce table.shop_table tbody th,
+.woocommerce table.shop_table tfoot td,
+.woocommerce table.shop_table tfoot th {
+	color: $heading_color;
+	font-size: 16px;
+	font-weight: 500;
+}
+.woocommerce ul.order_details {
+	li {
+		float: unset;
+		display: block;
+		width: 100%;
+		border: none;
+		background-color: $gray_color;
+		border-radius: 12px;
+		padding: 15px;
+		text-align: center;
+		strong {
+			color: $heading_color;
+			font-weight: 500;
+		}
+	}
+}
+#customer_login {
+	background-color: $gray_color;
+	border-radius: 10px;
+	padding: 30px;
+	.col-1, .col-2 {
+		max-width: 50%;
+		@media(max-width: 767px) {
+			max-width: 100%;
+			width: 100% !important;
+		}
+	}
+}
+.woocommerce form.login,
+.woocommerce form.register {
+	border: 1px solid $border_color;
+	padding: 20px;
+	margin: 2em 0;
+	text-align: left;
+	border-radius: 5px;
+}
+@media (min-width: 1025px) {
+	.woocommerce-account .rtsb-builder-content .rtsb-myacount-page .rtsb-left-border:before {
+		background: $border_color;
+		width: 1px;
+	}
+}
+@media (min-width: 768px) {
+	.woocommerce .col2-set .col-1,
+	.woocommerce .col2-set .col-2,
+	.woocommerce-page .col2-set .col-1,
+	.woocommerce-page .col2-set .col-2 {
+		float: left;
+	}
+}
+
+// Compare
+.rtsb-compare-wrap {
+	border-color: $border_color;
+}
+.rtsb-compare-list-col {
+	border-color: $border_color;
+	text-align: left;
+	justify-content: start;
+}

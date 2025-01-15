@@ -2,7 +2,7 @@
 
 .fasheno-offcanvas-drawer {
 	position: fixed;
-	top: 50px;
+	top: 58px;
 	left: 0;
 	width: $nav_drawer_width;
 	margin-left: - $nav_drawer_width;
@@ -11,7 +11,6 @@
 	box-sizing: border-box;
 	transition: 0.4s ease-in-out;
 	background-color: $body_bg_color;
-	border-top: 1px solid $border_color;
 	color: $body_color;
 	height: 100vh;
 	padding: 24px;
@@ -205,7 +204,7 @@
 }
 // mobile action button
 .mobile-action-button {
-	@media(min-width: 1200px) {
+	@media(min-width: 1025px) {
 		display: none;
 	}
 	position: fixed;
@@ -234,6 +233,26 @@
 				i {
 					color: $button_color;
 				}
+			}
+		}
+	}
+}
+
+.fasheno-header-footer {
+	.fasheno-offcanvas-drawer {
+		top: 72px
+	}
+
+	&.admin-bar {
+		.fasheno-offcanvas-drawer {
+			top: 91px
+		}
+	}
+
+	@media(max-width: 782px){
+		&.admin-bar {
+			.fasheno-offcanvas-drawer {
+				top: 105px
 			}
 		}
 	}

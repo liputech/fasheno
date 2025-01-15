@@ -17,6 +17,7 @@
 		position: relative;
 		display: inline-flex;
 		align-items: center;
+		column-gap: 24px;
 	}
 	.icon-box {
 		position: relative;
@@ -27,7 +28,7 @@
 		height: 62px;
 		border-radius: 50%;
 		background-color: $white_color;
-		color: $primary_color;
+		color: $black_color;
 		line-height: 42px;
 		text-align: center;
 		font-size: 22px;
@@ -36,104 +37,21 @@
 		justify-content: center;
 		align-items: center;
 		backdrop-filter: blur(7.5px);
+		transform: scale(1);
+		transition: background-color 320ms;
+		i {
+			transition: all 320ms;
+		}
 		&:hover {
 			background-color: $primary_color;
 			color: $white_color;
-		}
-		&::before,
-		&::after {
-			content: "";
-			background-color: transparent;
-			border: 1px solid #B2C2C0;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translateY(-50%) translateX(-50%);
-			border-radius: 50%;
-			animation: pulse_border 2000ms ease-out infinite;
-			z-index: -1;
+			transform: scale(1.02);
 		}
 	}
 	.button-text {
-		margin-left: 24px;
 		display: inline-block;
 		font-size: 16px;
-		color: $meta_color;
+		color: $black_color;
 		font-weight: 800;
-	}
-}
-.icon-style1 .video-popup-icon {
-	z-index: 1;
-}
-.icon-style1 .video-popup-icon::before {
-	height: 83px;
-	width: 83px;
-}
-.icon-style1 .video-popup-icon::after {
-	height: 100px;
-	width: 100px;
-}
-.icon-style2 .video-popup-icon::before {
-	height: 83px;
-	width: 83px;
-}
-.icon-style2 .video-popup-icon::after {
-	height: 100px;
-	width: 100px;
-}
-
-@-webkit-keyframes sppbModalRipple {
-	0% {
-		opacity: 0;
-		transform: scale(0.5);
-	}
-	10% {
-		opacity: 1;
-	}
-	90% {
-		opacity: 0;
-	}
-	to {
-		opacity: 0;
-		transform: scale(1);
-	}
-}
-
-@keyframes sppbModalRipple {
-	0% {
-		opacity: 0;
-		transform: scale(0.5);
-	}
-	10% {
-		opacity: 1;
-	}
-	90% {
-		opacity: 0;
-	}
-	to {
-		opacity: 0;
-		transform: scale(1);
-	}
-}
-
-@-webkit-keyframes pulse_border {
-	0% {
-		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(0.5);
-		opacity: 1;
-	}
-	100% {
-		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-		opacity: 0;
-	}
-}
-
-@keyframes pulse_border {
-	0% {
-		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(0.5);
-		opacity: 1;
-	}
-	100% {
-		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-		opacity: 0;
 	}
 }

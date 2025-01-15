@@ -39,15 +39,10 @@ $action_buttons = $module_data['wc_shop_add_to_cart'] ||  $module_data['wc_shop_
 		<?php do_action('toyup_shop_layout_after_cart_button'); ?>
 	</div>
 	<div class="rt-content-area">
-		<?php if ( fasheno_option('rt_woo_variation_attr') ) { ?>
-			<?php do_action('rtwpvs_show_archive_variation'); ?>
-		<?php } ?>
 
 		<?php if ( $cat ): ?>
 			<?php fasheno_html( $cat, false );?>
 		<?php endif; ?>
-
-		<h3 class="rt-shop-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
 
 		<?php if ( fasheno_option('wc_shop_rating') == 1 ) { ?>
 			<div class="rating-custom">
@@ -60,10 +55,17 @@ $action_buttons = $module_data['wc_shop_add_to_cart'] ||  $module_data['wc_shop_
 			</div>
 		<?php } ?>
 
+		<h2 class="rt-shop-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+
 		<div class="rt-excerpt"><?php the_excerpt();?></div>
 
 		<?php if ( $price_html = $product->get_price_html() ) { ?>
 			<div class="rt-price price"><?php fasheno_html( $price_html, false ); ?></div>
 		<?php } ?>
+
+		<?php if ( fasheno_option('rt_woo_variation_attr') ) { ?>
+			<?php do_action('rtwpvs_show_archive_variation'); ?>
+		<?php } ?>
+
 	</div>
 </div>

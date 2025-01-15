@@ -94,8 +94,8 @@ if (process.env.npm_config_package) {
 			"searchform.php",
 			"sidebar.php",
 			"single.php",
-			"style-editor.css",
 			"style.css",
+			"style-editor.css",
 			"wpml-config.xml",
 		];
 		fs.ensureDir(copyTo, function (err) {

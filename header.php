@@ -41,7 +41,7 @@ use RT\Fasheno\Options\Opt;
 <!-- ajax search overlay -->
 <div class="rt-focus"></div>
 
-<div class="mobile-action-button"><?php fasheno_mobile_menu_icons_group(); ?></div>
+<?php fasheno_mobile_menu_icons_group(); ?>
 
 <div id="page" class="site">
 	<header id="masthead" class="site-header headroom" role="banner">

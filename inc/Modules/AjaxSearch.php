@@ -62,7 +62,6 @@ class AjaxSearch{
 		die();
 	}
 
-
 	/*Product advanced search Ajax */
 	public function title_filter( $where, $wp_query ){
 		global $wpdb;
@@ -95,7 +94,7 @@ class AjaxSearch{
 			}
 			add_filter( 'posts_where', [&$this,'title_filter'], 10, 2 );
 			$query = new \WP_Query( $args );
-			remove_filter( 'posts_where', [&$this,'title_filter'], 10, 2 );
+			//remove_filter( 'posts_where', [&$this,'title_filter'], 10, 2 );
 			if ( ! empty( $query ) ) {
 				if ( $query->have_posts() ) :
 					echo '<div class="result-wrap"><ul>';

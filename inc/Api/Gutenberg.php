@@ -45,30 +45,30 @@ class Gutenberg {
 			[
 				'name' => esc_html__( 'Primary Color', 'fasheno' ),
 				'slug' => 'fasheno-primary',
-				'color' => '#006D5B',
+				'color' => '#ff6c23',
 			],
 			[
 				'name' => esc_html__( 'Secondary Color', 'fasheno' ),
 				'slug' => 'fasheno-secondary',
-				'color' => '#00473b',
+				'color' => '#ff0000',
 			],
 			[
 				'name' => esc_html__( 'Yellow Color', 'fasheno' ),
-				'slug' => 'fasheno-yellow',
-				'color' => '#ffb000',
+				'slug' => 'fasheno-tertiary',
+				'color' => '#f99a1e',
 			],
 			[
-				'name' => esc_html__( 'Dark gray', 'fasheno' ),
-				'slug' => 'fasheno-dark-gray',
-				'color' => '#edf5f4',
+				'name' => esc_html__( 'Black Color', 'fasheno' ),
+				'slug' => 'fasheno-black',
+				'color' => '#010101',
 			],
 			[
-				'name' => esc_html__( 'light gray', 'fasheno' ),
-				'slug' => 'fasheno-light-gray',
-				'color' => '#f1f1f1',
+				'name' => esc_html__( 'Gray Color', 'fasheno' ),
+				'slug' => 'fasheno-gray',
+				'color' => '#f8f8f8',
 			],
 			[
-				'name' => esc_html__( 'white', 'fasheno' ),
+				'name' => esc_html__( 'White Color', 'fasheno' ),
 				'slug' => 'fasheno-white',
 				'color' => '#ffffff',
 			],
@@ -77,7 +77,7 @@ class Gutenberg {
 		add_theme_support( 'editor-font-sizes', [
 			[
 				'name' => esc_html__( 'Small', 'fasheno' ),
-				'size' => 16,
+				'size' => 15,
 				'slug' => 'small'
 			],
 			[

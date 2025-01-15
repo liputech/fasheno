@@ -19,6 +19,6 @@
 defined( 'ABSPATH' ) || die( 'Keep Silent' );
 ?>
 <a href="<?php echo esc_url( $page_url ); ?>" class="action-icon">
-	<i class="icon-rt-heart"></i>
+	<i class="icon-rt-hart"></i>
 	<span class="wishlist-icon-num rtsb-wishlist-counter item-count"><?php echo esc_html( $item_count ); ?></span>
 </a>

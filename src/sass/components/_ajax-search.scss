@@ -1,7 +1,7 @@
 // Ajax search
 .rt-search-box-wrap {
 	form {
-		border: 1px solid $border_color;
+		border: 1px solid rgba($heading_rgb, 0.2);
 		border-radius: 5px;
 	}
 	&.flex-grow-1 {
@@ -13,7 +13,6 @@
 }
 ul.rt-action-list{
 	@include list_default();
-
 	.dropdown {
 		position: relative;
 	}
@@ -36,6 +35,8 @@ ul.rt-action-list{
 		opacity: 0;
 		visibility: hidden;
 		transition: all 0.21s ease-in-out;
+		height: 240px;
+		overflow-x: hidden;
 		li {
 			font-size: 14px;
 			padding: 0 20px;
@@ -75,7 +76,7 @@ ul.rt-action-list{
 			position: absolute;
 			height: 100%;
 			width: 1px;
-			background-color: $border_color;
+			background-color: rgba($heading_rgb, 0.2);
 			top: 50%;
 			transform: translateY(-50%);
 			right: 0;
@@ -95,14 +96,15 @@ ul.rt-action-list{
 		position: relative;
 	}
 	.product-search-form {
-		 background-color: transparent;
-		 border: none;
-		 font-size: 16px;
-		 padding: 14px 60px 14px 15px;
-		 line-height: 1;
-		 height: 54px;
-		 transition: unset;
-		 width: 100%;
+		background-color: transparent;
+		color: $heading_color;
+		border: none;
+		font-size: 16px;
+		padding: 14px 60px 14px 15px;
+		line-height: 1;
+		height: 54px;
+		transition: unset;
+		width: 100%;
 		&:focus {
 			box-shadow: none;
 			border: none;
@@ -201,4 +203,8 @@ ul.rt-action-list{
 			background-color: transparent;
 		}
 	}
+}
+
+.rt-advanced-search .product-search-form {
+
 }

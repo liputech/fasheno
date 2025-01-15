@@ -12,7 +12,7 @@
 }
 .rt-search-box-form {
 	width: 100%;
-	border: 1px solid $border_color;
+	border: 1px solid rgba($heading_rgb, 0.4);
 	border-radius: 5px;
 	padding-left: 20px;
 	padding-right: 3px;
@@ -24,7 +24,7 @@
 	.search-box-input {
 		font-size: 16px;
 		background-color: transparent;
-		color: $black_color;
+		color: $heading_color;
 		width: 94%;
 		height: 54px;
 		border: none;

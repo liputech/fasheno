@@ -10,12 +10,8 @@
 		gap: 10px;
 		flex-wrap: wrap;
 		a {
-			height: 45px;
-			width: 45px;
 			font-size: 18px;
-			border-radius: 50px;
-			background-color: $primary_color;
-			color: $button_color;
+			color: $button_text_color;
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
@@ -25,11 +21,7 @@
 				display: block;
 			}
 			&:hover {
-				background-color: $tertiary_color;
-				color: $button_text_color;
-				i {
-					animation: headShake 1.5s;
-				}
+				color: $primary_color;
 			}
 		}
 	}

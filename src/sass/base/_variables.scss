@@ -28,6 +28,7 @@ $tertiary_color: var(--rt-tertiary-color);
 $body_bg_color: var(--rt-body-bg-color);
 $body_color: var(--rt-body-color);
 $border_color: var(--rt-border-color);
+$border_dark_color: var(--rt-border-dark-color);
 $heading_color: var(--rt-heading-color);
 $heading_color_1: var(--rt-heading-color-1);
 $button_color: var(--rt-button-color);
@@ -52,8 +53,13 @@ $white_color: #ffffff;
 $black_color: #000000;
 $meta_overlay_color: #cbcbcb;
 $brown_bg_color: #fff8ef;
-$light_pink_bg_color: #FFF5FA;
-$light_purple_bg_color: #F3F7FF;
+$dark_brown_bg_color: #fff2e7;
+$light_pink_bg_color: #fff5fa;
+$dark_pink_bg_color: #faebeb;
+$dark_pink2_bg_color: #ffebdb;
+$light_purple_bg_color: #f3f7ff;
+$dark_purple_bg_color: #ebf8fd;
+$light_gray_bg_color: #fcfcfc;
 
 //Headers
 $dropdown_width: 240px;
@@ -89,4 +95,4 @@ $swift: cubic-bezier(0.4, 0, 0.2, 1);
 $ease: ease;
 
 //nav drawer width
-$nav_drawer_width: 480px;
+$nav_drawer_width: 375px;

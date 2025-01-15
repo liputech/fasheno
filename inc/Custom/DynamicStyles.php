@@ -39,7 +39,7 @@ class DynamicStyles {
 		:root[data-theme="light-mode"] {
 		--rt-primary-color: 	<?php echo esc_html( fasheno_option( 'rt_primary_color', '#ff6c23' ) ); ?>;
 		--rt-secondary-color: 	<?php echo esc_html( fasheno_option( 'rt_secondary_color', '#ff0000' ) ); ?>;
-		--rt-tertiary-color: 	<?php echo esc_html( fasheno_option( 'rt_tertiary_color', '#ffab02' ) ); ?>;
+		--rt-tertiary-color: 	<?php echo esc_html( fasheno_option( 'rt_tertiary_color', '#f99a1e' ) ); ?>;
 		--rt-body-color: 		<?php echo esc_html( fasheno_option( 'rt_body_color', '#666666' ) ); ?>;
 		--rt-body-bg-color: 	<?php echo esc_html( fasheno_option( 'rt_body_bg_color', '#ffffff' ) ); ?>;
 		--rt-border-color: 		<?php echo esc_html( fasheno_option( 'rt_border_color', '#e6e6e6' ) ); ?>;
@@ -50,12 +50,13 @@ class DynamicStyles {
 		--rt-button-bg-color: 	<?php echo esc_html( fasheno_option( 'rt_button_bg_color', '#ffffff' ) ); ?>;
 		--rt-white-bg-color: 	<?php echo esc_html( fasheno_option( 'rt_white_bg_color', '#ffffff' ) ); ?>;
 		--rt-red-color: 		<?php echo esc_html( fasheno_option( 'rt_red_color', '#ff0004' ) ); ?>;
-		--rt-gray-color: 		<?php echo esc_html( fasheno_option( 'rt_gray_color', '#f6f6f6' ) ); ?>;
+		--rt-gray-color: 		<?php echo esc_html( fasheno_option( 'rt_gray_color', '#f8f8f8' ) ); ?>;
 
 		--rt-black-bg-color: 	#010101;
 		--rt-black-bg-color-1: 	#010101;
 		--rt-button-color-1: 	#ffffff;
 		--rt-heading-color-1: 	#010101;
+		--rt-border-dark-color: #010101;
 
 		--rt-body-rgb: 			<?php echo esc_html( Fns::hex2rgb( fasheno_option( 'rt_body_color', '#666666' ) ) ); ?>;
 		--rt-heading-rgb: 		<?php echo esc_html( Fns::hex2rgb( fasheno_option( 'rt_heading_color', '#010101' ) ) ); ?>;
@@ -73,7 +74,7 @@ class DynamicStyles {
 		--rt-body-bg-color: 	<?php echo esc_html( fasheno_option( 'rt_body_bg_color', '#000000' ) ); ?>;
 		--rt-border-color: 		<?php echo esc_html( fasheno_option( 'rt_border_color', '#3a3939' ) ); ?>;
 		--rt-heading-color: 	<?php echo esc_html( fasheno_option( 'rt_heading_color', '#ffffff' ) ); ?>;
-		--rt-meta-color: 		<?php echo esc_html( fasheno_option( 'rt_meta_color', '#a0a0a0' ) ); ?>;
+		--rt-meta-color: 		<?php echo esc_html( fasheno_option( 'rt_meta_color', '#d0cccc' ) ); ?>;
 		--rt-button-color: 		<?php echo esc_html( fasheno_option( 'rt_button_color', '#ffffff' ) ); ?>;
 		--rt-button-text-color: <?php echo esc_html( fasheno_option( 'rt_button_text_color', '#ffffff' ) ); ?>;
 		--rt-button-bg-color: 	<?php echo esc_html( fasheno_option( 'rt_button_bg_color', '#202020' ) ); ?>;
@@ -84,7 +85,8 @@ class DynamicStyles {
 		--rt-black-bg-color: 	#1d1c1c;
 		--rt-black-bg-color-1: 	#ffffff;
 		--rt-button-color-1: 	#010101;
-		--rt-heading-color-1: 	#b4b4b4;
+		--rt-heading-color-1: 	#d0cccc;
+		--rt-border-dark-color: #3a3939;
 
 		--rt-body-rgb: 			<?php echo esc_html( Fns::hex2rgb( fasheno_option( 'rt_body_color', '#666666' ) ) ); ?>;
 		--rt-heading-rgb: 		<?php echo esc_html( Fns::hex2rgb( fasheno_option( 'rt_heading_color', '#b4b4b4' ) ) ); ?>;
@@ -165,7 +167,6 @@ class DynamicStyles {
 		$_tr_menu_color        = fasheno_option( 'rt_tr_menu_color' );
 		$_tr_menu_active_color = fasheno_option( 'rt_tr_menu_active_color' );
 
-		$_header_border     = fasheno_option( 'rt_header_border' );
 		$_breadcrumb_border = fasheno_option( 'rt_breadcrumb_border' );
 		$_preloader_bg_color = fasheno_option( 'preloader_bg_color' );
 		?>
@@ -293,9 +294,6 @@ class DynamicStyles {
 			}
 		<?php endif; ?>
 
-		<?php if ( ! $_header_border ) : ?>
-			body .main-header-section {border-bottom: none;}
-		<?php endif; ?>
 		<?php if ( ! $_breadcrumb_border ) : ?>
 			body .fasheno-breadcrumb-wrapper {border-bottom: none;}
 		<?php endif; ?>

@@ -54,13 +54,13 @@ class Error extends Customizer {
 			'rt_error_text' => [
 				'type'        => 'text',
 				'label'       => __( 'Error Text', 'fasheno' ),
-				'default'     => __( 'Sorry! This Page Is Not Available!', 'fasheno' ),
+				'default'     => __( "The page you're looking for isn't available. Try to search gain or use the go back button below.", 'fasheno' ),
 			],
 
 			'rt_error_button_text' => [
 				'type'        => 'text',
 				'label'       => __( 'Error Button Text', 'fasheno' ),
-				'default'     => __( 'Back To Home Page', 'fasheno' ),
+				'default'     => __( 'Go Back Home', 'fasheno' ),
 			],
 
 		] );

@@ -49,19 +49,4 @@ class ThemeSupport {
 		return $data;
 	}
 
-	/**
-	 * Pagination compatibility.
-	 *
-	 * @return int
-	 */
-	public function fasheno_products_per_page() {
-		if ( ! empty( fasheno_option('products_per_page') ) ) {
-			return absint( fasheno_option('products_per_page') );
-		}
-
-		$products_row = absint( get_option( 'woocommerce_catalog_rows', 4 ) );
-		$products_col = absint( get_option( 'woocommerce_catalog_columns', 4 ) );
-
-		return $products_row * $products_col;
-	}
 }

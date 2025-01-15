@@ -217,7 +217,7 @@
 			background: $gray_color;
 			border-radius: 4px;
 			display: inline-block;
-			font-size: 14px!important;
+			font-size: 15px!important;
 			font-weight: 400;
 			margin: 0;
 			padding: 8px 16px;
@@ -262,8 +262,8 @@
 			padding-top: 20px;
 		}
 		.entry-title {
-			font-size: 16px;
-			font-weight: 600;
+			font-size: 17px;
+			font-weight: 500;
 			margin-bottom: 0;
 			line-height: 1.4;
 			text-overflow: ellipsis;
@@ -274,7 +274,7 @@
 			a {
 				color: $heading_color;
 				&:hover {
-					@extend .primaryColor;
+					text-decoration: underline;
 				}
 			}
 		}

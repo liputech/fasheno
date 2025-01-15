@@ -50,7 +50,7 @@ class Footer extends Customizer {
 			'rt_footer_style' => [
 				'type'    => 'image_select',
 				'label'   => __( 'Choose Layout', 'fasheno' ),
-				'default' => '1',
+				'default' => 1,
 				'choices' => Fns::image_placeholder( 'footer', 2 )
 			],
 
@@ -92,7 +92,7 @@ class Footer extends Customizer {
 				'type'        => 'switch',
 				'label'       => __( 'Payment Display', 'fasheno' ),
 				'description' => __( 'Show Payment Cart Display, This options available for only Footer layout.', 'fasheno' ),
-				'default' => 1,
+				'default' => 0,
 			],
 			'rt_footer_payment_cart' => [
 				'type'         => 'image',

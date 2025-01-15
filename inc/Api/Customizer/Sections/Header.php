@@ -106,11 +106,6 @@ class Header extends Customizer {
 				'condition' => [ 'rt_tr_header' ]
 			],
 
-			'rt_header_border' => [
-				'type'    => 'switch',
-				'label'   => __( 'Header Border', 'fasheno' ),
-				'default' => 0
-			],
 			'rt_header_sep1'   => [
 				'type' => 'separator',
 				'edit-link' => '.menu-icon-wrapper',

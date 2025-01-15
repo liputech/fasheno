@@ -2,19 +2,23 @@
 .rt-swiper-hero-slider {
 	overflow: hidden;
 }
-.rt-hero-slider {
+.rt-hero-slider-layout-1 {
 	border-radius: 5px;
 	.single-slide {
 		&:nth-child(even) {
 			.content-wrap {
-				flex-direction: row-reverse;
+				@media(min-width: 768px) {
+					flex-direction: row-reverse;
+				}
 			}
 		}
 	}
 	.single-slider {
 		border-radius: 5px;
-		padding-left: 50px;
-		padding-right: 50px;
+		padding: 0 50px;
+		@media(max-width: 767px) {
+			padding: 0 30px 30px;
+		}
 	}
 	.content-wrap {
 		display: flex;
@@ -23,12 +27,17 @@
 		@media(max-width: 767px) {
 			flex-direction: column;
 		}
+		@media(min-width: 768px) {
+			max-height: 525px;
+		}
 	}
 	.slider-image {
 		padding-top: 30px;
 		img {
 			display: block;
-			max-width: 370px;
+			@media(min-width: 991px) {
+				max-width: 370px;
+			}
 		}
 	}
 	.slider-content {
@@ -39,14 +48,22 @@
 		position: relative;
 		display: inline-block;
 		color: $heading_color;
-		border: 1px solid $border_color;
+		border: 1px solid rgba(230,230,230, 1);
 		border-radius: 3px;
 		font-size: 15px;
 		font-weight: 400;
-		margin-bottom: 7px;
-		padding: 5px 12px;
+		margin-bottom: 6px;
+		padding-right: 12px;
 		line-height: 1.2;
 		z-index: 1;
+		overflow: hidden;
+		i {
+			display: inline-block;
+			background-color: $black_bg_color_1;
+			color: $button_color_1;
+			margin-right: 7px;
+			padding: 8px 10px;
+		}
 	}
 	.slider-title {
 		 font-size: 44px;
@@ -60,59 +77,127 @@
 		line-height: 1.6;
 		margin-bottom: 30px;
 	}
-	.animation {
-		.single-slide {
-			.sub-title {
-				transform: translateY(30px);
-				transition: all ease 320ms;
-				opacity: 0;
-				visibility: hidden;
-			}
-			.slider-title {
-				transform: translateY(30px);
-				transition: all ease 320ms;
-				opacity: 0;
-				visibility: hidden;
-			}
-			.slider-text {
-				transform: translateY(30px);
-				transition: all ease 320ms;
-				opacity: 0;
-				visibility: hidden;
-			}
-			.slider-btn-area {
-				transform: translateY(30px);
-				transition: all ease 320ms;
-				opacity: 0;
-				visibility: hidden;
-			}
-			&.swiper-slide-active {
-				.sub-title {
-					transform: translateY(0);
-					transition-delay: 0.5s;
-					opacity: 1;
-					visibility: visible;
+	@media(max-width: 991px ) {
+		.slider-title br,
+		.slider-text br {
+			display: none;
+		}
+	}
+	.swiper-pagination {
+		position: absolute;
+		margin-top: 0;
+		column-gap: 5px;
+		align-items: center;
+		bottom: 30px !important;
+		@media(max-width: 991px) {
+			bottom: 20px !important;
+		}
+		.swiper-pagination-bullet {
+			position: relative;
+			width: 8px;
+			height: 8px;
+			text-align: left;
+			color: $button_text_color;
+			background: $white_bg_color;
+			box-shadow: 0 0 5px rgba( $heading_rgb, 0.08);
+			font-size: 0;
+
+
+			$base-top: 8px;
+			$increment: 4px;
+
+			@for $i from 1 through 200 {
+				&:nth-child(#{$i}) {
+					width: $base-top + ($increment * ($i - 1));
+					height: $base-top + ($increment * ($i - 1));
 				}
-				.slider-title {
-					transform: translateY(0);
-					transition-delay: 1s;
-					opacity: 1;
-					visibility: visible;
-				}
-				.slider-text {
-					transform: translateY(0);
-					transition-delay: 1.5s;
-					opacity: 1;
-					visibility: visible;
-				}
-				.slider-btn-area {
-					transform: translateX(0);
-					transition-delay: 2s;
-					opacity: 1;
-					visibility: visible;
-				}
+			}
+
+			&.swiper-pagination-bullet-active {
+				background-color: $primary_color;
 			}
 		}
+	}
+}
+
+
+
+
+
+
+.rt-hero-slider-layout-2 {
+	.swiper-slide {
+		overflow: hidden;
+	}
+	.img-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
+	.hero-banner {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.slider-content {
+		position:  relative;
+		max-width: 450px;
+		z-index: 9;
+		@media(max-width: 767px) {
+			max-width: 100%;
+		}
+	}
+	.single-slider {
+		min-height: 700px;
+		display: flex;
+		align-items: center;
+	}
+	.sub-title {
+		position: relative;
+		display: inline-block;
+		color: $white_color;
+		border: 1px dashed rgba(255,255,255, 0.4);
+		border-radius: 3px;
+		font-size: 15px;
+		font-weight: 400;
+		margin-bottom: 6px;
+		padding: 7px 12px;
+		line-height: 1.2;
+		z-index: 1;
+		overflow: hidden;
+		i {
+			display: inline-block;
+			margin-right: 7px;
+		}
+	}
+	.slider-title {
+		font-size: 60px;
+		color: $white_color;
+		margin-bottom: 20px;
+		line-height: 1.2;
+		span {
+			font-weight: 200;
+		}
+	}
+	.slider-text {
+		color: $white_color;
+		font-size: 16px;
+		line-height: 1.4;
+		margin-bottom: 35px;
 	}
 	@media(max-width: 991px ) {
 		.slider-title br,
@@ -123,49 +208,33 @@
 	.swiper-pagination {
 		position: absolute;
 		margin-top: 0;
-		justify-content: right;
-		column-gap: 7px;
-		bottom: 70px !important;
-		right: 70px;
+		gap: 25px;
+		right: 0;
 		left: auto !important;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 130px;
+		flex-direction: column;
 		.swiper-pagination-bullet {
 			position: relative;
-			width: auto;
-			height: 100%;
+			width: 40px;
+			height: auto;
 			text-align: left;
-			color: #9DB8B6;
+			font-size: 20px;
+			color: $white_color;
 			background: transparent !important;
 			&.swiper-pagination-bullet-active {
 				width: 60px;
-				color: $white_color;
+				margin-left: -40px;
 				&:after {
 					position: absolute;
 					content: "";
 					right: -7px;
 					top: 13px;
-					width: 40px;
+					width: 28px;
 					height: 2px;
 					border-radius: 50px;
 					background-color: $white_color;
-				}
-			}
-			&:last-child {
-				&.swiper-pagination-bullet-active {
-					text-align: right;
-					&:after {
-						display: none;
-					}
-					&:before {
-						position: absolute;
-						content: "";
-						left: -10px;
-						top: 13px;
-						right: auto;
-						width: 40px;
-						height: 2px;
-						border-radius: 50px;
-						background-color: $white_color;
-					}
 				}
 			}
 		}

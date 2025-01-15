@@ -5,7 +5,9 @@
 		position: relative;
 		display: inline-block;
 		.bg-shape {
-			display: inline-block;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
 			line-height: 1;
 		}
 		.counter-number {
@@ -17,19 +19,13 @@
 		}
 		.counter-label {
 			font-size: 20px;
-			font-weight: 600;
+			font-weight: 500;
 			color: $heading_color;
 			line-height: 1;
 			margin-bottom: 0;
 		}
 		.counter-gradient {
 			-webkit-text-stroke: 2px transparent;
-		}
-		&:hover {
-			.counter-number {
-				color: initial;
-				-webkit-text-stroke: unset;
-			}
 		}
 	}
 }

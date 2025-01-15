@@ -67,6 +67,9 @@ class Setup {
 		add_theme_support( 'custom-logo' );
 		add_theme_support( "custom-header" );
 		add_theme_support( "custom-background" );
+		add_theme_support( "register_block_style" );
+		add_theme_support( "register_block_pattern" );
+		add_theme_support( "responsive-embeds" );
 
 		/**
 		 * Add woocommerce support and woocommerce override

@@ -18,6 +18,7 @@ $_fullwidth = Opt::$header_width == 'full' ? '-fluid' : '';
 ?>
 
 <div class="fasheno-top-bar top-bar-style-2">
+	<button type="button" aria-label="close button" class="close">×</button>
 	<div class="top-bar-container rt-container<?php echo esc_attr($_fullwidth) ?>">
 		<div class="top-bar-row d-flex flex-wrap column-gap-30 align-items-center">
 			<?php if( $top_info_left ) { ?>

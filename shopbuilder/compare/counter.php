@@ -19,6 +19,6 @@
 defined( 'ABSPATH' ) || die( 'Keep Silent' );
 ?>
 <a href="<?php echo esc_url( $page_url ); ?>" class="action-icon rtsb-compare-counter-wrap">
-	<i class="icon-default rtsb-icon rtsb-icon-arrows-cw"></i>
+	<i class="icon-default rtsb-icon icon-rt-shuffle"></i>
 	<span class="rtsb-compare-counter item-count"><?php echo esc_html( $item_count ); ?></span>
 </a>

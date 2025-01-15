@@ -45,6 +45,37 @@
 		@media (max-width: 1199px) {
 			padding: 21px 15px;
 		}
+
+		.new {
+			background-color: #0a7aff;
+			border-radius: 2px;
+			color: #ffffff;
+			padding: 0 3px 1px;
+			font-size: 12px;
+			height: 16px;
+			display: inline-flex;
+			align-items: center;
+		}
+		.sale {
+			background-color: #D9FFBF;
+			border-radius: 2px;
+			color: $black_color;
+			padding: 0 3px 1px;
+			font-size: 12px;
+			height: 16px;
+			display: inline-flex;
+			align-items: center;
+		}
+		.hot {
+			background-color: #FACCCD;
+			border-radius: 2px;
+			color: $black_color;
+			padding: 0 3px 1px;
+			font-size: 12px;
+			height: 16px;
+			display: inline-flex;
+			align-items: center;
+		}
 	}
 
 	ul li.current-menu-item > a svg,
@@ -87,7 +118,6 @@
 		border-radius: 0 0 15px 15px;
 		background-color: $body_bg_color;
 		box-shadow: 0 8px 8px rgba(23,22,24,.04),0 4px 4px rgba(23,22,24,.04),0 2px 2px rgba(23,22,24,.04);
-		transition: transform .3s cubic-bezier(.175,.885,.32,1.275);
 	}
 
 	ul > li:hover > ul {
@@ -103,50 +133,42 @@
 
 	ul li ul li {
 		display: block;
-		padding: 0 24px;
+		padding: 0 30px;
 	}
 
 	ul li ul li a {
 		position: relative;
-		display: block;
+		display: inline-block;
 		color: $heading_color;
-		padding: 10px 0;
+		padding: 6px 0;
 		z-index: 2;
-		font-size: 15px;
-		border-bottom: 1px dashed $border_color;
-		transition: all 220ms ease;
+		font-size: 14px;
 	}
 	ul li ul li > a:before {
 		position: absolute;
-		content: '';
-		left: -5px;
-		top: 50%;
-		width: 5px;
-		height: 5px;
-		opacity: 0;
-		visibility: hidden;
-		border-radius: 50%;
-		@extend .primaryBG;
-		transform: translateY(-50%);
-		@include transition_default();
-	}
-	ul li ul li:hover > a {
-		padding-left: 15px;
-	}
-	ul li ul li:hover > a:before {
-		opacity: 1;
-		visibility: visible;
+		content: "";
+		bottom: 8px;
 		left: 0;
+		height: 1px;
+		width: 0;
+		opacity: 0;
+		background-color: $primary_color;
+		transition: 0.5s;
+	}
+	ul li ul li:hover {
+		> a {
+			color: $primary_color;
+			&:before {
+				width: 100%;
+				opacity: 1;
+			}
+		}
 	}
 
 	ul li ul > li:last-child {
 		> a {
 			border-bottom: none;
 		}
-	}
-
-	ul li ul li:hover > a {
-		color: $primary_color;
 	}
 
 	/*Menu hover effect*/
@@ -192,14 +214,13 @@
 	}
 
 	.caret svg {
-		fill: unset;
 		transition: fill 0.4s;
 	}
 
 	.dropdown-menu .caret {
 		position: absolute;
 		top: 50%;
-		right: 0;
+		right: -20px;
 		transform: translateY(-50%);
 	}
 

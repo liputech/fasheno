@@ -1,0 +1,50 @@
+/*-------------------------------------
+#. EL: RT Countdown
+---------------------------------------*/
+.rt-countdown-wrap {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+	.rt-label {
+		font-size: 22px;
+		color: $heading_color;
+		display: inline-flex;
+		align-items: center;
+		column-gap: 5px;
+		i {
+			font-size: 15px;
+		}
+	}
+}
+.rt-countdown-layout {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	.countdown-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		color: $button_color_1;
+		background-color: $white_bg_color;
+		border: 1px solid $border_color;
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		overflow: hidden;
+	}
+	.countdown-number {
+		color: $heading_color;
+		font-size: 30px;
+		font-weight: 400;
+		margin-bottom: 3px;
+		line-height: 1;
+	}
+	.countdown-unit {
+		color: $body_color;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 1;
+	}
+}

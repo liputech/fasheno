@@ -41,7 +41,7 @@ $topinfo = ( fasheno_option( 'rt_contact_address' ) || fasheno_option( 'rt_phone
 		<?php if( fasheno_option( 'rt_mobile_delivery_button' ) || fasheno_option( 'rt_mobile_sale_offer_button' )) { ?>
 		<div class="rt-button-action">
 			<?php if ( fasheno_option( 'rt_mobile_delivery_button' ) ) { ?>
-				<a class="rt-delivery-btn" href="<?php echo esc_url( fasheno_option( 'rt_get_delivery_button_url' ) ) ?>" aria-label="button link"><i class="icon-rt-user-1"></i><?php fasheno_html( fasheno_option( 'rt_get_delivery_label', 'allow_title' ) ); ?></a>
+				<a class="rt-delivery-btn" href="<?php echo esc_url( fasheno_option( 'rt_get_delivery_button_url' ) ) ?>" aria-label="button link"><i class="icon-rt-truck"></i><?php fasheno_html( fasheno_option( 'rt_get_delivery_label', 'allow_title' ) ); ?></a>
 			<?php } if ( fasheno_option( 'rt_mobile_sale_offer_button' ) ) { ?>
 				<a class="rt-sale-offer-btn" href="<?php echo esc_url( fasheno_option( 'rt_get_sale_offer_button_url' ) ) ?>" aria-label="button link"><i class="icon-rt-percentage"></i><?php fasheno_html( fasheno_option( 'rt_get_sale_offer_label', 'allow_title' ) ); ?></a>
 			<?php } ?>
@@ -54,9 +54,9 @@ $topinfo = ( fasheno_option( 'rt_contact_address' ) || fasheno_option( 'rt_phone
 				<?php if( fasheno_option( 'rt_contact_info_label' ) ) { ?><label><?php echo fasheno_option( 'rt_contact_info_label' ) ?></label><?php } ?>
 				<ul class="offcanvas-info">
 					<?php if( fasheno_option( 'rt_contact_address' ) ) { ?>
-						<li><i class="icon-rt-location-4"></i><?php fasheno_html( fasheno_option( 'rt_contact_address' ) , false );?> </li>
+						<li><i class="icon-rt-map"></i><?php fasheno_html( fasheno_option( 'rt_contact_address' ) , false );?> </li>
 					<?php } if( fasheno_option( 'rt_phone' ) ) { ?>
-						<li><i class="icon-rt-phone-2"></i><a href="tel:<?php echo esc_attr( fasheno_option( 'rt_phone' ) );?>"><?php fasheno_html( fasheno_option( 'rt_phone' ) , false );?></a> </li>
+						<li><i class="icon-rt-phone-call"></i><a href="tel:<?php echo esc_attr( fasheno_option( 'rt_phone' ) );?>"><?php fasheno_html( fasheno_option( 'rt_phone' ) , false );?></a> </li>
 					<?php } if( fasheno_option( 'rt_email' ) ) { ?>
 						<li><i class="icon-rt-email"></i><a href="mailto:<?php echo esc_attr( fasheno_option( 'rt_email' ) );?>"><?php fasheno_html( fasheno_option( 'rt_email' ) , false );?></a> </li>
 					<?php } if( fasheno_option( 'rt_website' ) ) { ?>

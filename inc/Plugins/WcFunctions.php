@@ -7,6 +7,7 @@ namespace RT\Fasheno\Plugins;
  */
 
 use RadiusTheme\SB\Helpers\BuilderFns;
+use RadiusTheme\SB\Helpers\Fns;
 use RT\Fasheno\Modules\Pagination;
 
 class WcFunctions {
@@ -48,7 +49,6 @@ class WcFunctions {
 		//Filter Hooks
 		add_filter( 'woocommerce_show_page_title','__return_false' );
 		add_filter( 'woocommerce_sale_flash',array( $this, 'sale_flash' ), 10, 3 );
-		add_filter( 'rtsb/quick_checkout/button/text',array( $this, 'quick_checkout_text' ), 10);
 		add_filter( 'rtsb/quick_checkout/button/icon',array( $this, 'quick_checkout_icon' ), 10);
 		add_filter( 'rtsb/module/compare/icon_html',array( $this, 'compare_button_icon' ), 10);
 		add_filter( 'rtsb/module/quick_view/icon_html',array( $this, 'quick_view_icon' ), 10);
@@ -214,12 +214,6 @@ class WcFunctions {
 		}
 	}
 
-	public function quick_checkout_text( $text ) {
-		if (!is_singular('product')){
-			$text = '';
-		}
-		return $text;
-	}
 	public function quick_checkout_icon( $icon ) {
 		if (!is_singular('product')){
 			$icon = '<i class="rtsb-icon rtsb-icon-pay"></i>';
@@ -228,13 +222,13 @@ class WcFunctions {
 	}
 	public function compare_button_icon( $icon ) {
 
-		$icon = '<i class="icon-rt-filter"></i>';
+		$icon = '<i class="icon-rt-shuffle"></i>';
 
 		return $icon;
 	}
 	public function quick_view_icon( $icon ) {
 
-		$icon = '<i class="icon-rt-search-1"></i>';
+		$icon = '<i class="icon-rt-eye"></i>';
 
 		return $icon;
 	}
@@ -262,15 +256,15 @@ class WcFunctions {
 
 		if ( $in_cart ) {
 			if ( $text ) {
-				$html .= '<i class="icon-rt-check"></i><span>Already Added Cart</span>';
+				$html .= '<i class="icon-rt-check"></i>';
 			}
 		} else {
 			if ( $icon ) {
-				$html .= '<i class="icon-rt-cart"></i>';
+				$html .= '<i class="icon-rt-cart-2"></i>';
 			}
 
 			if ( $text ) {
-				$html .= '<span>' . $product->add_to_cart_text() . '</span>';
+				$html .= '<span class="button-text">' . $product->add_to_cart_text() . '</span>';
 			}
 		}
 
@@ -320,22 +314,22 @@ class WcFunctions {
 		$defaults = array(
 			'facebook' => array(
 				'url'  => "http://www.facebook.com/sharer.php?u=$url",
-				'icon' => 'fab fa-facebook-f',
+				'icon' => 'icon-rt-facebook-1',
 				'class' => 'bg-fb'
 			),
 			'twitter'  => array(
 				'url'  => "https://twitter.com/intent/tweet?source=$url&text=$title:$url",
-				'icon' => 'fab fa-x-twitter',
+				'icon' => 'icon-rt-twitter-1',
 				'class' => 'bg-twitter'
 			),
 			'linkedin' => array(
 				'url'  => "http://www.linkedin.com/shareArticle?mini=true&url=$url&title=$title",
-				'icon' => 'fab fa-linkedin-in',
+				'icon' => 'icon-rt-linkedin-1',
 				'class' => 'bg-linked'
 			),
 			'pinterest'=> array(
 				'url'  => "http://pinterest.com/pin/create/button/?url=$url&description=$title",
-				'icon' => 'fab fa-pinterest-p',
+				'icon' => 'icon-rt-pinterest-1',
 				'class' => 'bg-pinterst'
 			),
 		);
@@ -362,4 +356,72 @@ class WcFunctions {
 			</ul>
 		</div>
 	<?php }
+
+
+	/**
+	 * Get product rating.
+	 *
+	 * @param array $args Arguments.
+	 *
+	 * @return string|void
+	 */
+	public static function fasheno_get_product_rating_html( $args = [] ) {
+		global $product;
+
+		$html           = '';
+		$rating_count   = $product->get_rating_count();
+		$average_rating = $product->get_average_rating();
+
+		if ( ! rtsb()->has_pro() || empty( $args ) ) {
+			if ( ! $rating_count || empty( wc_get_rating_html( $average_rating, $rating_count ) ) ) {
+				return $html;
+			}
+
+			$html .= '<div class="product-rating">';
+			$html .= wc_get_rating_html( $average_rating, $rating_count );
+			$html .= ! empty( $html ) ? '<span class="rtsb-count">(' . $average_rating . ')</span>' : '';
+			$html .= '</div>';
+
+			Fns::print_html( $html, true );
+
+			return;
+		}
+
+		if ( empty( $rating_count ) && ! $args['show_empty_rating'] ) {
+			return '';
+		}
+
+		$preset  = ! empty( $args['preset'] ) ? $args['preset'] : 'preset1';
+		$average = $args['show_average_rating'] ? '<span class="rtsb-count">(' . $average_rating . ')</span>' : '';
+		$count   = '';
+
+		if ( $args['show_rating_count'] ) {
+			$count .= '<div class="rtsb-count">(';
+			$count .= sprintf(
+			/* translators: %s is the number of reviews */
+				_n( '%s', '%s', $rating_count, 'fasheno' ),
+				$rating_count
+			);
+			$count .= ')</div>';
+		}
+
+		if ( 'preset2' === $preset ) {
+			$average = $args['show_average_rating'] ? '<div class="inner-wrapper"><span class="star-icon"></span><span class="average-rating">' . $average_rating . '</span></div>' : '';
+		}
+
+		$html .= '<div class="product-rating ' . esc_attr( $preset ) . '">';
+
+		if ( 'preset1' === $preset ) {
+			$html .= wc_get_rating_html( $average_rating, $rating_count );
+			$html .= $average;
+			$html .= $count;
+		} elseif ( 'preset2' === $preset ) {
+			$html .= $average;
+			$html .= $count;
+		}
+
+		$html .= '</div>';
+
+		Fns::print_html( $html, true );
+	}
 }

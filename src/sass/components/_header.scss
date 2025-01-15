@@ -34,18 +34,21 @@ $dropdown_top_bottom_margin: 10px;
 	}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1025px) {
 	.header-mobile {
 		display: none;
 	}
 }
-@media (max-width: 1199px) {
+@media (max-width: 1024px) {
 	.header-desktop {
 		display: none;
 	}
 }
-.main-header-section {
-	border-bottom: 1px solid rgba($black_color, 0.1);
+
+@media (max-width: 1024px) {
+	header.site-header {
+		border-bottom: 1px solid $border_color;
+	}
 }
 
 .site-branding {
@@ -93,11 +96,12 @@ $dropdown_top_bottom_margin: 10px;
 	.menu-icon-action {
 		display: flex;
 		align-items: center;
-		gap: 24px;
+		gap: 30px;
 		flex-wrap: wrap;
 		.action-icon {
 			position: relative;
 			display: inline-flex;
+			cursor: pointer;
 			i {
 				color: $heading_color;
 				font-size: 20px;
@@ -108,10 +112,11 @@ $dropdown_top_bottom_margin: 10px;
 				top: -8px;
 				color: $button_color;
 				background-color: $primary_color;
+				border: 1px solid $white_bg_color;
 				border-radius: 50%;
 				font-size: 13px;
-				width: 18px;
-				height: 18px;
+				width: 19px;
+				height: 19px;
 				display: inline-flex;
 				align-items: center;
 				justify-content: center;
@@ -321,7 +326,14 @@ $dropdown_top_bottom_margin: 10px;
 		}
 	}
 }
-
+.fasheno-header-1.has-trheader.tr-header-dark {
+	.site-header {
+		transition: all 0.32s;
+		&:hover {
+			background-color: $white_bg_color;
+		}
+	}
+}
 .fasheno-header-2 {
 	.header-top {
 		border-bottom: 1px solid $border_color;

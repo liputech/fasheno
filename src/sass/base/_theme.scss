@@ -36,7 +36,27 @@
 .rt-blend img {
 	filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg) !important;
 }
-/*scroll bar*/
+
+
+//Scrollbar CSS
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: $gray_color;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: $meta_color;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: $heading_color;
+}
+
+/*offcanvas scroll bar*/
 .fasheno-offcanvas-drawer::-webkit-scrollbar {
 	width: 3px;
 }
@@ -44,5 +64,18 @@
 	background: $black_bg_color;
 }
 .fasheno-offcanvas-drawer::-webkit-scrollbar-thumb {
+	background: $black_bg_color;
+}
+
+/*rtsb-tax-filter scroll bar*/
+.rtsb-tax-filter::-webkit-scrollbar {
+	width: 3px;
+	position: absolute;
+	left: 0;
+}
+.rtsb-tax-filter::-webkit-scrollbar-track {
+	background: $border_color;
+}
+.rtsb-tax-filter::-webkit-scrollbar-thumb {
 	background: $black_bg_color;
 }

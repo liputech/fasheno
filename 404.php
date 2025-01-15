@@ -18,7 +18,7 @@ get_header();
 			if ( ! empty( fasheno_option( 'rt_error_image' ) ) ) {
 				echo wp_get_attachment_image( fasheno_option( 'rt_error_image' ), 'full', true );
 			} else {
-				fasheno_get_img( '404.png', true, 'width="1007" height="530"' ) . "' alt='";
+				fasheno_get_img( '404.svg', true, 'width="1007" height="530"' ) . "' alt='";
 			}
 			?>
 
@@ -27,8 +27,8 @@ get_header();
 				<p><?php fasheno_html( fasheno_option( 'rt_error_text' ), 'allow_title' ); ?></p>
 
 				<div class="rt-button">
-					<a class="btn button-3" href="<?php echo esc_url( home_url() ) ?>">
-						<?php fasheno_html( fasheno_option( 'rt_error_button_text' ), 'allow_title' ); ?><i class="icon-rt-right-arrow"></i>
+					<a class="btn button-2" href="<?php echo esc_url( home_url() ) ?>">
+						<span><i class="icon-rt-next"></i></span><?php fasheno_html( fasheno_option( 'rt_error_button_text' ), 'allow_title' ); ?>
 					</a>
 				</div>
 

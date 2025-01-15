@@ -266,7 +266,7 @@ if ( ! function_exists( 'fasheno_menu_icons_group' ) ) {
 			<ul class="menu-icon-action <?php echo esc_attr( $menu_classes ) ?>">
 				<?php if ( $args['search'] ) { ?>
 					<li class="rt-search-popup">
-						<a class="action-icon menu-search-bar rt-search-trigger" href="#header-search" aria-label="search popup"><i class="icon-rt-search-1"></i></a>
+						<a class="action-icon menu-search-bar rt-search-trigger" href="#header-search" aria-label="search popup"><i class="icon-rt-search-2"></i></a>
 					</li>
 				<?php } if ($args['compare'] && class_exists( 'WooCommerce' ) && function_exists('rtsb')) { ?>
 					<li class="item-icon header-compare-icon">
@@ -283,14 +283,14 @@ if ( ! function_exists( 'fasheno_menu_icons_group' ) ) {
 				<?php } if ($args['add_to_cart'] && class_exists( 'WooCommerce' ) && function_exists('rtsb')) { ?>
 					<li class="item-icon rt-cart-float-inner rtsb-cart-float-menu">
 						<span class="rt-cart-icon action-icon">
-							<i class="icon-rt-cart"></i>
+							<i class="icon-rt-cart-2"></i>
 							<span class="rtsb-cart-icon-num"></span>
 						</span>
 					</li>
 				<?php } if ( $args['login'] ) { ?>
 					<li class="rt-user-login rt-button">
 						<a  class="action-icon" href="<?php echo esc_url( $args['login_link'] ) ?>" aria-label="user login">
-							<i class="icon-rt-user-1"></i>
+							<i class="icon-rt-user-2"></i>
 						</a>
 					</li>
 				<?php } ?>
@@ -321,39 +321,41 @@ if ( ! function_exists( 'fasheno_mobile_menu_icons_group' ) ) {
 		$has_button   = $args['button'] && $args['button_label'];
 
 		?>
-		<div class="menu-icon-wrapper">
-			<ul class="menu-icon-action">
-				<?php if ( $args['search'] ) { ?>
-					<li class="rt-search-popup">
-						<a class="action-icon menu-search-bar rt-search-trigger" href="#header-search" aria-label="search popup"><i class="icon-rt-search-1"></i></a>
-					</li>
-				<?php } if ( $args['login'] ) { ?>
-					<li class="rt-user-login rt-button">
-						<a  class="action-icon" href="<?php echo esc_url( $args['login_link'] ) ?>" aria-label="user login">
-							<i class="icon-rt-user-1"></i>
-						</a>
-					</li>
-				<?php } if ($args['compare'] && class_exists( 'WooCommerce' ) && function_exists('rtsb')) { ?>
-					<li class="item-icon header-compare-icon">
-						<?php if ( shortcode_exists( 'rtsb_compare_counter' ) ) {
-							echo do_shortcode('[rtsb_compare_counter]');
-						} ?>
-					</li>
-				<?php } if ($args['wishlist'] && class_exists( 'WooCommerce' ) && function_exists('rtsb')) { ?>
-					<li class="item-icon header-wishlist-icon">
-						<?php if ( shortcode_exists( 'rtsb_wishlist_counter' ) ) {
-							echo do_shortcode('[rtsb_wishlist_counter]');
-						} ?>
-					</li>
-				<?php } if ($args['add_to_cart'] && class_exists( 'WooCommerce' ) && function_exists('rtsb')) { ?>
-					<li class="item-icon rt-cart-float-inner rtsb-cart-float-menu">
-						<span class="rt-cart-icon action-icon">
-							<i class="icon-rt-cart"></i>
-							<span class="rtsb-cart-icon-num"></span>
-						</span>
-					</li>
-				<?php } ?>
-			</ul>
+		<div class="mobile-action-button">
+			<div class="menu-icon-wrapper">
+				<ul class="menu-icon-action">
+					<?php if ( $args['search'] ) { ?>
+						<li class="rt-search-popup">
+							<a class="action-icon menu-search-bar rt-search-trigger" href="#header-search" aria-label="search popup"><i class="icon-rt-search-2"></i></a>
+						</li>
+					<?php } if ( $args['login'] ) { ?>
+						<li class="rt-user-login rt-button">
+							<a  class="action-icon" href="<?php echo esc_url( $args['login_link'] ) ?>" aria-label="user login">
+								<i class="icon-rt-user-2"></i>
+							</a>
+						</li>
+					<?php } if ($args['compare'] && class_exists( 'WooCommerce' ) && function_exists('rtsb')) { ?>
+						<li class="item-icon header-compare-icon">
+							<?php if ( shortcode_exists( 'rtsb_compare_counter' ) ) {
+								echo do_shortcode('[rtsb_compare_counter]');
+							} ?>
+						</li>
+					<?php } if ($args['wishlist'] && class_exists( 'WooCommerce' ) && function_exists('rtsb')) { ?>
+						<li class="item-icon header-wishlist-icon">
+							<?php if ( shortcode_exists( 'rtsb_wishlist_counter' ) ) {
+								echo do_shortcode('[rtsb_wishlist_counter]');
+							} ?>
+						</li>
+					<?php } if ($args['add_to_cart'] && class_exists( 'WooCommerce' ) && function_exists('rtsb')) { ?>
+						<li class="item-icon rt-cart-float-inner rtsb-cart-float-menu">
+							<span class="rt-cart-icon action-icon">
+								<i class="icon-rt-cart-2"></i>
+								<span class="rtsb-cart-icon-num"></span>
+							</span>
+						</li>
+					<?php } ?>
+				</ul>
+			</div>
 		</div>
 		<?php
 	}
@@ -370,7 +372,8 @@ if ( ! function_exists( 'fasheno_color_mode_icons' ) ) {
 		<div class="header-switch header-switch-wrapper">
 			<label class="header-switch-label" for="headerSwitchCheckbox">
 				<input class="header-switch-input" type="checkbox" name="headerSwitchCheckbox" id="headerSwitchCheckbox">
-				<i class="icon-rt-heart"></i>
+				<i class="icon-rt-sun"></i>
+				<i class="icon-rt-moon"></i>
 			</label>
 		</div>
 	<?php } }
@@ -414,7 +417,7 @@ if ( ! function_exists( 'fasheno_product_ajax_search' ) ) {
 								<div class="cat-btn-wrap">
 									<button class="rt-btn cat-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 										<span class="cat-label"><?php echo esc_html( $label );?></span>
-										<span class="icon"><i class="down-arrow icon-rt-filter"></i></span>
+										<span class="icon"><i class="down-arrow icon-rt-angle-down-1"></i></span>
 									</button>
 									<ul class="dropdown-menu rt-drop-menu" aria-labelledby="dropdownMenuButton1">
 										<li data-slug=""><?php echo esc_html( $all_label );?></li>
@@ -432,7 +435,7 @@ if ( ! function_exists( 'fasheno_product_ajax_search' ) ) {
 								<input type="text" autocomplete="off" name="s" class="form-control product-search-form product-autocomplete-js" placeholder="<?php esc_attr_e( 'Type Your Products ...', 'fasheno' );?>" value="<?php echo esc_attr( $search );?>">
 								<div class="input-group-append">
 									<input type="hidden" name="post_type" value="product">
-									<button class="search-btn" aria-label="button"><i class="icon-rt-search-1"></i></button>
+									<button class="search-btn" aria-label="button"><i class="icon-rt-search-2"></i></button>
 								</div>
 							</div>
 						</li>
@@ -835,7 +838,7 @@ if ( ! function_exists( 'fasheno_scroll_top' ) ) {
 	function fasheno_scroll_top( $class = '', $icon = 'scroll-top' ) {
 		if ( fasheno_option( 'rt_back_to_top' ) ) {
 			?>
-			<a href="#" class="scrollToTop <?php echo esc_attr( $class ) ?>"><i class="icon-rt-up-angle-bar"></i></a>
+			<a href="#" class="scrollToTop <?php echo esc_attr( $class ) ?>"><i class="icon-rt-corner-left-up"></i></a>
 			<?php
 		}
 	}
@@ -854,12 +857,12 @@ if ( ! function_exists( 'fasheno_meta_icons' ) ) {
 			return;
 		}
 		$icon_list = [
-			'author'   => '<i class="icon-rt-user-1"></i>',
+			'author'   => '<i class="icon-rt-user-2"></i>',
 			'date'     => '<i class="icon-rt-calendar"></i>',
-			'comment'  => '<i class="icon-rt-comments"></i>',
-			'category' => '<i class="icon-rt-tag"></i>',
-			'tag'      => '<i class="icon-rt-tags"></i>',
-			'reading'  => '<i class="icon-rt-clock"></i>',
+			'comment'  => '<i class="icon-rt-comment-3"></i>',
+			'category' => '<i class="icon-rt-tags"></i>',
+			'tag'      => '<i class="icon-rt-tag"></i>',
+			'reading'  => '<i class="icon-rt-clock-2"></i>',
 			'views'    => '<i class="icon-rt-eye"></i>',
 		];
 
@@ -1085,8 +1088,8 @@ if ( ! function_exists( 'fasheno_post_thumbnail' ) ) {
 					<?php } ?>
 				</div>
 				<div class="swiper-navigation">
-					<div class="swiper-button swiper-button-prev"><i class="icon-rt-left-arrow"></i></div>
-					<div class="swiper-button swiper-button-next"><i class="icon-rt-right-arrow"></i></div>
+					<div class="swiper-button swiper-button-prev"><i class="icon-rt-prev"></i></div>
+					<div class="swiper-button swiper-button-next"><i class="icon-rt-next"></i></div>
 				</div>
 			</div>
 		<?php } else { ?>
@@ -1096,7 +1099,7 @@ if ( ! function_exists( 'fasheno_post_thumbnail' ) ) {
 
 			<?php $rt_youtube_link = get_post_meta( get_the_ID(), 'rt_youtube_link', true );
 			if ( fasheno_option( 'rt_video_visibility' ) == 1 && ( 'video' == get_post_format( get_the_ID() ) ) && !empty( $rt_youtube_link ) ) { ?>
-				<div class="rt-video"><a class="popup-youtube video-popup-icon" href="<?php echo esc_url( $rt_youtube_link );?>"><i class="icon-rt-play"></i></a></div>
+				<div class="rt-video"><a class="popup-youtube video-popup-icon" href="<?php echo esc_url( $rt_youtube_link );?>"><i class="icon-rt-play-stroke"></i></a></div>
 			<?php } ?>
 		<?php } ?>
 
@@ -1153,8 +1156,8 @@ if ( ! function_exists( 'fasheno_post_single_thumbnail' ) ) {
 					<?php } ?>
 				</div>
 				<div class="swiper-navigation">
-					<div class="swiper-button swiper-button-prev"><i class="icon-rt-left-arrow"></i></div>
-					<div class="swiper-button swiper-button-next"><i class="icon-rt-right-arrow"></i></div>
+					<div class="swiper-button swiper-button-prev"><i class="icon-rt-prev"></i></div>
+					<div class="swiper-button swiper-button-next"><i class="icon-rt-next"></i></div>
 				</div>
 			</div>
 		<?php } else { ?>
@@ -1184,7 +1187,7 @@ if ( ! function_exists( 'fasheno_entry_footer' ) ) {
 		if ( ! is_single() ) {
 			if ( fasheno_option( 'rt_blog_footer_visibility' ) ) { ?>
 				<footer class="entry-footer rt-button">
-					<a class="btn button-4" href="<?php echo esc_url( get_permalink() ) ?>"><i class="icon-rt-right-arrow"></i><span><?php echo fasheno_readmore_text() ?></span>
+					<a class="btn button-4" href="<?php echo esc_url( get_permalink() ) ?>"><i class="icon-rt-next"></i><span><?php echo fasheno_readmore_text() ?></span>
 					</a>
 				</footer>
 			<?php }
@@ -1229,12 +1232,15 @@ if ( ! function_exists( 'fasheno_post_single_video' ) ) {
 		if ( ( function_exists( 'get_post_format' ) && 'video' == get_post_format( get_the_ID() ) && !empty( $rt_youtube_link ) )  ) {
 			preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $rt_youtube_link, $match);
 			$youtube_id = $match[1];
+
 		} ?>
 		<?php if ( !empty($youtube_id) ) { ?>
 			<?php if ( ( function_exists( 'get_post_format' ) && 'video' == get_post_format( get_the_ID() ) )  ) { ?>
 				<div class="entry-video-area embed-responsive-16by9">
 					<div class="embed-responsive">
-						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo esc_attr( $youtube_id ); ?>" allowfullscreen></iframe>
+						<div class="video-container">
+							<object data="https://www.youtube.com/embed/<?php echo esc_attr( $youtube_id ); ?>" type="text/html" width="560" height="315"></object>
+						</div>
 					</div>
 				</div>
 			<?php } ?>
@@ -1294,14 +1300,14 @@ if ( ! function_exists( 'fasheno_entry_profile' ) ) {
 							<div class="author-bio"><?php echo esc_html( $prof_description );?></div>
 						<?php } ?>
 						<ul class="profile-author-social">
-							<?php if ( ! empty( $prof_fb ) ){ ?><li><a href="<?php echo esc_attr( $prof_fb ); ?>"><i class="icon-rt-facebook"></i></a></li><?php } ?>
-							<?php if ( ! empty( $prof_tw ) ){ ?><li><a href="<?php echo esc_attr( $prof_tw ); ?>"><i class="icon-rt-x-twitter"></i></a></li><?php } ?>
-							<?php if ( ! empty( $prof_lk ) ){ ?><li><a href="<?php echo esc_attr( $prof_lk ); ?>"><i class="icon-rt-linkedin"></i></a></li><?php } ?>
+							<?php if ( ! empty( $prof_fb ) ){ ?><li><a href="<?php echo esc_attr( $prof_fb ); ?>"><i class="icon-rt-facebook-1"></i></a></li><?php } ?>
+							<?php if ( ! empty( $prof_tw ) ){ ?><li><a href="<?php echo esc_attr( $prof_tw ); ?>"><i class="icon-rt-twitter-1"></i></a></li><?php } ?>
+							<?php if ( ! empty( $prof_lk ) ){ ?><li><a href="<?php echo esc_attr( $prof_lk ); ?>"><i class="icon-rt-linkedin-1"></i></a></li><?php } ?>
+							<?php if ( ! empty( $prof_pin ) ){ ?><li><a href="<?php echo esc_attr( $prof_pin ); ?>"><i class="icon-rt-pinterest-1"></i></a></li><?php } ?>
+							<?php if ( ! empty( $prof_ins ) ){ ?><li><a href="<?php echo esc_attr( $prof_ins ); ?>"><i class="icon-rt-instagram-1"></i></a></li><?php } ?>
+							<?php if ( ! empty( $prof_wht ) ){ ?><li><a href="<?php echo esc_attr( $prof_wht ); ?>"><i class="icon-rt-whatsapp-1"></i></a></li><?php } ?>
 							<?php if ( ! empty( $prof_vim ) ){ ?><li><a href="<?php echo esc_attr( $prof_vim ); ?>"><i class="icon-rt-vine"></i></a></li><?php } ?>
-							<?php if ( ! empty( $prof_you ) ){ ?><li><a href="<?php echo esc_attr( $prof_you ); ?>"><i class="icon-rt-youtube-2"></i></a></li><?php } ?>
-							<?php if ( ! empty( $prof_ins ) ){ ?><li><a href="<?php echo esc_attr( $prof_ins ); ?>"><i class="icon-rt-instagram"></i></a></li><?php } ?>
-							<?php if ( ! empty( $prof_pin ) ){ ?><li><a href="<?php echo esc_attr( $prof_pin ); ?>"><i class="icon-rt-pinterest"></i></a></li><?php } ?>
-							<?php if ( ! empty( $prof_wht ) ){ ?><li><a href="<?php echo esc_attr( $prof_wht ); ?>"><i class="icon-rt-whatsapp"></i></a></li><?php } ?>
+							<?php if ( ! empty( $prof_you ) ){ ?><li><a href="<?php echo esc_attr( $prof_you ); ?>"><i class="icon-rt-youtube"></i></a></li><?php } ?>
 						</ul>
 					</div>
 				</div>
@@ -1473,7 +1479,7 @@ if ( ! function_exists( 'fasheno_breadcrumb' ) ) {
 			<ul class="breadcrumb">
 				<li class="breadcrumb-item">
 					<a href="<?php echo esc_url( home_url() ); ?>"><?php esc_html_e( 'Home', 'fasheno' ) ?></a>
-					<span class="raquo"><i class="icon-rt-user-datalist-feature"></i></span>
+					<span class="raquo"><i class="icon-rt-next"></i></span>
 				</li>
 				<li class="breadcrumb-item active" aria-current="page">
 					<?php
@@ -1501,7 +1507,7 @@ if ( ! function_exists( 'fasheno_breadcrumb' ) ) {
 						$category = get_the_category();
 						if ( $category ) {
 							$catlink = get_category_link( $category[0]->cat_ID );
-							echo '<a href="' . esc_url( $catlink ) . '">' . esc_html( $category[0]->cat_name ) . '</a> <span class="raquo"><i class="icon-rt-user-datalist-feature"></i></span> ';
+							echo '<a href="' . esc_url( $catlink ) . '">' . esc_html( $category[0]->cat_name ) . '</a> <span class="raquo"><i class="icon-rt-next"></i></span> ';
 						}
 						echo '<span class="title">';
 						echo get_the_title();
@@ -1524,7 +1530,7 @@ if ( ! function_exists( 'fasheno_breadcrumb' ) ) {
 						}
 
 						if ( ! empty( $tt_taxonomy_links ) ) {
-							echo implode( ' <span class="raquo">/</span> ', array_reverse( $tt_taxonomy_links ) ) . ' <span class="raquo"><i class="icon-rt-user-datalist-feature"></i></span> ';
+							echo implode( ' <span class="raquo">/</span> ', array_reverse( $tt_taxonomy_links ) ) . ' <span class="raquo"><i class="icon-rt-next"></i></span> ';
 						}
 
 						echo '<span class="title">';

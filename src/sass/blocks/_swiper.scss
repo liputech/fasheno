@@ -84,7 +84,6 @@
 		width: 12px;
 		height: 12px;
 		border-radius: 50%;
-		transition: all 0.21s ease-in-out;
 		background: $gray_color;
 		opacity: 1;
 	}
@@ -93,7 +92,8 @@
 	}
 }
 @media(max-width: 767px) {
-	.swiper-navigation {
+	.swiper-navigation,
+	.swiper-pagination {
 		display: none;
 	}
 }

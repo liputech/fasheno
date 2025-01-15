@@ -1,0 +1,33 @@
+// Currency
+
+.rt-currency {
+	.switcher-list {
+		display: inline-block;
+		.switcher-using-shortcode {
+			display: inline-flex;
+			border: unset;
+			padding: 0;
+			.currency-selected {
+				padding: 0;
+			}
+		}
+		.dashicons {
+			position: relative;
+			top: 0;
+		}
+		a.currency-selected, .switcher-list a:hover {
+			color: $button_text_color;
+		}
+		a:hover {
+			color: $primary_color;
+		}
+		.switcher-btn-wrapper {
+			background-color: $white_bg_color;
+			box-shadow: 0 0 30px 4px rgba($heading_rgb, 0.1);
+			border: 1px solid $border_color;
+		}
+		.switcher-btn-wrapper:before {
+			border-color: transparent transparent $white_bg_color;
+		}
+	}
+}

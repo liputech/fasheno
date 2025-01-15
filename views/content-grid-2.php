@@ -58,8 +58,8 @@ $duration = fasheno_option('duration');
 						<?php } ?>
 					</div>
 					<div class="swiper-navigation">
-						<div class="swiper-button swiper-button-prev"><i class="icon-rt-left-arrow"></i></div>
-						<div class="swiper-button swiper-button-next"><i class="icon-rt-right-arrow"></i></div>
+						<div class="swiper-button swiper-button-prev"><i class="icon-rt-prev"></i></div>
+						<div class="swiper-button swiper-button-next"><i class="icon-rt-next"></i></div>
 					</div>
 				</div>
 			<?php } else { ?>
@@ -69,7 +69,7 @@ $duration = fasheno_option('duration');
 
 				<?php $rt_youtube_link = get_post_meta( get_the_ID(), 'rt_youtube_link', true );
 				if ( fasheno_option( 'rt_video_visibility' ) == 1 && ( 'video' == get_post_format( get_the_ID() ) ) && !empty( $rt_youtube_link ) ) { ?>
-					<div class="rt-video"><a class="popup-youtube video-popup-icon" href="<?php echo esc_url( $rt_youtube_link );?>"><i class="icon-rt-play"></i></a></div>
+					<div class="rt-video"><a class="popup-youtube video-popup-icon" href="<?php echo esc_url( $rt_youtube_link );?>"><i class="icon-rt-play-stroke"></i></a></div>
 				<?php } ?>
 			<?php } ?>
 		</div>
