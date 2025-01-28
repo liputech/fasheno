@@ -80,7 +80,7 @@ if ( fasheno_option( 'rt_header_separator' ) ) {
 	</div><!-- .container -->
 </div>
 
-<div class="main-header-section header-bottom">
+<div class="main-header-section header-bottom mega-menu-left">
 	<div class="header-container rt-container<?php echo esc_attr($_fullwidth) ?>">
 		<div class="row navigation-menu-wrap align-middle m-0">
 			<nav class="fasheno-navigation <?php echo esc_attr( $menu_classes ) ?>" role="navigation">

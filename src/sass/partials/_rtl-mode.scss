@@ -1,0 +1,28 @@
+// RTL Button
+
+.rtl-mode-switch {
+	.fashion-rtl-btn {
+		border-radius: 50%;
+		background-color: #3aa9de;
+		color: $white_color;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		font-size: 15px;
+		font-weight: 600;
+		right: 40px;
+		bottom: 220px;
+		width: 60px;
+		height: 60px;
+		cursor: pointer;
+		z-index: 999;
+		@media (max-width: 767px) {
+			font-size: 12px;
+			right: 20px;
+			bottom: 130px;
+			width: 40px;
+			height: 40px;
+		}
+	}
+}

@@ -115,9 +115,11 @@
 		padding: 0;
 		width: $dropdown_width;
 		text-align: left;
-		border-radius: 0 0 15px 15px;
+		border-radius: 0 0 10px 10px;
 		background-color: $body_bg_color;
-		box-shadow: 0 8px 8px rgba(23,22,24,.04),0 4px 4px rgba(23,22,24,.04),0 2px 2px rgba(23,22,24,.04);
+		box-shadow: 0 6px 12px rgba(23,22,24,.04),0 4px 8px rgba(23,22,24,.04),0 2px 8px rgba(23,22,24,.04);
+		transform: translate3d(0,2rem,0)scale3d(1,1,1)rotateX(0)rotateY(0)rotateZ(0)skew(0,0);
+		transition: transform 0.33s,opacity 0.33s;
 	}
 
 	ul > li:hover > ul {
@@ -214,6 +216,7 @@
 	}
 
 	.caret svg {
+		fill: $heading_color_1;
 		transition: fill 0.4s;
 	}
 

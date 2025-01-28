@@ -42,7 +42,6 @@
 ::-webkit-scrollbar {
 	width: 5px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
 	background: $gray_color;
@@ -57,25 +56,15 @@
 }
 
 /*offcanvas scroll bar*/
+ul.rt-action-list .rt-drop-menu::-webkit-scrollbar,
 .fasheno-offcanvas-drawer::-webkit-scrollbar {
-	width: 3px;
+	width: 1px;
 }
+ul.rt-action-list .rt-drop-menu::-webkit-scrollbar,
 .fasheno-offcanvas-drawer::-webkit-scrollbar {
-	background: $black_bg_color;
-}
-.fasheno-offcanvas-drawer::-webkit-scrollbar-thumb {
-	background: $black_bg_color;
-}
-
-/*rtsb-tax-filter scroll bar*/
-.rtsb-tax-filter::-webkit-scrollbar {
-	width: 3px;
-	position: absolute;
-	left: 0;
-}
-.rtsb-tax-filter::-webkit-scrollbar-track {
 	background: $border_color;
 }
-.rtsb-tax-filter::-webkit-scrollbar-thumb {
+ul.rt-action-list .rt-drop-menu::-webkit-scrollbar-thumb,
+.fasheno-offcanvas-drawer::-webkit-scrollbar-thumb {
 	background: $black_bg_color;
 }

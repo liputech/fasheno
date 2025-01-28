@@ -1,5 +1,4 @@
-/* Mega-menu CSS
-***************************/
+/* Mega menu elementor CSS */
 .mega-menu-wrap {
 	.e-con-inner {
 		position: relative;
@@ -9,6 +8,17 @@
 		position: unset;
 	}
 }
+.mega-menu-left {
+	.fasheno-navigation ul li.mega-menu > ul.dropdown-menu {
+		right: auto;
+	}
+}
+.mega-menu-right {
+	.fasheno-navigation ul li.mega-menu > ul.dropdown-menu {
+		left: auto;
+	}
+}
+/* Mega-menu CSS */
 .fasheno-navigation {
 	ul.menu li.mega-menu ul.dropdown-menu li a:before,
 	ul.menu li.mega-menu ul.dropdown-menu li:after,
@@ -118,12 +128,23 @@
 	}
 
 	ul li.mega-menu.mega-menu-col-2 > ul {
-		width: 45%;
+		width: 30%;
 	}
 
 	ul li.mega-menu.mega-menu-col-3 > ul {
-		width: 65%;
+		width: 50%;
 	}
 }
-
-
+@keyframes menu_slide {
+	0% {
+		 transform: translate3d(33px, 0, 0);
+		 opacity: 0;
+	}
+	100% {
+	   transform: translateZ(0);
+	   opacity: 1;
+   	}
+}
+.fasheno-navigation ul.fasheno-navbar > li:hover > ul.dropdown-menu {
+	animation: menu_slide 0.44s both;
+}

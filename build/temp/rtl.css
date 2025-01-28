@@ -6,17 +6,9 @@
 .rt-service-sidebar .fasheno-navbar li a:after,
 .service-sidebar-menu ul.menu li a:after,
 .service-sidebar-menu .fasheno-navbar li a:after,
-.service-single .service-single-item ul li:before {
+.service-single .service-single-item ul li:before,
+.rt-icon-list .right-arrow-icon .title-link:after {
   transform: rotate(180deg);
-}
-
-.blog-grid-2 .post-thumbnail-wrap .posted-on {
-  right: 5px;
-  bottom: 5px;
-}
-
-.wp-block-quote {
-  border-left-width: 0;
 }
 
 /*# sourceMappingURL=rtl.css.map*/

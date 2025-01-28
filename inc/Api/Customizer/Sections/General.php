@@ -49,6 +49,14 @@ class General extends Customizer {
 				'label' => __( 'Preloader', 'fasheno' ),
 			],
 
+			'rt_preloader_text' => [
+				'type'        => 'text',
+				'label'       => __( 'Preloader Text', 'fasheno' ),
+				'default'     => __( 'Fasheno...', 'fasheno' ),
+				'description' => __( 'Content: Change Preloader text', 'fasheno' ),
+				'condition' => [ 'rt_preloader' ]
+			],
+
 			'rt_preloader_logo' => [
 				'type'         => 'image',
 				'label'        => __( 'Preloader Logo', 'fasheno' ),
@@ -66,6 +74,11 @@ class General extends Customizer {
 			'rt_back_to_top' => [
 				'type'  => 'switch',
 				'label' => __( 'Back to Top', 'fasheno' ),
+			],
+
+			'rt_rtl_mode' => [
+				'type'  => 'switch',
+				'label' => __( 'RTL Mode', 'fasheno' ),
 			],
 
 			'rt_color_mode' => [

@@ -3,6 +3,9 @@
 
 .layout-left-sidebar #sidebar {
 	order: -1;
+	@media(max-width: 1139px) {
+		order: 1;
+	}
 }
 
 @import "parts/_meta";

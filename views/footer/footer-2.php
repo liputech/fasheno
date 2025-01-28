@@ -41,6 +41,5 @@ $copyright_center = fasheno_option('rt_footer_payment_display') ? 'justify-conte
 				<?php } ?>
 			</div>
 		</div>
-
 	</div>
 <?php endif; ?>

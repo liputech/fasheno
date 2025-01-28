@@ -3,6 +3,14 @@
 .woocommerce {
 	div.product {
 		.rtwpvg-images {
+			.rtwpvg-thumbnail-position-bottom {
+				.rtwpvg-single-image-container {
+					height: 600px;
+					img {
+						object-fit: cover;
+					}
+				}
+			}
 			.rtwpvg-container {
 				gap: 10px;
 			}

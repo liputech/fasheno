@@ -24,7 +24,7 @@ $copyright_center = fasheno_option('rt_footer_payment_display') ? 'justify-conte
 <?php if ( ! empty( fasheno_option( 'rt_footer_copyright' ) ) ) : ?>
 	<div class="footer-copyright-wrapper text-center">
 		<div class="footer-container <?php echo esc_attr( $footer_width ) ?>">
-			<div class="d-flex align-items-center <?php echo esc_attr($copyright_center); ?>">
+			<div class="d-flex flex-wrap gap-20 align-items-center <?php echo esc_attr($copyright_center); ?>">
 				<div class="copyright-text">
 					<?php fasheno_html( str_replace( '[y]', date( 'Y' ), fasheno_option( 'rt_footer_copyright' ) ) ); ?>
 				</div>

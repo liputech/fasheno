@@ -2,8 +2,8 @@
 .separate-meta {
 	margin-bottom: 7px;
 	a {
-		background-color: $primary_color;
-		color: $button_color;
+		background-color: $gray_color;
+		color: $button_text_color;
 		border-radius: 30px;
 		font-size: 14px;
 		font-weight: 500;
@@ -14,6 +14,7 @@
 		position: relative;
 		margin: 0 4px 4px 0;
 		line-height: 1.2;
+		transition: all 0.220ms;
 		&:hover {
 			background: $black_bg_color_1;
 			color: $button_color_1;

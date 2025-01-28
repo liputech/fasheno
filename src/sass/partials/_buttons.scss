@@ -1,6 +1,7 @@
 button {
 	@include transition_default();
 	cursor: pointer;
+	transition: all 220ms;
 }
 
 .btn {

@@ -1,12 +1,18 @@
 <wpml-config>
     <admin-texts>
         <key name="fasheno">
+            <key name="rt_preloader_text" />
             <key name="rt_phone" />
             <key name="rt_email" />
             <key name="rt_website" />
             <key name="rt_contact_address" />
-            <key name="rt_get_login_label" />
-            <key name="rt_get_started_label" />
+			<key name="rt_get_phone_label" />
+			<key name="rt_get_login_label" />
+            <key name="rt_get_cart_label" />
+            <key name="rt_get_wishlist_label" />
+            <key name="rt_get_compare_label" />
+            <key name="rt_get_delivery_label" />
+            <key name="rt_get_sale_offer_label" />
             <key name="rt_contact_info_label" />
             <key name="rt_follow_us_label" />
             <key name="rt_about_label" />

@@ -32,7 +32,6 @@ class Enqueue {
 		wp_register_script( 'rt-parallax-scroll', fasheno_get_js( 'parallax-scroll' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-ele-parallax', fasheno_get_js( 'ele-parallax' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-countdown', fasheno_get_js( 'countdown' ), [ 'jquery' ], Constants::get_version(), true );
-		wp_register_script( 'rt-appear', fasheno_get_js( 'appear' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-magnific-popup', fasheno_get_js( 'magnific-popup' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-nice-select', fasheno_get_js( 'nice-select' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-isotope', fasheno_get_js( 'isotope.min' ), [ 'jquery' ], Constants::get_version(), true );
@@ -54,9 +53,7 @@ class Enqueue {
 		wp_enqueue_style( 'rt-animate' );
 		wp_enqueue_style( 'rt-magnific-popup' );
 
-		//if ( ! function_exists( 'rtsb' ) ) {
-			wp_enqueue_style( 'rt-swiper' );
-		//}
+		wp_enqueue_style( 'rt-swiper' );
 		wp_enqueue_style( 'fasheno-main', fasheno_get_css( 'style', true ), [], Constants::get_version() );
 
 		// JS
@@ -68,7 +65,6 @@ class Enqueue {
 
 		wp_enqueue_script( 'rt-swiper-animation' );
 
-		wp_enqueue_script( 'rt-appear', fasheno_get_js( 'appear' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_enqueue_script( 'rt-magnific-popup', fasheno_get_js( 'magnific-popup' ), [ 'jquery' ], Constants::get_version(), true );// magnific js
 		wp_enqueue_script( 'rt-isotope', fasheno_get_js( 'isotope.min' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_enqueue_script( 'rt-swiper', fasheno_get_js( 'swiper.min' ), [ 'jquery' ], Constants::get_version(), true );

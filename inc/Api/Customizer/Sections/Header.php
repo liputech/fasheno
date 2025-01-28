@@ -176,7 +176,7 @@ class Header extends Customizer {
 
 			'rt_get_delivery_button_url' => [
 				'type'    => 'text',
-				'label'   => __( 'Button Link', 'fasheno' ),
+				'label'   => __( 'Delivery Link', 'fasheno' ),
 				'condition' => [ 'rt_get_delivery_button' ],
 			],
 

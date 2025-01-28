@@ -11,14 +11,14 @@
 			.rt-marquee-item {
 				display: inline-block;
 				will-change: transform;
-				animation: marquee_left 40s linear infinite;
+				animation: marquee_left 50s linear infinite;
 			}
 		}
 		&.marquee-right {
 			.rt-marquee-item {
 				display: inline-block;
 				will-change: transform;
-				animation: marquee_right 40s linear infinite;
+				animation: marquee_right 50s linear infinite;
 			}
 		}
 		&:hover {
@@ -38,6 +38,9 @@
 			margin-bottom: 0;
 			text-transform: uppercase;
 			color: $heading_color;
+			&:hover {
+				color: $primary_color;
+			}
 			a {
 				color: $heading_color;
 				&:hover {

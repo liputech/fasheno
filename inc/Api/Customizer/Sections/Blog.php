@@ -96,7 +96,7 @@ class Blog extends Customizer {
 				'description' => __( 'This option works only for blog pagination style', 'fasheno' ),
 				'default'     => 'pagination-area',
 				'choices'     => [
-					'pagination-area'  => __( 'Default', 'fasheno' ),
+					'pagination-area'  => __( 'Style 1', 'fasheno' ),
 					'pagination-area-2'  => __( 'Style 2', 'fasheno' ),
 				]
 			],

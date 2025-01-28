@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-10 05:12+0000\n"
+"POT-Creation-Date: 2025-01-27 10:20+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -37,10 +37,6 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: ../header.php:61
-msgid "Type your search........"
-msgstr ""
-
 #: ../inc/template-tags.php:212
 msgid "Add %s Menu"
 msgstr ""
@@ -49,119 +45,119 @@ msgstr ""
 msgid "Add a menu"
 msgstr ""
 
-#: ../inc/template-tags.php:216, ../inc/template-tags.php:1481
+#: ../inc/template-tags.php:216, ../inc/template-tags.php:1609
 msgid "Home"
 msgstr ""
 
-#: ../inc/template-tags.php:402
+#: ../inc/template-tags.php:449
 msgid "Select Category"
 msgstr ""
 
-#: ../inc/template-tags.php:435
+#: ../inc/template-tags.php:485, ../inc/template-tags.php:535
 msgid "Type Your Products ..."
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: ../inc/template-tags.php:510, ../inc/Core/Tags.php:50, ../inc/Core/Tags.php:55
+#: ../inc/template-tags.php:613, ../inc/Core/Tags.php:50, ../inc/Core/Tags.php:55
 msgid ", "
 msgstr ""
 
-#: ../inc/template-tags.php:560
+#: ../inc/template-tags.php:663
 msgid "%s %s"
 msgstr ""
 
-#: ../inc/template-tags.php:893
+#: ../inc/template-tags.php:1001
 msgid "%s mins read"
 msgstr ""
 
-#: ../inc/template-tags.php:891
+#: ../inc/template-tags.php:999
 msgid "1 min read"
 msgstr ""
 
-#: ../inc/template-tags.php:889
+#: ../inc/template-tags.php:997
 msgid "%s hours read"
 msgstr ""
 
-#: ../inc/template-tags.php:887
+#: ../inc/template-tags.php:995
 msgid "Less than a minute"
 msgstr ""
 
-#: ../inc/template-tags.php:977, ../inc/Helpers/Fns.php:365
+#: ../inc/template-tags.php:1082, ../inc/Helpers/Fns.php:365
 msgid "Views"
 msgstr ""
 
-#: ../inc/template-tags.php:975
+#: ../inc/template-tags.php:1080
 msgid "View"
 msgstr ""
 
-#: ../inc/template-tags.php:998, ../inc/Api/Customizer/Sections/Labels.php:148
+#: ../inc/template-tags.php:1103, ../inc/Api/Customizer/Sections/Labels.php:148
 msgid "By"
 msgstr ""
 
-#: ../inc/template-tags.php:1004
+#: ../inc/template-tags.php:1109
 msgid "Comment: %s"
 msgid_plural "Comments: %s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:1294
+#: ../inc/template-tags.php:1406
 msgid "Ph: "
 msgstr ""
 
-#: ../inc/template-tags.php:1557
+#: ../inc/template-tags.php:1685
 msgid "Shop"
 msgstr ""
 
-#: ../inc/template-tags.php:1553
+#: ../inc/template-tags.php:1681
 msgid "Blog"
 msgstr ""
 
-#: ../inc/template-tags.php:1544
+#: ../inc/template-tags.php:1672
 msgid "Posts by: "
 msgstr ""
 
-#: ../inc/template-tags.php:1516
+#: ../inc/template-tags.php:1644
 msgid "Posts Category: "
 msgstr ""
 
-#: ../inc/template-tags.php:1504
+#: ../inc/template-tags.php:1632
 msgid "404"
 msgstr ""
 
-#: ../inc/template-tags.php:1499
+#: ../inc/template-tags.php:1627
 msgid "Search results for: "
 msgstr ""
 
-#: ../inc/template-tags.php:1494
+#: ../inc/template-tags.php:1622
 msgid "Posts made in: "
 msgstr ""
 
-#: ../inc/template-tags.php:1487
+#: ../inc/template-tags.php:1615
 msgid "Posts Tagged: "
 msgstr ""
 
-#: ../inc/template-tags.php:1596
+#: ../inc/template-tags.php:1724
 msgid "Pingback:"
 msgstr ""
 
-#: ../inc/template-tags.php:1617
+#: ../inc/template-tags.php:1745
 msgid "<cite class=\"fn\">%s</cite>"
 msgstr ""
 
 #. translators: 1: date, 2: time
-#: ../inc/template-tags.php:1623
+#: ../inc/template-tags.php:1751
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: ../inc/template-tags.php:1628
+#: ../inc/template-tags.php:1756
 msgid "Edit"
 msgstr ""
 
-#: ../inc/template-tags.php:1636
+#: ../inc/template-tags.php:1764
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: ../inc/template-tags.php:1647
+#: ../inc/template-tags.php:1775
 msgid "Reply"
 msgstr ""
 
@@ -814,19 +810,19 @@ msgid_plural "%s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/Setup/Enqueue.php:89
+#: ../inc/Setup/Enqueue.php:85
 msgid "Day"
 msgstr ""
 
-#: ../inc/Setup/Enqueue.php:90
+#: ../inc/Setup/Enqueue.php:86
 msgid "Hour"
 msgstr ""
 
-#: ../inc/Setup/Enqueue.php:91
+#: ../inc/Setup/Enqueue.php:87
 msgid "Min"
 msgstr ""
 
-#: ../inc/Setup/Enqueue.php:92
+#: ../inc/Setup/Enqueue.php:88
 msgid "Sec"
 msgstr ""
 
@@ -1171,7 +1167,7 @@ msgid "This option works only for blog pagination style"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/Blog.php:99
-msgid "Default"
+msgid "Style 1"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/Blog.php:100
@@ -1815,78 +1811,94 @@ msgid "Preloader"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/General.php:54
-msgid "Preloader Logo"
+msgid "Preloader Text"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/General.php:55
-msgid "Upload preloader logo for your site."
+msgid "Fasheno..."
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/General.php:56, ../inc/Api/Customizer/Sections/SiteIdentity.php:38
-msgid "Logo"
+#: ../inc/Api/Customizer/Sections/General.php:56
+msgid "Content: Change Preloader text"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/General.php:62
+msgid "Preloader Logo"
+msgstr ""
+
+#: ../inc/Api/Customizer/Sections/General.php:63
+msgid "Upload preloader logo for your site."
+msgstr ""
+
+#: ../inc/Api/Customizer/Sections/General.php:64, ../inc/Api/Customizer/Sections/SiteIdentity.php:38
+msgid "Logo"
+msgstr ""
+
+#: ../inc/Api/Customizer/Sections/General.php:70
 msgid "Preloader Background Color"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/General.php:68
+#: ../inc/Api/Customizer/Sections/General.php:76
 msgid "Back to Top"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/General.php:73
+#: ../inc/Api/Customizer/Sections/General.php:81
+msgid "RTL Mode"
+msgstr ""
+
+#: ../inc/Api/Customizer/Sections/General.php:86
 msgid "Color Mode"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/General.php:78
+#: ../inc/Api/Customizer/Sections/General.php:91
 msgid "Select Color Mode"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/General.php:81
+#: ../inc/Api/Customizer/Sections/General.php:94
 msgid "Light Mode"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/General.php:82
+#: ../inc/Api/Customizer/Sections/General.php:95
 msgid "Dark Mode"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/General.php:89
+#: ../inc/Api/Customizer/Sections/General.php:102
 msgid "Remove Admin Bar"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/General.php:90
+#: ../inc/Api/Customizer/Sections/General.php:103
 msgid "This option not work for administrator role."
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/General.php:95
+#: ../inc/Api/Customizer/Sections/General.php:108
 msgid "Container Width"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/General.php:98
+#: ../inc/Api/Customizer/Sections/General.php:111
 msgid "1554px"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/General.php:99
+#: ../inc/Api/Customizer/Sections/General.php:112
 msgid "1344px"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/General.php:100
+#: ../inc/Api/Customizer/Sections/General.php:113
 msgid "1240px"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/General.php:101
+#: ../inc/Api/Customizer/Sections/General.php:114
 msgid "1200px"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/General.php:102
+#: ../inc/Api/Customizer/Sections/General.php:115
 msgid "1140px"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/General.php:108
+#: ../inc/Api/Customizer/Sections/General.php:121
 msgid "Image Blend"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/General.php:110
+#: ../inc/Api/Customizer/Sections/General.php:123
 msgid "This option for use all image blend mode."
 msgstr ""
 
@@ -1958,7 +1970,7 @@ msgstr ""
 msgid "Compare ?"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/Header.php:134, ../inc/Api/Customizer/Sections/HeaderMobile.php:64
+#: ../inc/Api/Customizer/Sections/Header.php:134, ../inc/Api/Customizer/Sections/HeaderMobile.php:70
 msgid "Search ?"
 msgstr ""
 
@@ -1987,7 +1999,7 @@ msgid "Free Delivery Button ?"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/Header.php:179
-msgid "Button Link"
+msgid "Delivery Link"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/Header.php:189, ../inc/Api/Customizer/Sections/HeaderMobile.php:101
@@ -2002,8 +2014,8 @@ msgstr ""
 msgid "Header Mobile Option"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/HeaderMobile.php:70
-msgid "Ajax Search ?"
+#: ../inc/Api/Customizer/Sections/HeaderMobile.php:64
+msgid "Shop Page ?"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/HeaderMobile.php:76
@@ -2282,24 +2294,12 @@ msgstr ""
 msgid "Upload light logo for transparent header. It should a white logo"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/SiteIdentity.php:50, ../inc/Api/Customizer/Sections/SiteIdentity.php:52
-msgid "Mobile Logo"
-msgstr ""
-
-#: ../inc/Api/Customizer/Sections/SiteIdentity.php:51
-msgid "Upload, if you need a different logo for mobile device.."
-msgstr ""
-
-#: ../inc/Api/Customizer/Sections/SiteIdentity.php:57
+#: ../inc/Api/Customizer/Sections/SiteIdentity.php:50
 msgid "Main Logo Dimension"
 msgstr ""
 
-#: ../inc/Api/Customizer/Sections/SiteIdentity.php:58, ../inc/Api/Customizer/Sections/SiteIdentity.php:65
+#: ../inc/Api/Customizer/Sections/SiteIdentity.php:51
 msgid "Enter the width and height value separate by comma (,). Eg. 120px,45px"
-msgstr ""
-
-#: ../inc/Api/Customizer/Sections/SiteIdentity.php:64
-msgid "Mobile Logo Dimension"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/Socials.php:29

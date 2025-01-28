@@ -59,16 +59,16 @@ class HeaderMobile extends Customizer {
 				'default' => 0,
 			],
 
+			'rt_mobile_header_shop_page' => [
+				'type'    => 'switch',
+				'label'   => __( 'Shop Page ?', 'fasheno' ),
+				'default' => 0,
+			],
+
 			'rt_mobile_header_search' => [
 				'type'    => 'switch',
 				'label'   => __( 'Search ?', 'fasheno' ),
 				'default' => 0,
-			],
-
-			'rt_mobile_header_ajax_search' => [
-				'type'    => 'switch',
-				'label'   => __( 'Ajax Search ?', 'fasheno' ),
-				'default' => 1,
 			],
 
 			'rt_mobile_header_bar' => [

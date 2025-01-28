@@ -6,19 +6,13 @@
  *
  * @package fasheno
  */
-use RT\Fasheno\Options\Opt;
-use RT\Fasheno\Helpers\Fns;
+
 $logo_h1 = ! is_singular( [ 'post' ] );
 $topinfo = ( fasheno_option( 'rt_contact_address' ) || fasheno_option( 'rt_phone' ) || fasheno_option( 'rt_email' ) || fasheno_option( 'rt_website' ) ) ? true : false;
 ?>
 
 <div class="fasheno-offcanvas-drawer">
 	<div class="offcanvas-drawer-wrap">
-
-		<?php if ( fasheno_option( 'rt_mobile_header_ajax_search' ) ) { ?>
-			<?php fasheno_product_ajax_search(); ?>
-		<?php } ?>
-
 		<?php if( fasheno_option( 'rt_about_label' ) || fasheno_option( 'rt_about_text' ) ) { ?>
 		<div class="offcanvas-about offcanvas-address">
 			<?php if( fasheno_option( 'rt_about_label' ) ) { ?><label><?php echo fasheno_option( 'rt_about_label' ) ?></label><?php } ?>
@@ -36,8 +30,7 @@ $topinfo = ( fasheno_option( 'rt_contact_address' ) || fasheno_option( 'rt_phone
 				);
 			endif;
 			?>
-		</nav><!-- .fasheno-navigation -->
-
+		</nav>
 		<?php if( fasheno_option( 'rt_mobile_delivery_button' ) || fasheno_option( 'rt_mobile_sale_offer_button' )) { ?>
 		<div class="rt-button-action">
 			<?php if ( fasheno_option( 'rt_mobile_delivery_button' ) ) { ?>

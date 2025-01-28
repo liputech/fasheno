@@ -25,6 +25,11 @@
 		font-size: 24px;
 		@include transition_default();
 	}
+	.rt-content {
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
 	.content-wrap {
 		position: relative;
 		display: flex;
@@ -66,18 +71,43 @@
 			&:before {
 				width: 100%;
 			}
+			.rt-content {
+				position: relative;
+				opacity: 1;
+				height: 100%;
+				visibility: visible;
+				animation: tab_slide 0.74s both;
+			}
 		}
 		p {
 			margin-bottom: 0;
 		}
 	}
 	.service-img {
+		position: relative;
 		line-height: 0;
 		background-color: $white_color;
 		border-radius: 8px;
+		display: flex;
+		justify-content: center;
 		img {
 			border-radius: 8px;
 			object-fit: cover;
 		}
+		.btn {
+			position: absolute;
+			bottom: 30px;
+			text-align: center;
+		}
+	}
+}
+@keyframes tab_slide {
+	0% {
+		transform: translate3d(0, 33px, 0);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
 	}
 }

@@ -45,7 +45,7 @@ class TgmConfig {
 				'slug'         => 'shopbuilder-pro',
 				'source'       => 'shopbuilder-pro.zip',
 				'required'     => true,
-				'version'      => '1.7.1'
+				'version'      => '1.8.3'
 			],
 			[
 				'name'         => 'WooCommerce Variation Swatches Pro',

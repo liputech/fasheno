@@ -45,23 +45,9 @@ class SiteIdentity extends Customizer {
 				'button_label' => __( 'Light Logo', 'fasheno' ),
 			],
 
-			'rt_logo_mobile' => [
-				'type'         => 'image',
-				'label'        => __( 'Mobile Logo', 'fasheno' ),
-				'description'  => __( 'Upload, if you need a different logo for mobile device..', 'fasheno' ),
-				'button_label' => __( 'Mobile Logo', 'fasheno' ),
-			],
-
 			'rt_logo_width_height' => [
 				'type'      => 'text',
 				'label'     => __( 'Main Logo Dimension', 'fasheno' ),
-				'description'     => __( 'Enter the width and height value separate by comma (,). Eg. 120px,45px', 'fasheno' ),
-				'transport' => '',
-			],
-
-			'rt_mobile_logo_width_height' => [
-				'type'      => 'text',
-				'label'     => __( 'Mobile Logo Dimension', 'fasheno' ),
 				'description'     => __( 'Enter the width and height value separate by comma (,). Eg. 120px,45px', 'fasheno' ),
 				'transport' => '',
 			],

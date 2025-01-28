@@ -14,26 +14,30 @@
 			pointer-events: none;
 		}
 	}
-	.site-header {
-		.fasheno-navigation ul li a svg {
-			opacity: 0.7;
-		}
+}
+.tr-header-dark {
+	.dark-logo {
+		display: block;
+	}
+	.light-logo {
+		display: none;
+	}
+}
+.tr-header-light {
+	.dark-logo {
+		display: none;
+	}
+	.light-logo {
+		display: block;
 	}
 }
 
 .tr-header-light {
-	.light-logo {
-		display: block;
-	}
-	.dark-logo, .rt-mobile-logo {
-		display: none;
-	}
 	.fasheno-navigation .menu-main-menu-container {
 		> ul {
 			> li {
 				> a {
 					color: $white_color;
-
 					svg {
 						fill: $white_color
 					}

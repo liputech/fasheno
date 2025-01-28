@@ -1,4 +1,7 @@
 // Shop page
+.woocommerce .loader::before {
+	display: none;
+}
 .woocommerce {
 	.price {
 		color: $primary_color;
@@ -534,6 +537,9 @@ body .wc-block-checkout__sidebar .wc-block-components-product-name {
 body .wc-block-checkout__sidebar .wc-block-components-totals-item {
 	color: $heading_color;
 	font-weight: 700;
+}
+.woocommerce-checkout #payment div.payment_box:before {
+	top: -12px;
 }
 // Quick View
 .rtsb-ui-modal .rtsb-modal-wrapper .rtsb-modal-content {

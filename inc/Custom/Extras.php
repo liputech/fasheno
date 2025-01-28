@@ -284,6 +284,11 @@ class Extras {
 			echo '<meta name="twitter:card" content="summary" />';
 			echo '<meta property="og:updated_time" content="'.time().'" />';
 		}
+
+		 // RTL Mode
+		 if ( ! empty( $_GET['dir'] ) && $_GET['dir'] == 'rtl' ) {
+			 echo "<style>html{direction:rtl}</style>";
+		 }
 	}
 
 	//W3C validator passing code

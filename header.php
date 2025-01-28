@@ -27,13 +27,7 @@ use RT\Fasheno\Options\Opt;
 	if( !empty( fasheno_option( 'rt_preloader_logo' ) ) ) { ?>
 		<div id="preloader"><?php echo wp_get_attachment_image( fasheno_option( 'rt_preloader_logo' ), 'full', true );?></div>
 	<?php } else { ?>
-		<div id="preloader" class="loader">
-			<div class="cssload-loader">
-				<div class="cssload-inner cssload-one"></div>
-				<div class="cssload-inner cssload-two"></div>
-				<div class="cssload-inner cssload-three"></div>
-			</div>
-		</div>
+		<div id="preloader" class="rt-loader" data-text="<?php fasheno_html( fasheno_option('rt_preloader_text') , 'allow_title' );?>"><?php fasheno_html( fasheno_option('rt_preloader_text') , 'allow_title' );?></div>
 	<?php }
 }
 ?>
@@ -57,10 +51,7 @@ use RT\Fasheno\Options\Opt;
 	<div id="header-search" class="header-search">
 		<div class="header-search-wrap">
 			<button type="button" aria-label="close button" class="close">×</button>
-			<form method="get" class="header-search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<input type="search" value="<?php echo get_search_query(); ?>" name="s" placeholder="<?php esc_attr_e( 'Type your search........', 'fasheno' ); ?>">
-				<button type="submit" aria-label="submit button" class="search-btn"><i class="icon-rt-search"></i></button>
-			</form>
+			<?php fasheno_product_mobile_ajax_search(); ?>
 		</div>
 	</div>
 

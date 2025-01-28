@@ -25,6 +25,8 @@ $classes = Fns::class_list([
 		<?php } ?>
 		</div><!-- #page -->
 
+		<?php fasheno_rtl_mode_icons(); ?>
+
 		<?php fasheno_color_mode_icons(); ?>
 
 		<?php fasheno_scroll_top(); ?>

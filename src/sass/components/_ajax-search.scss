@@ -35,7 +35,7 @@ ul.rt-action-list{
 		opacity: 0;
 		visibility: hidden;
 		transition: all 0.21s ease-in-out;
-		height: 240px;
+		height: 340px;
 		overflow-x: hidden;
 		li {
 			font-size: 14px;
@@ -126,6 +126,7 @@ ul.rt-action-list{
 			font-weight: 600;
 			height: 44px;
 			width: 44px;
+			padding: 5px;
 			line-height: 1;
 			display: flex;
 			column-gap: 8px;
@@ -203,8 +204,4 @@ ul.rt-action-list{
 			background-color: transparent;
 		}
 	}
-}
-
-.rt-advanced-search .product-search-form {
-
 }

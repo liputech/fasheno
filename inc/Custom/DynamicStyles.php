@@ -125,7 +125,6 @@ class DynamicStyles {
 				color: <?php echo esc_attr( $_topbar_active_color ); ?>;
 			}
 
-
 			body .site-header .fasheno-top-bar .social-icon a:hover svg {
 				fill: <?php echo esc_attr( $_topbar_active_color ); ?>;
 			}
@@ -144,17 +143,12 @@ class DynamicStyles {
 	protected function header_css() {
 		//Logo CSS
 		$logo_width = '';
-		$logo_mobile_width = '';
 
 		$logo_dimension     = fasheno_option( 'rt_logo_width_height' );
-		$logo_mobile_dimension     = fasheno_option( 'rt_mobile_logo_width_height' );
 		$menu_border_bottom = fasheno_option( 'rt_menu_border_color' );
 
 		if ( strpos( $logo_dimension, ',' ) ) {
 			$logo_width = explode( ',', $logo_dimension );
-		}
-		if ( strpos( $logo_mobile_dimension, ',' ) ) {
-			$logo_mobile_width = explode( ',', $logo_mobile_dimension );
 		}
 
 		//Default Menu
@@ -190,14 +184,6 @@ class DynamicStyles {
 				max-width: <?php echo esc_attr( $logo_width[0] ?? '100%' ) ?>;
 				max-height: <?php echo esc_attr( $logo_width[1] ?? 'auto' ) ?>;
 				object-fit: contain;
-			}
-		<?php endif; ?>
-
-		<?php if ( ! empty( $logo_mobile_width ) ) : ?>
-			.site-branding .rt-mobile-logo {
-			max-width: <?php echo esc_attr( $logo_mobile_width[0] ?? '100%' ) ?>;
-			max-height: <?php echo esc_attr( $logo_mobile_width[1] ?? 'auto' ) ?>;
-			object-fit: contain;
 			}
 		<?php endif; ?>
 

@@ -32,7 +32,7 @@
 		}
 	}
 }
-@media(max-width: 1140px) {
+@media(max-width: 1139px) {
 	.layout-right-sidebar {
 		.fasheno-widget-area {
 			margin-top: 60px;
@@ -40,7 +40,7 @@
 	}
 	.layout-left-sidebar {
 		.fasheno-widget-area {
-			margin-bottom: 60px;
+			margin-top: 60px;
 		}
 	}
 }
@@ -65,7 +65,7 @@
 	&:after {
 		content: "";
 		background-color: $white_bg_color;
-		box-shadow: 0 0 50px rgba($heading_rgb, 0.07);
+		box-shadow: 0 0 50px rgba($heading_rgb, 0.05);
 		border-radius: 5px;
 		height: 100%;
 		display: block;
