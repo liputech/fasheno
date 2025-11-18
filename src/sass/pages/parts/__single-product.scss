@@ -5,7 +5,6 @@
 		.rtwpvg-images {
 			.rtwpvg-thumbnail-position-bottom {
 				.rtwpvg-single-image-container {
-					height: 600px;
 					img {
 						object-fit: cover;
 					}
@@ -332,11 +331,6 @@ body.woocommerce .product {
 }
 .rtsb-quantity-box-group {
 	input[type=number] {
-		color: $heading_color;
-	}
-}
-.rtsb-countdown-campaign {
-	.rtsb-countdown-section {
 		color: $heading_color;
 	}
 }

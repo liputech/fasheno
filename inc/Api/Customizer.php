@@ -16,6 +16,7 @@ use RT\Fasheno\Traits\SingletonTraits;
 class Customizer {
 	use SingletonTraits;
 
+	public $customizeClasses;
 	public static $default_value = [];
 
 	/**
@@ -25,16 +26,17 @@ class Customizer {
 	public function __construct() {
 		if ( defined( 'RT_FRAMEWORK_VERSION' ) ) {
 			new Pannels();
-			add_action( 'after_setup_theme', [ $this, 'register_controls' ] );
+			add_action( 'init', [ $this, 'register_controls' ], 99 );
 		}
-		add_action( 'after_setup_theme', [ $this, 'get_controls_default_value' ] );
+		add_action( 'init', [ $this, 'get_controls_default_value' ], 99 );
+		add_action( 'init', [ $this, 'add_controls' ], 0 );
 	}
 
 	/**
 	 * Add customize controls
 	 * @return string[]
 	 */
-	public static function add_controls() {
+	public function add_controls() {
 		$classess = [
 			Customizer\Sections\General::class,
 			Customizer\Sections\SiteIdentity::class,
@@ -70,7 +72,7 @@ class Customizer {
 		}
 
 
-		return $classess;
+		$this->customizeClasses = $classess;
 	}
 
 	/**
@@ -79,7 +81,7 @@ class Customizer {
 	 * @param string $section_general
 	 */
 	public function register_controls() {
-		foreach ( self::add_controls() as $class ) {
+		foreach ( $this->customizeClasses as $class ) {
 			$control = new $class();
 			if ( method_exists( $control, 'register' ) ) {
 				$control->register();
@@ -92,7 +94,7 @@ class Customizer {
 	 * @return void
 	 */
 	public function get_controls_default_value() {
-		foreach ( self::add_controls() as $class ) {
+		foreach ( $this->customizeClasses as $class ) {
 			$control = new $class();
 			if ( method_exists( $control, 'get_controls' ) ) {
 				$controls = $control->get_controls();

@@ -31,7 +31,6 @@ class Enqueue {
 		wp_register_script( 'rt-animated-headline', fasheno_get_js( 'animated-headline' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-parallax-scroll', fasheno_get_js( 'parallax-scroll' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-ele-parallax', fasheno_get_js( 'ele-parallax' ), [ 'jquery' ], Constants::get_version(), true );
-		wp_register_script( 'rt-countdown', fasheno_get_js( 'countdown' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-magnific-popup', fasheno_get_js( 'magnific-popup' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-nice-select', fasheno_get_js( 'nice-select' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'rt-isotope', fasheno_get_js( 'isotope.min' ), [ 'jquery' ], Constants::get_version(), true );
@@ -100,9 +99,6 @@ class Enqueue {
 		if ( 'off' === _x( 'on', 'Google font: on or off', 'fasheno' ) ) {
 			return '';
 		}
-
-		//Default variable.
-		$subsets = '';
 
 		$body_font = json_decode( fasheno_option( 'rt_body_typo' ), true );
 		$menu_font = json_decode( fasheno_option( 'rt_menu_typo' ), true );

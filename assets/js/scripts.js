@@ -67,7 +67,7 @@
 		},
 
 		rtCountDown: function () {
-			$('.countdown').each(function () {
+			$('.rt-countdown').each(function () {
 				var date = $(this).data('date');
 				$(this).countdown(date, function (event) {
 					var $this = $(this).html(event.strftime("<div class='countdown-section'><div class='countdown-number'>%D</div> <div class='countdown-unit'>" + fashenoObj.day + "%!D</div> </div><div class='countdown-section'><div class='countdown-number'>%H</div> <div class='countdown-unit'>" + fashenoObj.hour + "%!H</div> </div><div class='countdown-section'><div class='countdown-number'>%M</div> <div class='countdown-unit'>" + fashenoObj.minute + "%!M</div> </div><div class='countdown-section'><div class='countdown-number'>%S</div> <div class='countdown-unit'>" + fashenoObj.second + "%!S</div> </div>"));
@@ -160,14 +160,14 @@
 
 				$(window).on('scroll', function () {
 					var height = $(window).scrollTop();
-					if (height < 86) {
-						$('.site-header').removeClass('scrolling');
+					if (height < 88) {
+						$('.sticky-headroom').removeClass('scrolling');
 					} else {
-						$('.site-header').addClass('scrolling');
+						$('.sticky-headroom').addClass('scrolling');
 					}
 				});
 
-				var intHeight = $('.headroom')[0].getBoundingClientRect().height;
+				var intHeight = $('.sticky-headroom')[0].getBoundingClientRect().height;
 				$('.fixed-header-space').height(intHeight);
 			}
 		},
@@ -702,6 +702,7 @@
 					pagination: {
 						el: $pagination,
 						clickable: true,
+						//dynamicBullets: true,
 						renderBullet: function (index, className) {
 							return '<span class="' + className + '">' + 0 + (index + 1) + "</span>";
 						},

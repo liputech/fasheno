@@ -9,10 +9,6 @@
 }
 .has-trheader {
 	.site-header {
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
 		background-color: transparent;
 	}
 }
@@ -48,6 +44,7 @@
 		}
 	}
 }
+
 .headroom {
 	will-change: transform;
 	transition: transform 250ms ease-in-out;
@@ -58,6 +55,11 @@
 .headroom--unpinned {
 	transform: translateY(-100%);
 }
-.header--not-top.headroom--pinned {
-	transform: translateY(calc(86px - 100%));
+.headroom--not-top.headroom--pinned {
+	transform: translateY(calc(88px - 100%));
+}
+@media(max-width: 1024px) {
+	.headroom--not-top.headroom--pinned {
+		transform: translateY(calc(55px - 100%));
+	}
 }

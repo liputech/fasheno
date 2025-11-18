@@ -84,6 +84,7 @@
 				background-color: $white_bg_color;
 				border: 1px solid $red_color;
 				color: $red_color;
+				column-gap: 3px;
 			}
 		}
 		&.rtsb-countdown-horizontal {
@@ -94,7 +95,7 @@
 			border-radius: 50px;
 			left: 30px;
 			right: 30px;
-			width: 210px;
+			width: 230px;
 			height: auto;
 			margin: 0 auto;
 			.rtsb-countdown-section {
@@ -115,7 +116,10 @@
 		bottom: 30px;
 	}
 }
-
+.rtsb-product-flash-sale-countdown.layout1 {
+	align-items: center;
+	column-gap: 15px;
+}
 .elementor-element {
 	.rtsb-elementor-container.products {
 		.product-price {
@@ -205,7 +209,7 @@
 		}
 	}
 	.product-filter-toggle {
-		color: $heading_color !important;
+		color: $button_text_color !important;
 		background-color: $white_bg_color;
 		border: 1px solid $border_color;
 		border-radius: 3px;
@@ -214,13 +218,22 @@
 		font-weight: 400;
 		text-transform: capitalize;
 		@include transition_default();
-		&:hover {
+		&:before {
+			border-top: 9px solid $black_bg_color;
+		}
+		&.active {
 			border: 1px solid transparent;
+			background-color: $black_bg_color;
 			color: $button_color !important;
 		}
-	}
-	.product-filter-toggle:before {
-		border-top: 9px solid $primary_color;
+		&:hover {
+			background-color: $black_bg_color;
+			border: 1px solid transparent;
+			color: $button_color !important;
+			&:before {
+				border-top: 9px solid $black_bg_color;
+			}
+		}
 	}
 	@media(max-width: 767px) {
 		.rtsb-filter-toggle {

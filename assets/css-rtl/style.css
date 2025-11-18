@@ -6163,10 +6163,6 @@ body .rtrs-review-form {
 }
 
 .has-trheader .site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   background-color: transparent;
 }
 
@@ -6207,10 +6203,15 @@ body .rtrs-review-form {
   transform: translateY(-100%);
 }
 
-.header--not-top.headroom--pinned {
-  transform: translateY(calc(86px - 100%));
+.headroom--not-top.headroom--pinned {
+  transform: translateY(calc(88px - 100%));
 }
 
+@media (max-width: 1024px) {
+  .headroom--not-top.headroom--pinned {
+    transform: translateY(calc(55px - 100%));
+  }
+}
 /* Transparent Header */
 .has-trheader.has-menu-shadow .site-header::before {
   content: "";
@@ -6421,66 +6422,6 @@ body .rtrs-review-form {
 }
 .fasheno-breadcrumb-wrapper .align-items-end .entry-breadcrumb {
   text-align: left;
-}
-
-.has-trheader .fasheno-breadcrumb-wrapper {
-  padding-top: 205px;
-}
-.has-trheader .fasheno-breadcrumb-wrapper.has-bg {
-  padding-bottom: 120px;
-}
-.has-trheader .fasheno-breadcrumb-wrapper.has-color {
-  padding-bottom: 120px;
-}
-
-.has-sticky-header.fasheno-header-1 .fasheno-breadcrumb-wrapper {
-  padding-top: 145px;
-}
-@media (max-width: 1199px) {
-  .has-sticky-header.fasheno-header-1 .fasheno-breadcrumb-wrapper {
-    padding-top: 115px;
-  }
-}
-.has-sticky-header.fasheno-header-2 .fasheno-breadcrumb-wrapper {
-  padding-top: 250px;
-}
-@media (max-width: 1199px) {
-  .has-sticky-header.fasheno-header-2 .fasheno-breadcrumb-wrapper {
-    padding-top: 115px;
-  }
-}
-.has-sticky-header.fasheno-header-3 .fasheno-breadcrumb-wrapper {
-  padding-top: 195px;
-}
-@media (max-width: 1199px) {
-  .has-sticky-header.fasheno-header-3 .fasheno-breadcrumb-wrapper {
-    padding-top: 115px;
-  }
-}
-
-.has-sticky-header.has-top-bar.fasheno-header-1 .fasheno-breadcrumb-wrapper {
-  padding-top: 195px;
-}
-@media (max-width: 1199px) {
-  .has-sticky-header.has-top-bar.fasheno-header-1 .fasheno-breadcrumb-wrapper {
-    padding-top: 115px;
-  }
-}
-.has-sticky-header.has-top-bar.fasheno-header-2 .fasheno-breadcrumb-wrapper {
-  padding-top: 300px;
-}
-@media (max-width: 1199px) {
-  .has-sticky-header.has-top-bar.fasheno-header-2 .fasheno-breadcrumb-wrapper {
-    padding-top: 115px;
-  }
-}
-.has-sticky-header.has-top-bar.fasheno-header-3 .fasheno-breadcrumb-wrapper {
-  padding-top: 245px;
-}
-@media (max-width: 1199px) {
-  .has-sticky-header.has-top-bar.fasheno-header-3 .fasheno-breadcrumb-wrapper {
-    padding-top: 115px;
-  }
 }
 
 .fasheno-breadcrumb-wrapper .breadcrumb,
@@ -9443,6 +9384,8 @@ body .wc-block-checkout__sidebar .wc-block-components-totals-item {
   background-color: var(--rt-white-bg-color);
   border: 1px solid var(--rt-red-color);
   color: var(--rt-red-color);
+  -moz-column-gap: 3px;
+       column-gap: 3px;
 }
 .rtsb-elementor-container .rtsb-countdown-campaign.rtsb-countdown-horizontal {
   height: auto !important;
@@ -9452,7 +9395,7 @@ body .wc-block-checkout__sidebar .wc-block-components-totals-item {
   border-radius: 50px;
   right: 30px;
   left: 30px;
-  width: 210px;
+  width: 230px;
   height: auto;
   margin: 0 auto;
 }
@@ -9470,6 +9413,12 @@ body .wc-block-checkout__sidebar .wc-block-components-totals-item {
 .rtsb-elementor-container .rtsb-product .rtsb-countdown-campaign.rtsb-countdown-horizontal,
 .rtsb-elementor-container .rtsb-product .rtsb-action-buttons.horizontal-floating-btn {
   bottom: 30px;
+}
+
+.rtsb-product-flash-sale-countdown.layout1 {
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
 }
 
 .elementor-element .rtsb-elementor-container.products .product-price {
@@ -9547,7 +9496,7 @@ body .wc-block-checkout__sidebar .wc-block-components-totals-item {
   min-width: auto;
 }
 .rtsb-archive-filters .product-filter-toggle {
-  color: var(--rt-heading-color) !important;
+  color: var(--rt-button-text-color) !important;
   background-color: var(--rt-white-bg-color);
   border: 1px solid var(--rt-border-color);
   border-radius: 3px;
@@ -9557,12 +9506,21 @@ body .wc-block-checkout__sidebar .wc-block-components-totals-item {
   text-transform: capitalize;
   transition: all 20ms ease;
 }
+.rtsb-archive-filters .product-filter-toggle:before {
+  border-top: 9px solid var(--rt-black-bg-color);
+}
+.rtsb-archive-filters .product-filter-toggle.active {
+  border: 1px solid transparent;
+  background-color: var(--rt-black-bg-color);
+  color: var(--rt-button-color) !important;
+}
 .rtsb-archive-filters .product-filter-toggle:hover {
+  background-color: var(--rt-black-bg-color);
   border: 1px solid transparent;
   color: var(--rt-button-color) !important;
 }
-.rtsb-archive-filters .product-filter-toggle:before {
-  border-top: 9px solid var(--rt-primary-color);
+.rtsb-archive-filters .product-filter-toggle:hover:before {
+  border-top: 9px solid var(--rt-black-bg-color);
 }
 @media (max-width: 767px) {
   .rtsb-archive-filters .rtsb-filter-toggle {
@@ -10207,9 +10165,6 @@ body .wc-block-checkout__sidebar .wc-block-components-totals-item {
   }
 }
 
-.woocommerce div.product .rtwpvg-images .rtwpvg-thumbnail-position-bottom .rtwpvg-single-image-container {
-  height: 600px;
-}
 .woocommerce div.product .rtwpvg-images .rtwpvg-thumbnail-position-bottom .rtwpvg-single-image-container img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -10498,10 +10453,6 @@ body.woocommerce .product p.price ins, body.woocommerce .product span.price ins 
   color: var(--rt-heading-color);
 }
 
-.rtsb-countdown-campaign .rtsb-countdown-section {
-  color: var(--rt-heading-color);
-}
-
 .rtsb-actions-button-widgets .button-text {
   display: none;
 }
@@ -10727,6 +10678,9 @@ body.woocommerce .product p.price ins, body.woocommerce .product span.price ins 
 .rtsb-notice .wc-block-components-notice-banner.is-info {
   border: 1px solid var(--rt-primary-color);
   background-color: var(--rt-gray-color);
+}
+.rtsb-notice .wc-block-components-notice-banner:focus-visible {
+  outline-style: none;
 }
 
 .woocommerce-MyAccount-navigation {
@@ -11129,8 +11083,6 @@ Section Title
 }
 .rt-hero-slider-layout-1 .swiper-pagination .swiper-pagination-bullet {
   position: relative;
-  width: 8px;
-  height: 8px;
   text-align: right;
   color: var(--rt-button-text-color);
   background: #e6e6e6;

@@ -63,28 +63,10 @@ elseif ( is_home() ) {
 	else {
 		$fasheno_title = apply_filters( 'theme_blog_title', esc_html__( 'All Posts', 'fasheno' ) );
 	}
-} elseif (is_post_type_archive('rt-team')) {
-	$fasheno_title  = fasheno_option('rt_team_banner_archive_title');
-} elseif (is_post_type_archive('rt-service')) {
-	$fasheno_title  = fasheno_option('rt_service_banner_archive_title');
-} elseif (is_post_type_archive('rt-project')) {
-	$fasheno_title  = fasheno_option('rt_project_banner_archive_title');
-} elseif (is_tax('rt-team-category')) {
-	$fasheno_title  = single_term_title( '', false );
-} elseif (is_tax('rt-service-category')) {
-	$fasheno_title  = single_term_title( '', false );
-} elseif (is_tax('rt-project-category')) {
-	$fasheno_title  = single_term_title( '', false );
 } elseif ( is_category() ) {
 	$fasheno_title = single_term_title( '', false );
 } elseif ( is_archive() ) {
 	$fasheno_title = esc_html__( 'Our Recent Posts', 'fasheno' );
-} elseif (is_singular('rt-team')) {
-	$fasheno_title  = fasheno_option('rt_team_banner_single_title');
-} elseif (is_singular('rt-service')) {
-	$fasheno_title  = fasheno_option('rt_service_banner_single_title');
-} elseif (is_singular('rt-project')) {
-	$fasheno_title  = fasheno_option('rt_project_banner_single_title');
 } elseif ( is_single() ) {
 	$fasheno_title = fasheno_option('rt_post_banner_single_title');
 } else {

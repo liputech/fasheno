@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-27 10:20+0000\n"
+"POT-Creation-Date: 2025-10-09 06:08+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -45,119 +45,119 @@ msgstr ""
 msgid "Add a menu"
 msgstr ""
 
-#: ../inc/template-tags.php:216, ../inc/template-tags.php:1609
+#: ../inc/template-tags.php:216, ../inc/template-tags.php:1612
 msgid "Home"
 msgstr ""
 
-#: ../inc/template-tags.php:449
+#: ../inc/template-tags.php:452
 msgid "Select Category"
 msgstr ""
 
-#: ../inc/template-tags.php:485, ../inc/template-tags.php:535
+#: ../inc/template-tags.php:488, ../inc/template-tags.php:538
 msgid "Type Your Products ..."
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: ../inc/template-tags.php:613, ../inc/Core/Tags.php:50, ../inc/Core/Tags.php:55
+#: ../inc/template-tags.php:616, ../inc/Core/Tags.php:50, ../inc/Core/Tags.php:55
 msgid ", "
 msgstr ""
 
-#: ../inc/template-tags.php:663
+#: ../inc/template-tags.php:666
 msgid "%s %s"
 msgstr ""
 
-#: ../inc/template-tags.php:1001
+#: ../inc/template-tags.php:1004
 msgid "%s mins read"
 msgstr ""
 
-#: ../inc/template-tags.php:999
+#: ../inc/template-tags.php:1002
 msgid "1 min read"
 msgstr ""
 
-#: ../inc/template-tags.php:997
+#: ../inc/template-tags.php:1000
 msgid "%s hours read"
 msgstr ""
 
-#: ../inc/template-tags.php:995
+#: ../inc/template-tags.php:998
 msgid "Less than a minute"
 msgstr ""
 
-#: ../inc/template-tags.php:1082, ../inc/Helpers/Fns.php:365
+#: ../inc/template-tags.php:1085, ../inc/Helpers/Fns.php:365
 msgid "Views"
 msgstr ""
 
-#: ../inc/template-tags.php:1080
+#: ../inc/template-tags.php:1083
 msgid "View"
 msgstr ""
 
-#: ../inc/template-tags.php:1103, ../inc/Api/Customizer/Sections/Labels.php:148
+#: ../inc/template-tags.php:1106, ../inc/Api/Customizer/Sections/Labels.php:148
 msgid "By"
 msgstr ""
 
-#: ../inc/template-tags.php:1109
+#: ../inc/template-tags.php:1112
 msgid "Comment: %s"
 msgid_plural "Comments: %s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:1406
+#: ../inc/template-tags.php:1409
 msgid "Ph: "
 msgstr ""
 
-#: ../inc/template-tags.php:1685
+#: ../inc/template-tags.php:1688
 msgid "Shop"
 msgstr ""
 
-#: ../inc/template-tags.php:1681
+#: ../inc/template-tags.php:1684
 msgid "Blog"
 msgstr ""
 
-#: ../inc/template-tags.php:1672
+#: ../inc/template-tags.php:1675
 msgid "Posts by: "
 msgstr ""
 
-#: ../inc/template-tags.php:1644
+#: ../inc/template-tags.php:1647
 msgid "Posts Category: "
 msgstr ""
 
-#: ../inc/template-tags.php:1632
+#: ../inc/template-tags.php:1635
 msgid "404"
 msgstr ""
 
-#: ../inc/template-tags.php:1627
+#: ../inc/template-tags.php:1630
 msgid "Search results for: "
 msgstr ""
 
-#: ../inc/template-tags.php:1622
+#: ../inc/template-tags.php:1625
 msgid "Posts made in: "
 msgstr ""
 
-#: ../inc/template-tags.php:1615
+#: ../inc/template-tags.php:1618
 msgid "Posts Tagged: "
 msgstr ""
 
-#: ../inc/template-tags.php:1724
+#: ../inc/template-tags.php:1727
 msgid "Pingback:"
 msgstr ""
 
-#: ../inc/template-tags.php:1745
+#: ../inc/template-tags.php:1748
 msgid "<cite class=\"fn\">%s</cite>"
 msgstr ""
 
 #. translators: 1: date, 2: time
-#: ../inc/template-tags.php:1751
+#: ../inc/template-tags.php:1754
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: ../inc/template-tags.php:1756
+#: ../inc/template-tags.php:1759
 msgid "Edit"
 msgstr ""
 
-#: ../inc/template-tags.php:1764
+#: ../inc/template-tags.php:1767
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: ../inc/template-tags.php:1775
+#: ../inc/template-tags.php:1778
 msgid "Reply"
 msgstr ""
 
@@ -771,12 +771,12 @@ msgstr ""
 msgid "No product found."
 msgstr ""
 
-#: ../inc/Modules/TgmConfig.php:67
-msgid "WooCommerce"
+#: ../inc/Modules/TgmConfig.php:44
+msgid "ShopBuilder - Elementor WooCommerce Builder Addons"
 msgstr ""
 
-#: ../inc/Modules/TgmConfig.php:72
-msgid "ShopBuilder - Elementor WooCommerce Builder Addons"
+#: ../inc/Modules/TgmConfig.php:82
+msgid "WooCommerce"
 msgstr ""
 
 #: ../inc/Modules/TgmConfig.php:87
@@ -810,19 +810,19 @@ msgid_plural "%s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/Setup/Enqueue.php:85
+#: ../inc/Setup/Enqueue.php:84
 msgid "Day"
 msgstr ""
 
-#: ../inc/Setup/Enqueue.php:86
+#: ../inc/Setup/Enqueue.php:85
 msgid "Hour"
 msgstr ""
 
-#: ../inc/Setup/Enqueue.php:87
+#: ../inc/Setup/Enqueue.php:86
 msgid "Min"
 msgstr ""
 
-#: ../inc/Setup/Enqueue.php:88
+#: ../inc/Setup/Enqueue.php:87
 msgid "Sec"
 msgstr ""
 
@@ -2460,7 +2460,7 @@ msgstr ""
 msgid "Image link for %1$s: %2$s"
 msgstr ""
 
-#: ../views/content-banner.php:81
+#: ../views/content-banner.php:69
 msgid "Our Recent Posts"
 msgstr ""
 

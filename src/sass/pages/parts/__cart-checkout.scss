@@ -97,6 +97,9 @@
 			border: 1px solid $primary_color;
 			background-color: $gray_color;
 		}
+		&:focus-visible {
+			outline-style: none;
+		}
 	}
 }
 

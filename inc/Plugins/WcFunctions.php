@@ -171,17 +171,17 @@ class WcFunctions {
 				return sprintf('<span class="variable onsale rt-prodcut-badge-1">-%s%%</span>', $highest_sale_percent );
 			} else {
 				$regular_price = $product->get_regular_price();
-				$sale_percent = 0;
+				$sale_percent  = 0;
 				if ( intval( $regular_price ) > 0 ) {
-					$sale_percent = round( ( ( $regular_price - $product->get_sale_price() ) / $regular_price ) * 100 );
+					$sale_percent = round( ( ( (float) $regular_price - (float) $product->get_sale_price() ) / (float) $regular_price ) * 100 );
 				}
 				return sprintf('<span class="normal onsale rt-prodcut-badge-1">-%s%%</span>', $sale_percent );
 			}
 
 		} else {
-			$price = $product->get_regular_price();
-			$sale  = $product->get_sale_price();
-			if ( !$price ) {
+			$price = (float) $product->get_regular_price();
+			$sale  = (float) $product->get_sale_price();
+			if ( ! $price || empty( $sale ) ) {
 				return $args;
 			}
 			$discount = ( ( $price - $sale ) / $price ) * 100;

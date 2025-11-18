@@ -315,7 +315,7 @@ if ( ! function_exists( 'fasheno_mobile_menu_icons_group' ) ) {
 		$default_args = [
 			'search'       => fasheno_option( 'rt_mobile_header_search' ),
 			'login'        => fasheno_option( 'rt_mobile_header_login' ),
-			'login_link'   => fasheno_option( 'rt_mobile_header_login_link' ),
+			'login_link'   => fasheno_option( 'rt_header_login_link' ),
 			'button'       => fasheno_option( 'rt_mobile_get_delivery_button' ),
 			'button_label' => fasheno_option( 'rt_mobile_get_delivery_label' ),
 			'button_link'  => fasheno_option( 'rt_mobile_get_delivery_button_url' ),

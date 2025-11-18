@@ -31,56 +31,56 @@ class TgmConfig {
 				'slug'     => 'fasheno-core',
 				'source'   => 'fasheno-core.zip',
 				'required' => true,
-				'version'  => '1.0.0'
+				'version'  => '1.0.3'
 			],
 			[
 				'name'     => 'RT Framework',
 				'slug'     => 'rt-framework',
 				'source'   => 'rt-framework.zip',
 				'required' => true,
-				'version'  => '3.0.1'
+				'version'  => '3.0.3'
+			],
+			[
+				'name'          => esc_html__('ShopBuilder - Elementor WooCommerce Builder Addons','fasheno'),
+				'slug'          => 'shopbuilder',
+				'required'      => false,
 			],
 			[
 				'name'         => 'ShopBuilder Pro',
 				'slug'         => 'shopbuilder-pro',
 				'source'       => 'shopbuilder-pro.zip',
 				'required'     => true,
-				'version'      => '1.8.3'
+				'version'      => '2.1.3'
+			],
+			[
+				'name'          => 'Variation Swatches for WooCommerce',
+				'slug'          => 'woo-product-variation-swatches',
+				'required'      => false,
 			],
 			[
 				'name'         => 'WooCommerce Variation Swatches Pro',
 				'slug'         => 'woo-product-variation-swatches-pro',
 				'source'       => 'woo-product-variation-swatches-pro.zip',
 				'required'     => false,
-				'version'      => '2.2.7'
+				'version'      => '2.2.9'
+			],
+			[
+				'name'          => 'Variation Images Gallery for WooCommerce',
+				'slug'          => 'woo-product-variation-gallery',
+				'required'      => false,
 			],
 			[
 				'name'         => 'WooCommerce Variation images gallery Pro',
 				'slug'         => 'woo-product-variation-gallery-pro',
 				'source'       => 'woo-product-variation-gallery-pro.zip',
 				'required'     => false,
-				'version'      => '2.3.9'
+				'version'      => '2.3.11'
 			],
 
 			// Repository
 			[
 				'name'     => esc_html__('WooCommerce','fasheno'),
 				'slug'     => 'woocommerce',
-				'required' => false,
-			],
-			[
-				'name'     => esc_html__('ShopBuilder - Elementor WooCommerce Builder Addons','fasheno'),
-				'slug'     => 'shopbuilder',
-				'required' => false,
-			],
-			[
-				'name'     => 'Variation Images Gallery for WooCommerce',
-				'slug'     => 'woo-product-variation-gallery',
-				'required' => false,
-			],
-			[
-				'name'     => 'Variation Swatches for WooCommerce',
-				'slug'     => 'woo-product-variation-swatches',
 				'required' => false,
 			],
 			[

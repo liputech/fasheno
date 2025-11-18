@@ -38,7 +38,7 @@ use RT\Fasheno\Options\Opt;
 <?php fasheno_mobile_menu_icons_group(); ?>
 
 <div id="page" class="site">
-	<header id="masthead" class="site-header headroom" role="banner">
+	<header id="masthead" class="site-header sticky-headroom headroom" role="banner">
 		<div class="header-desktop">
 			<?php get_template_part( 'views/header/topbar', Opt::$topbar_style ); ?>
 			<?php get_template_part( 'views/header/header', Opt::$header_style ); ?>
@@ -46,7 +46,9 @@ use RT\Fasheno\Options\Opt;
 		<div class="header-mobile">
 			<?php get_template_part( 'views/header/header', 'mobile' ); ?>
 		</div>
+
 	</header><!-- #masthead -->
+	<div class="fixed-header-space"></div>
 
 	<div id="header-search" class="header-search">
 		<div class="header-search-wrap">

@@ -36,7 +36,7 @@ class Opt {
 	public static $pagebgcolor;
 
 	public function __construct() {
-		add_action( 'after_setup_theme', [ $this, 'set_options' ], 99 );
+		add_action( 'init', [ $this, 'set_options' ], 99999 );
 		add_action( 'customize_preview_init', [ $this, 'set_options' ] );
 	}
 

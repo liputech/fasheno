@@ -14,6 +14,7 @@ class Setup {
 	public function __construct() {
 		add_action( 'after_setup_theme', [ $this, 'setup' ] );
 		add_action( 'after_setup_theme', [ $this, 'content_width' ], 0 );
+		add_action( 'init', [ $this, 'rt_load_text_domain' ] );
 	}
 
 	/**
@@ -21,10 +22,12 @@ class Setup {
 	 * @return void
 	 */
 	public function setup() {
-		load_theme_textdomain( 'fasheno', get_template_directory() . '/languages' );
-
 		$this->add_theme_support();
 		$this->add_image_size();
+	}
+
+	public function rt_load_text_domain() {
+		load_theme_textdomain( 'fasheno', get_template_directory() . '/languages' );
 	}
 
 	/**
