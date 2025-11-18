@@ -31,7 +31,7 @@ class TgmConfig {
 				'slug'     => 'fasheno-core',
 				'source'   => 'fasheno-core.zip',
 				'required' => true,
-				'version'  => '1.0.3'
+				'version'  => '1.0.4'
 			],
 			[
 				'name'     => 'RT Framework',
@@ -50,7 +50,7 @@ class TgmConfig {
 				'slug'         => 'shopbuilder-pro',
 				'source'       => 'shopbuilder-pro.zip',
 				'required'     => true,
-				'version'      => '2.1.3'
+				'version'      => '2.1.5'
 			],
 			[
 				'name'          => 'Variation Swatches for WooCommerce',
@@ -74,7 +74,7 @@ class TgmConfig {
 				'slug'         => 'woo-product-variation-gallery-pro',
 				'source'       => 'woo-product-variation-gallery-pro.zip',
 				'required'     => false,
-				'version'      => '2.3.11'
+				'version'      => '2.3.12'
 			],
 
 			// Repository
