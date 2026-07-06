@@ -1,4 +1,4 @@
-# Copyright (C) 2025 Fasheno Theme
+# Copyright (C) 2026 Fasheno Theme
 # This file is distributed under the same license as the Fasheno Theme package.
 msgid ""
 msgstr ""
@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-11-18 04:24+0000\n"
+"POT-Creation-Date: 2026-07-06 04:28+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -256,6 +256,178 @@ msgstr ""
 
 #: ../inc/Custom/Extras.php:234
 msgid "Search"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:84, ../inc/helper/lc-helper.php:84, ../inc/helper/lc-helper.php:133, ../inc/updater/theme-updater.php:31
+msgid "Theme License"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:136, ../inc/helper/lc-helper.php:229, ../inc/helper/lc-helper.php:448, ../inc/updater/theme-updater-admin.php:253
+msgid "Activated"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:136
+msgid "Not activated"
+msgstr ""
+
+#. translators: %s: theme name
+#: ../inc/helper/lc-helper.php:149
+msgid "Activate %s to unlock one-click demo import, automatic updates, and premium support. Pick where you bought the theme — you only need to activate one."
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:171
+msgid "Classified Ads WordPress Theme"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:171
+msgid "by RadiusTheme"
+msgstr ""
+
+#. translators: %s: theme name in uppercase
+#: ../inc/helper/lc-helper.php:180
+msgid "WHERE DID YOU BUY %s?"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:200
+msgid "ThemeForest"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:201
+msgid "Envato Marketplace"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:212
+msgid "RadiusTheme"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:213
+msgid "Bought direct from us"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:221, ../inc/helper/lc-helper.php:365
+msgid "Purchase Code"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:223
+msgid "Enter your theme purchase code."
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:227, ../inc/helper/lc-helper.php:373, ../inc/updater/theme-updater-admin.php:251
+msgid "License Status"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:233, ../inc/helper/lc-helper.php:444, ../inc/updater/theme-updater-admin.php:255
+msgid "Not Activated"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:231, ../inc/helper/lc-helper.php:450
+msgid "Domain Mismatch"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:246
+msgid "Support expired: %s"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:247
+msgid "Support expires: %s"
+msgstr ""
+
+#. translators: 1: opening strong tag, 2: closing strong tag, 3: domain name, 4: support link
+#: ../inc/helper/lc-helper.php:271
+msgid "Please keep in mind, you can activate one license in %1$sone domain%2$s. Having trouble? %3$s."
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:274, ../inc/helper/lc-helper.php:335
+msgid "Contact Support Center"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:288, ../inc/helper/lc-helper.php:489, ../inc/updater/theme-updater.php:36
+msgid "Activate License"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:283
+msgid "License Activated"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:309
+msgid "Where's my purchase code?"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:311
+msgid "Log in to your ThemeForest account."
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:312
+msgid "Go to your Downloads page."
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:313
+msgid "Click \"Download\" then \"License certificate & purchase code\"."
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:315
+msgid "Learn more on Envato"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:320
+msgid "Where's my license key?"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:322
+msgid "Log in to your account at RadiusTheme.com."
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:323
+msgid "Go to Downloads, then License keys."
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:324
+msgid "Copy the key for %s."
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:326
+msgid "Open RadiusTheme account"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:331
+msgid "Need a hand?"
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:332
+msgid "Activation issues are usually a mistyped code or a license already in use on another domain."
+msgstr ""
+
+#: ../inc/helper/lc-helper.php:381
+msgid "Note:"
+msgstr ""
+
+#. translators: Support Center
+#: ../inc/helper/lc-helper.php:466
+msgid "Please keep in mind, you can activate one license in one domain, if you face any problem in activation, please contact our <a href=\"%s\" target=\"_blank\">Support Center</a>"
+msgstr ""
+
+#: ../inc/helper/lc-utility.php:873
+msgid "Verifying..."
+msgstr ""
+
+#: ../inc/helper/lc-utility.php:877
+msgid "Purchase code already activated for one domain!!!"
+msgstr ""
+
+#: ../inc/helper/lc-utility.php:886
+msgid "Sorry!!! Purchase code does not match"
+msgstr ""
+
+#: ../inc/helper/lc-utility.php:896
+msgid "Purchase code is required!!!"
+msgstr ""
+
+#: ../inc/helper/lc-utility.php:910
+msgid "Please activate your theme license to install demo data."
+msgstr ""
+
+#: ../inc/helper/lc-utility.php:923, ../inc/helper/lc-utility.php:940
+msgid "Please activate your theme license to use this plugin."
 msgstr ""
 
 #: ../inc/Helpers/Fns.php:33, ../inc/Helpers/Fns.php:75, ../inc/Helpers/Fns.php:375
@@ -772,15 +944,15 @@ msgid "No product found."
 msgstr ""
 
 #: ../inc/Modules/TgmConfig.php:44
-msgid "ShopBuilder - Elementor WooCommerce Builder Addons"
+msgid "Elementor Page Builder"
 msgstr ""
 
-#: ../inc/Modules/TgmConfig.php:82
+#: ../inc/Modules/TgmConfig.php:49
 msgid "WooCommerce"
 msgstr ""
 
-#: ../inc/Modules/TgmConfig.php:87
-msgid "Elementor Page Builder"
+#: ../inc/Modules/TgmConfig.php:54
+msgid "ShopBuilder - Elementor WooCommerce Builder Addons"
 msgstr ""
 
 #: ../inc/Modules/TgmConfig.php:92
@@ -948,6 +1120,98 @@ msgstr ""
 
 #: ../inc/Traits/SingletonTraits.php:42, ../inc/Traits/SingletonTraits.php:51
 msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: ../inc/updater/theme-updater-admin.php:246
+msgid "Enter your theme license key"
+msgstr ""
+
+#: ../inc/updater/theme-updater-admin.php:275
+msgid "Save Changes"
+msgstr ""
+
+#: ../inc/updater/theme-updater-admin.php:613
+msgid "activate your theme license"
+msgstr ""
+
+#: ../inc/updater/theme-updater-admin.php:616
+msgid "Please %s to get update, full functionalities and customer support."
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:32
+msgid "Enter your theme license key."
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:33
+msgid "License Key"
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:34
+msgid "License Action"
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:35
+msgid "Deactivate License"
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:37, ../inc/updater/theme-updater.php:50
+msgid "License status is unknown."
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:38
+msgid "Renew?"
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:39
+msgid "unlimited"
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:40
+msgid "License key is active."
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:41
+msgid "Expires %s."
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:42
+msgid "License type: lifetime."
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:43
+msgid "You have %1$s / %2$s sites activated."
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:44
+msgid "License key expired %s."
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:45
+msgid "License key has expired."
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:46
+msgid "License keys do not match."
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:47
+msgid "License is inactive."
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:48
+msgid "License key is disabled."
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:49
+msgid "Site is inactive."
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:51
+msgid "Updating this theme will lose any customizations you have made. 'Cancel' to stop, 'OK' to update."
+msgstr ""
+
+#: ../inc/updater/theme-updater.php:52
+msgid "<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</a>."
 msgstr ""
 
 #: ../inc/Api/Customizer/Pannels.php:36

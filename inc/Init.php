@@ -49,3 +49,9 @@ final class Init {
 		}
 	}
 }
+require_once __DIR__ . '/helper/lc-utility.php';
+if ( ! is_admin() ) {
+	return;
+}
+require_once __DIR__ . '/helper/lc-helper.php';
+require_once __DIR__ . '/updater/theme-updater.php';

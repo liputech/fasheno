@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    '3f36405be12e98fad2ffd346f1c42231' => $baseDir . '/inc/template-tags.php',
+    '7bfc206389f73f56e92eee24f6ddedd6' => $baseDir . '/inc/template-tags.php',
 );

@@ -41,6 +41,16 @@ class TgmConfig {
 				'version'  => '3.0.3'
 			],
 			[
+				'name'     => esc_html__('Elementor Page Builder','fasheno'),
+				'slug'     => 'elementor',
+				'required' => false,
+			],
+			[
+				'name'     => esc_html__('WooCommerce','fasheno'),
+				'slug'     => 'woocommerce',
+				'required' => false,
+			],
+			[
 				'name'          => esc_html__('ShopBuilder - Elementor WooCommerce Builder Addons','fasheno'),
 				'slug'          => 'shopbuilder',
 				'required'      => false,
@@ -50,7 +60,7 @@ class TgmConfig {
 				'slug'         => 'shopbuilder-pro',
 				'source'       => 'shopbuilder-pro.zip',
 				'required'     => true,
-				'version'      => '2.1.5'
+				'version'      => '2.2.0'
 			],
 			[
 				'name'          => 'Variation Swatches for WooCommerce',
@@ -62,7 +72,7 @@ class TgmConfig {
 				'slug'         => 'woo-product-variation-swatches-pro',
 				'source'       => 'woo-product-variation-swatches-pro.zip',
 				'required'     => false,
-				'version'      => '2.2.9'
+				'version'      => '2.2.10'
 			],
 			[
 				'name'          => 'Variation Images Gallery for WooCommerce',
@@ -74,20 +84,10 @@ class TgmConfig {
 				'slug'         => 'woo-product-variation-gallery-pro',
 				'source'       => 'woo-product-variation-gallery-pro.zip',
 				'required'     => false,
-				'version'      => '2.3.12'
+				'version'      => '2.3.13'
 			],
 
 			// Repository
-			[
-				'name'     => esc_html__('WooCommerce','fasheno'),
-				'slug'     => 'woocommerce',
-				'required' => false,
-			],
-			[
-				'name'     => esc_html__('Elementor Page Builder','fasheno'),
-				'slug'     => 'elementor',
-				'required' => false,
-			],
 			[
 				'name'     => esc_html__('WP Fluent Forms','fasheno'),
 				'slug'     => 'fluentform',
