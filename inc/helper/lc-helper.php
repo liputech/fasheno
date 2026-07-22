@@ -168,7 +168,7 @@ class Helper {
 									<?php echo esc_html( $theme_name ); ?>
 									<span class="rtlc-version">v<?php echo esc_html( $theme_version ); ?></span>
 								</div>
-								<div class="rtlc-theme-desc"><?php esc_html_e( 'Classified Ads WordPress Theme', 'fasheno' ); ?> &middot; <?php esc_html_e( 'by RadiusTheme', 'fasheno' ); ?></div>
+								<div class="rtlc-theme-desc"><?php esc_html_e( 'Fasheno - Fashion Store WooCommerce WordPress Theme', 'fasheno' ); ?> &middot; <?php esc_html_e( 'by RadiusTheme', 'fasheno' ); ?></div>
 							</div>
 						</div>
 
